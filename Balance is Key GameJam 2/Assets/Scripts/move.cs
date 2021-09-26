@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class move : MonoBehaviour
 {
+    private Rigidbody[] childRbs;
+    private GameObject[] arms;
     private float _userVerticalInput, _userHorizontalInput;
     public string player;
 
@@ -11,7 +13,8 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(transform.Find("Arms"));
+        childRbs = GetComponentsInChildren<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -19,8 +22,12 @@ public class move : MonoBehaviour
     {
         _userVerticalInput = Input.GetAxis(player + "Vertical");
         _userHorizontalInput = Input.GetAxis(player + "Horizontal");
-        Debug.Log(_userVerticalInput);
-        gameObject.GetComponent<Transform>().position += transform.forward * _userVerticalInput * speed;
-        gameObject.GetComponent<Transform>().position += transform.right * _userHorizontalInput * speed;
+
+        foreach(Rigidbody rb in childRbs)
+        {
+            gameObject.GetComponent<Transform>().position += transform.forward * _userVerticalInput * speed;
+            gameObject.GetComponent<Transform>().position += transform.right * _userHorizontalInput * speed;
+        }
+        
     }
 }
