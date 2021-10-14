@@ -1,0 +1,83 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "In Game",
+            "id": "a667a2a9-a6f2-491a-ba12-98df645e1640",
+            "actions": [
+                {
+                    "name": "PlayerMove",
+                    "type": "PassThrough",
+                    "id": "52456bde-c085-473c-93b7-bcc561b292c9",
+                    "expectedControlType": "Stick",
+                    "processors": "NormalizeVector2,StickDeadzone",
+                    "interactions": ""
+                },
+                {
+                    "name": "LeftArm",
+                    "type": "PassThrough",
+                    "id": "8e4833d2-3f62-46d5-b9a5-6ae97b026333",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "RightArm",
+                    "type": "PassThrough",
+                    "id": "a1d11243-23a7-47f5-a71d-841087c409df",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6a6aa18e-4a9c-491a-92e5-38228f67fc0b",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PlayerMove",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad8f78c1-52c7-47a1-89d6-7a8f3939a4f9",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "Normalize(min=-1,max=1)",
+                    "groups": "Gamepad",
+                    "action": "LeftArm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5178a83b-e56b-483e-b35b-632bffe74d1b",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "Normalize(min=-1,max=1)",
+                    "groups": "Gamepad",
+                    "action": "RightArm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

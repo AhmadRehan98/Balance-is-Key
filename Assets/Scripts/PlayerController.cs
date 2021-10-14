@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -52,8 +53,8 @@ public class PlayerController : MonoBehaviour
         // TODO (maybe): refactor this to handle an arbitrary number of hands?
 
         // interpolate target position of hand based on current controller trigger value
-        float tL = Input.GetAxis(_leftHandAxis);
-        float tR = Input.GetAxis(_rightHandAxis);
+        float tL = 0; //Input.GetAxis(_leftHandAxis);
+        float tR = 0; //Input.GetAxis(_rightHandAxis);
         
         _handTargetVecL = Vector3.Lerp(_handMinVec, _handMaxVec, tL);
         _handTargetVecR = Vector3.Lerp(_handMinVec, _handMaxVec, tR);
@@ -62,8 +63,8 @@ public class PlayerController : MonoBehaviour
         _handForceVecL = _handTargetVecL - _handRbL.transform.localPosition + Vector3.left*3; // hard coded offset, change later
         _handForceVecR = _handTargetVecR - _handRbR.transform.localPosition + Vector3.right*3;
 
-        print(_handForceVecL);
-        print(_handForceVecR);
+        // print(_handForceVecL);
+        // print(_handForceVecR);
 
         
         // apply impulse force each frame
@@ -77,13 +78,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _input = Vector3.zero;
-        _input.x = Input.GetAxis(_movementHorzAxis);
-        _input.z = Input.GetAxis(_movementVertAxis);
+        // _input.x = Input.GetAxis(_movementHorzAxis);
+        // _input.z = Input.GetAxis(_movementVertAxis);
         // TODO: move trigger inputs from FixedUpdate to Update? 
+        //
+        // if(Input.GetKeyDown("space"))
+        // {
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // }
+    }
 
-        if(Input.GetKeyDown("space"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
+    public void OnPlayerMove(InputAction.CallbackContext input)
+    {
+        print(input);
     }
 }
