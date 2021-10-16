@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     // rigid bodies
     private Rigidbody _handRbL, _handRbR, _bodyRb;
-    
+
     // hand private vars
     private Vector3 _handMinVec, _handMaxVec, _handTargetVecL, _handTargetVecR;
     private Vector3 _handForceVecL, _handForceVecR;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     // body input vector
     private Vector3 _input = Vector3.zero;
-    
+
     void Start()
     {
         _movementHorzAxis = "p" + player + "Horizontal";
@@ -37,11 +38,9 @@ public class PlayerController : MonoBehaviour
         _rightHandAxis = "p" + player + "RightTrigger";
 
         _bodyRb = GetComponent<Rigidbody>();
-        _handRbL = GetComponentsInChildren<Rigidbody>()[1];
-        _handRbR = GetComponentsInChildren<Rigidbody>()[2];
-        
-        
-        
+        Rigidbody[] childRbs = GetComponentsInChildren<Rigidbody>();
+        _handRbL = childRbs.Length >= 2 ? childRbs[1] : null;
+        _handRbR = childRbs.Length >= 3 ? childRbs[2] : null;
 
         _handMinVec = new Vector3(0, handMinDistance, 0);
         _handMaxVec = new Vector3(0, handMaxDistance, 0);
@@ -55,21 +54,22 @@ public class PlayerController : MonoBehaviour
         // interpolate target position of hand based on current controller trigger value
         float tL = 0; //Input.GetAxis(_leftHandAxis);
         float tR = 0; //Input.GetAxis(_rightHandAxis);
-        
+
         _handTargetVecL = Vector3.Lerp(_handMinVec, _handMaxVec, tL);
         _handTargetVecR = Vector3.Lerp(_handMinVec, _handMaxVec, tR);
-        
-        // calculate force vector to go in direction of target position
-        _handForceVecL = _handTargetVecL - _handRbL.transform.localPosition + Vector3.left*3; // hard coded offset, change later
-        _handForceVecR = _handTargetVecR - _handRbR.transform.localPosition + Vector3.right*3;
 
-        // print(_handForceVecL);
-        // print(_handForceVecR);
-
-        
-        // apply impulse force each frame
-        _handRbL.AddForce(_handForceVecL * handSpeed, ForceMode.VelocityChange);
-        _handRbR.AddForce(_handForceVecR * handSpeed, ForceMode.VelocityChange);
+        // calculate force vector to go in direction of target hand position and apply impulse force each frame
+        if (_handRbL)
+        {
+            // hard coded offset, change later
+            _handForceVecL = _handTargetVecL - _handRbL.transform.localPosition + Vector3.left * 3;
+            _handRbL.AddForce(_handForceVecL * handSpeed, ForceMode.VelocityChange);
+        }
+        if (_handRbR)
+        {
+            _handForceVecR = _handTargetVecR - _handRbR.transform.localPosition + Vector3.right * 3;
+            _handRbR.AddForce(_handForceVecR * handSpeed, ForceMode.VelocityChange);
+        }
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_input * bodyAcceleration, ForceMode.Force);
@@ -90,6 +90,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnPlayerMove(InputAction.CallbackContext input)
     {
-        print(input);
+        print(transform.name + " OnPlayerMove: " + input.ReadValue<Vector2>());
+    }
+    
+    public void OnLeftArm(InputAction.CallbackContext input)
+    {
+        print(transform.name + " OnLeftArm: " + input.ReadValue<float>());
+    }
+    
+    public void OnRightArm(InputAction.CallbackContext input)
+    {
+        print(transform.name + " OnRightArm: " + input.ReadValue<float>());
     }
 }
