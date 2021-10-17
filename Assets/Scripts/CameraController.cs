@@ -25,6 +25,6 @@ public class CameraController : MonoBehaviour
 
         avg /= followObjects.Length;
         transform.position = avg - offset;
-        print(transform.position);
+        
     }
 }
