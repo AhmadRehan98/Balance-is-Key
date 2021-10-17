@@ -41,6 +41,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""b552b129-4a25-4013-ba3c-c0a4586b8739"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -153,6 +161,17 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""RightArm"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""25385858-fa1e-418d-841e-577881e36c16"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -176,6 +195,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_InGame_PlayerMove = m_InGame.FindAction("PlayerMove", throwIfNotFound: true);
         m_InGame_LeftArm = m_InGame.FindAction("LeftArm", throwIfNotFound: true);
         m_InGame_RightArm = m_InGame.FindAction("RightArm", throwIfNotFound: true);
+        m_InGame_Reset = m_InGame.FindAction("Reset", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -228,6 +248,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_InGame_PlayerMove;
     private readonly InputAction m_InGame_LeftArm;
     private readonly InputAction m_InGame_RightArm;
+    private readonly InputAction m_InGame_Reset;
     public struct InGameActions
     {
         private @Player m_Wrapper;
@@ -235,6 +256,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @PlayerMove => m_Wrapper.m_InGame_PlayerMove;
         public InputAction @LeftArm => m_Wrapper.m_InGame_LeftArm;
         public InputAction @RightArm => m_Wrapper.m_InGame_RightArm;
+        public InputAction @Reset => m_Wrapper.m_InGame_Reset;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -253,6 +275,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @RightArm.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnRightArm;
                 @RightArm.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnRightArm;
                 @RightArm.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnRightArm;
+                @Reset.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
+                @Reset.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
+                @Reset.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -266,6 +291,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @RightArm.started += instance.OnRightArm;
                 @RightArm.performed += instance.OnRightArm;
                 @RightArm.canceled += instance.OnRightArm;
+                @Reset.started += instance.OnReset;
+                @Reset.performed += instance.OnReset;
+                @Reset.canceled += instance.OnReset;
             }
         }
     }
@@ -284,5 +312,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnPlayerMove(InputAction.CallbackContext context);
         void OnLeftArm(InputAction.CallbackContext context);
         void OnRightArm(InputAction.CallbackContext context);
+        void OnReset(InputAction.CallbackContext context);
     }
 }
