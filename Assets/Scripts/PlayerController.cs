@@ -65,7 +65,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnPlayerMove(InputAction.CallbackContext input)
     {
-        print(transform.name + " OnPlayerMove()");
         Vector2 inVec = input.ReadValue<Vector2>();
         _moveInput.x = inVec.x;
         _moveInput.y = 0;
@@ -74,13 +73,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnLeftArm(InputAction.CallbackContext input)
     {
-        print(transform.name + " OnRightArm()");
         _handTargetVecL = Vector3.Lerp(_handMinVec, _handMaxVec, input.ReadValue<float>());
     }
 
     public void OnRightArm(InputAction.CallbackContext input)
     {
-        print(transform.name + " OnRightArm()");
         _handTargetVecR = Vector3.Lerp(_handMinVec, _handMaxVec, input.ReadValue<float>());
     }
 
