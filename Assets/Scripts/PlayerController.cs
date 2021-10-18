@@ -53,8 +53,6 @@ public class PlayerController : MonoBehaviour
         _handStartingPosR = _handRbR ? new Vector3(_handRbR.transform.localPosition.x, 0, _handRbR.transform.localPosition.z) : Vector3.zero;
         _handTargetVecL = _handMinVec;
         _handTargetVecR = _handMinVec;
-        print(_handMinVec);
-
     }
 
 

@@ -9,24 +9,21 @@ using UnityEngine;
 public class GenerateMesh : MonoBehaviour
 {
     public string saveName = "Models/curvedPlatform";
-    
-    [Header("Mesh Parameters")] 
-    public int resolutionX = 10;
+
+    [Header("Mesh Parameters")] public int resolutionX = 10;
     public int resolutionZ = 10; // number of verts in x and z directions
     public float widthX = 5f, widthZ = 5f;
-    
-    [Header("Function Offsets")] 
-    public float offsetX;
+
+    [Header("Function Offsets")] public float offsetX;
     public float offsetY;
     public float offsetZ;
-   
-    [Header("Function Scales")] 
-    public float scaleX;
+
+    [Header("Function Scales")] public float scaleX;
     public float scaleY;
     public float scaleZ;
 
     [Header("Collider Settings")] public float colliderThickness = 0.001f;
-    
+
     private float _stepSizeX, _stepSizeZ;
     [SerializeField, HideInInspector] private MeshFilter meshfilter;
 
@@ -49,6 +46,7 @@ public class GenerateMesh : MonoBehaviour
         int numQuads = (resolutionX - 1) * (resolutionZ - 1);
         int numTriVerts = numQuads * 6; // 2 tris per quad, 3 verts per tri
 
+        // double everything to have tris for both sides of mesh
         Vector3[] verts = new Vector3[numVerts * 2]; // array of verts in mesh
         int[] tris = new int[numTriVerts * 2]; // indices into verts[] that make up the tris of mesh
         Vector2[] uvs = new Vector2[numVerts * 2]; // uv coords of each vert in mesh
@@ -108,37 +106,81 @@ public class GenerateMesh : MonoBehaviour
     }
 
     // generate a collider at center of each quad and align with normal. This should be ok as long as each quad is roughly rectangular
-    [ContextMenu("Generate Colliders")]
-    void GenerateColliders()
+    [ContextMenu("Generate Box Colliders")]
+    void GenerateBoxColliders()
     {
         Clear();
-        
-        Vector3[] verts = GetComponent<MeshFilter>().sharedMesh.vertices;
-        Func<int, int, Vector3> getVert = (i, j) => verts[i + j * resolutionX];
+
+        Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
+        Func<int, int, Vector3> getVert = (i, j) => mesh.vertices[i + j * resolutionX];
+        Func<int, int, Vector3> getNorm = (i, j) => mesh.normals[i + j * resolutionX];
 
         GameObject boxCollider = new GameObject();
         boxCollider.AddComponent<BoxCollider>();
-        
-        
+
+
         for (int xi = 1; xi < resolutionX; xi++)
         {
             for (int zi = 1; zi < resolutionZ; zi++)
             {
-                // i hate this
                 GameObject newBox = Instantiate(boxCollider, transform);
 
                 // opposite corners of quad
                 Vector3 v1 = getVert(xi, zi), v2 = getVert(xi - 1, zi - 1), v3 = getVert(xi, zi - 1);
-                
+
                 // center of square is at midpoint of opposite corners. quad should always be rectangular so this is ok
                 newBox.transform.position = Vector3.Lerp(v1 + transform.position, v2 + transform.position, 0.5f);
-                newBox.GetComponent<BoxCollider>().size = new Vector3(Mathf.Abs(v1.x - v2.x), colliderThickness, Mathf.Abs(v1.z-v2.z));;
-                newBox.transform.rotation = Quaternion.FromToRotation(Vector3.up, Vector3.Cross(v1-v2, v3 - v1));
+                newBox.GetComponent<BoxCollider>().size = new Vector3(Mathf.Abs(v1.x - v2.x), colliderThickness, Mathf.Abs(v1.z - v2.z));
+                ;
+
+                // rotate the collider so that the local y axis is pointing in the direction of the normal
+                Vector3 norm = (getNorm(xi, zi) + getNorm(xi - 1, zi - 1) + getNorm(xi - 1, zi) + getNorm(xi, zi - 1)).normalized;
+                newBox.transform.rotation = Quaternion.FromToRotation(Vector3.up, norm);
+            }
+        }
+
+        DestroyImmediate(boxCollider);
+    }
+
+    // create a mesh collider for each tri
+    // i'm 90% sure this is the only way to have an accurate collider for a mesh that is concave everywhere
+    // any other way of dividing up the collider will have seams where the ball will get stuck
+    // i hate this very much and definitely is horribly inefficient
+    [ContextMenu("Generate Mesh Colliders")]
+    void GenerateMeshColliders()
+    {
+        Clear();
+
+        Mesh mesh = GetComponent<MeshFilter>().sharedMesh;
+        Func<int, int, Vector3> getVert = (i, j) => mesh.vertices[i + j * resolutionX];
+
+        for (int xi = 1; xi < resolutionX; xi++)
+        {
+            for (int zi = 1; zi < resolutionZ; zi++) // i hate this
+            {
+                Mesh upperLeft = new Mesh();
+                Mesh bottomRight = new Mesh();
+                Vector3 v0 = getVert(xi - 1, zi - 1), v1 = getVert(xi - 1, zi), v2 = getVert(xi, zi - 1), v3 = getVert(xi, zi);
+                Vector3 center = Vector3.Lerp(v1, v2, 0.5f);
+                center.y -= 0.001f;
+                
+                upperLeft.vertices = new[] {v0, v1, v2, center};
+                bottomRight.vertices = new[] {v1, v3, v2, center};
+                upperLeft.triangles = new[] {0, 1, 2};
+                bottomRight.triangles = new[] {0, 1, 2};
+
+                MeshCollider ul = gameObject.AddComponent<MeshCollider>();
+                ul.sharedMesh = upperLeft;
+                ul.convex = true;
+
+                MeshCollider br = gameObject.AddComponent<MeshCollider>();
+                br.sharedMesh = bottomRight;
+                br.convex = true;
             }
         }
     }
-    
-    [ContextMenu("Clear Box Colliders")]
+
+    [ContextMenu("Clear All Colliders")]
     void Clear()
     {
         foreach (BoxCollider c in gameObject.GetComponents<BoxCollider>())
@@ -146,9 +188,14 @@ public class GenerateMesh : MonoBehaviour
             DestroyImmediate(c);
         }
 
-        foreach (Transform child in transform)
+        foreach (MeshCollider c in gameObject.GetComponents<MeshCollider>())
         {
-            DestroyImmediate(child.gameObject);
+            DestroyImmediate(c);
+        }
+
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            DestroyImmediate(transform.GetChild(i).gameObject);
         }
     }
 
