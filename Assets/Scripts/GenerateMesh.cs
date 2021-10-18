@@ -134,10 +134,6 @@ public class GenerateMesh : MonoBehaviour
                 newBox.transform.position = Vector3.Lerp(v1 + transform.position, v2 + transform.position, 0.5f);
                 newBox.GetComponent<BoxCollider>().size = new Vector3(Mathf.Abs(v1.x - v2.x), colliderThickness, Mathf.Abs(v1.z-v2.z));;
                 newBox.transform.rotation = Quaternion.FromToRotation(Vector3.up, Vector3.Cross(v1-v2, v3 - v1));
-                
-                print(v1);
-                print(v2);
-                
             }
         }
     }
@@ -161,7 +157,7 @@ public class GenerateMesh : MonoBehaviour
     {
         if (meshfilter)
         {
-            var savePath = "Assets/" + saveName + ".obj";
+            var savePath = "Assets/" + saveName + ".asset";
             Debug.Log("Saved Mesh to:" + savePath);
             AssetDatabase.CreateAsset(meshfilter.sharedMesh, savePath);
         }
