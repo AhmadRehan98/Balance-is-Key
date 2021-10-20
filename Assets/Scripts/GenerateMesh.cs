@@ -206,7 +206,7 @@ public class GenerateMesh : MonoBehaviour
         {
             var savePath = "Assets/" + saveName + ".asset";
             Debug.Log("Saved Mesh to:" + savePath);
-            AssetDatabase.CreateAsset(meshfilter.sharedMesh, savePath);
+            //AssetDatabase.CreateAsset(meshfilter.sharedMesh, savePath);
         }
     }
 }
