@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
         if (_handRbR)
         {
-            _handMoveDirR = _handTargetVecR - _handRbR.transform.localPosition + _handStartingPosL;
+            _handMoveDirR = _handTargetVecR - _handRbR.transform.localPosition + _handStartingPosR;
             _handRbR.AddForce(_handMoveDirR * handSpeed, ForceMode.VelocityChange);
         }
 
