@@ -1,7 +1,11 @@
 using System;
-using System.Linq;
+using System.Diagnostics;
+
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 
 [RequireComponent(typeof(MeshRenderer))]
@@ -163,7 +167,7 @@ public class GenerateMesh : MonoBehaviour
                 Vector3 v0 = getVert(xi - 1, zi - 1), v1 = getVert(xi - 1, zi), v2 = getVert(xi, zi - 1), v3 = getVert(xi, zi);
                 Vector3 center = Vector3.Lerp(v1, v2, 0.5f);
                 center.y -= 0.001f;
-                
+
                 upperLeft.vertices = new[] {v0, v1, v2, center};
                 bottomRight.vertices = new[] {v1, v3, v2, center};
                 upperLeft.triangles = new[] {0, 1, 2};
@@ -199,6 +203,9 @@ public class GenerateMesh : MonoBehaviour
         }
     }
 
+    // saving an asset causes issues during build, so we can exclude this method unless it is run in the editor
+    // we could probably just move this whole script to the editor folder, which is excluded from builds entierly
+#if UNITY_EDITOR
     [ContextMenu("Save Mesh")]
     void SaveAsset()
     {
@@ -209,4 +216,5 @@ public class GenerateMesh : MonoBehaviour
             AssetDatabase.CreateAsset(meshfilter.sharedMesh, savePath);
         }
     }
+#endif
 }
