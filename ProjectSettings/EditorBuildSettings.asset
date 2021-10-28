@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/old scenes/CharacterControllerTest.unity
-    guid: fc980be1b13ef224baa669f69b885bf5
-  - enabled: 0
-    path: Assets/Scenes/old scenes/demo_build_level.unity
-    guid: e7c4a24f8ab6ad74ebeba3fc13cb6fcf
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: b213553bcc2b07045b7b29cde8062f09
@@ -18,12 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/TerrainTest.unity
     guid: 020777b87e5ccd54f9a9d3554c64b547
   - enabled: 1
-
-    path: Assets/Scenes/MultiplayerTest.unity
-    guid: f772216f138b5064d8b83625d7eddd63
-  - enabled: 0
-    path: Assets/Scenes/old scenes/Test.unity
-    guid: b5c11a755be71e9459dd142445b3ce11
-  m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 3147bd4bd08beb341a8f603e092c1466,
-      type: 2}
+    path: Assets/Scenes/Level 1.unity
+    guid: f6edfe6b1c42d044ca5e3e2d3a56ce51
+  m_configObjects: {}
