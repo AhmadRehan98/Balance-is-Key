@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/old scenes/demo_build_level.unity
     guid: e7c4a24f8ab6ad74ebeba3fc13cb6fcf
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
-    guid: f6edfe6b1c42d044ca5e3e2d3a56ce51
-  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: b213553bcc2b07045b7b29cde8062f09
+  - enabled: 1
+    path: Assets/Scenes/TerrainTest.unity
+    guid: 020777b87e5ccd54f9a9d3554c64b547
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: f6edfe6b1c42d044ca5e3e2d3a56ce51
   - enabled: 0
     path: Assets/Scenes/MultiplayerTest.unity
     guid: f772216f138b5064d8b83625d7eddd63

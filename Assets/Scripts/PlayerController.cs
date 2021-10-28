@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
         else if (!Mathf.Approximately(_handRbL.position.y, _handRbR.position.y))
             Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
 
-        else
-            _handMinVec = new Vector3(0, _handRbL.transform.localPosition.y, 0);
+        
+        _handMinVec = new Vector3(0, _handRbL.transform.localPosition.y, 0);
         _handMaxVec = new Vector3(0, handMaxDistance, 0);
 
         _handStartingPosL = _handRbL ? new Vector3(_handRbL.transform.localPosition.x, 0, _handRbL.transform.localPosition.z) : Vector3.zero;
