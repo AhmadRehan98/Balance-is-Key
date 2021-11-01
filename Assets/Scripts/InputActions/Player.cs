@@ -15,7 +15,7 @@ public class @Player : IInputActionCollection, IDisposable
     ""name"": ""Player"",
     ""maps"": [
         {
-            ""name"": ""In Game"",
+            ""name"": ""In Game (Inverted)"",
             ""id"": ""a667a2a9-a6f2-491a-ba12-98df645e1640"",
             ""actions"": [
                 {
@@ -23,7 +23,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""type"": ""PassThrough"",
                     ""id"": ""52456bde-c085-473c-93b7-bcc561b292c9"",
                     ""expectedControlType"": ""Stick"",
-                    ""processors"": ""NormalizeVector2,StickDeadzone"",
+                    ""processors"": ""InvertVector2,NormalizeVector2,StickDeadzone"",
                     ""interactions"": """"
                 },
                 {
@@ -80,7 +80,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""PlayerMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -91,7 +91,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""PlayerMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -102,7 +102,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""PlayerMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -113,7 +113,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""PlayerMove"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -174,6 +174,167 @@ public class @Player : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""In Game"",
+            ""id"": ""a001a9b5-6726-4ab9-bfbf-538dce14b74b"",
+            ""actions"": [
+                {
+                    ""name"": ""PlayerMove"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""9050bc65-15eb-4fdf-9e1d-f576b2f25c6e"",
+                    ""expectedControlType"": ""Stick"",
+                    ""processors"": ""InvertVector2(invertX=false,invertY=false),NormalizeVector2,StickDeadzone"",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftArm"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""84c1e7dd-63f3-487f-9716-12a759b316c4"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RightArm"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""818aa0a9-1312-47cc-90f1-01b71a273284"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""bc78cc9d-8834-4b6f-b1fe-dbfae55a59ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5179e86d-ad27-4570-a838-01341e802875"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""a6595fd9-ba52-4c9d-8d5d-d843de1f3ca8"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""65b823ee-5353-4274-8dfc-b40040a24406"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0f2c4274-e9e0-4a97-b326-72a037fefb44"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""271ae8fc-b235-4328-b030-fc42b2e5c8db"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""aa8f1762-a563-4e4a-b028-70becb533332"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""PlayerMove"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""45a2c71d-9133-4683-9bdb-51784d185632"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""LeftArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8ff68e6-cbc6-40d9-86e1-43ce2461add2"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1d95ff76-acdc-48d8-bda8-24b09647dd59"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": ""Normalize(min=-1,max=1)"",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""RightArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c7050dd8-7381-484e-9a14-102c09b3f5d5"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightArm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a76dafaa-84de-4d59-81a3-764d54e66195"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -190,6 +351,12 @@ public class @Player : IInputActionCollection, IDisposable
         }
     ]
 }");
+        // In Game (Inverted)
+        m_InGameInverted = asset.FindActionMap("In Game (Inverted)", throwIfNotFound: true);
+        m_InGameInverted_PlayerMove = m_InGameInverted.FindAction("PlayerMove", throwIfNotFound: true);
+        m_InGameInverted_LeftArm = m_InGameInverted.FindAction("LeftArm", throwIfNotFound: true);
+        m_InGameInverted_RightArm = m_InGameInverted.FindAction("RightArm", throwIfNotFound: true);
+        m_InGameInverted_Reset = m_InGameInverted.FindAction("Reset", throwIfNotFound: true);
         // In Game
         m_InGame = asset.FindActionMap("In Game", throwIfNotFound: true);
         m_InGame_PlayerMove = m_InGame.FindAction("PlayerMove", throwIfNotFound: true);
@@ -241,6 +408,63 @@ public class @Player : IInputActionCollection, IDisposable
     {
         asset.Disable();
     }
+
+    // In Game (Inverted)
+    private readonly InputActionMap m_InGameInverted;
+    private IInGameInvertedActions m_InGameInvertedActionsCallbackInterface;
+    private readonly InputAction m_InGameInverted_PlayerMove;
+    private readonly InputAction m_InGameInverted_LeftArm;
+    private readonly InputAction m_InGameInverted_RightArm;
+    private readonly InputAction m_InGameInverted_Reset;
+    public struct InGameInvertedActions
+    {
+        private @Player m_Wrapper;
+        public InGameInvertedActions(@Player wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PlayerMove => m_Wrapper.m_InGameInverted_PlayerMove;
+        public InputAction @LeftArm => m_Wrapper.m_InGameInverted_LeftArm;
+        public InputAction @RightArm => m_Wrapper.m_InGameInverted_RightArm;
+        public InputAction @Reset => m_Wrapper.m_InGameInverted_Reset;
+        public InputActionMap Get() { return m_Wrapper.m_InGameInverted; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(InGameInvertedActions set) { return set.Get(); }
+        public void SetCallbacks(IInGameInvertedActions instance)
+        {
+            if (m_Wrapper.m_InGameInvertedActionsCallbackInterface != null)
+            {
+                @PlayerMove.started -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnPlayerMove;
+                @PlayerMove.performed -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnPlayerMove;
+                @PlayerMove.canceled -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnPlayerMove;
+                @LeftArm.started -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnLeftArm;
+                @LeftArm.performed -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnLeftArm;
+                @LeftArm.canceled -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnLeftArm;
+                @RightArm.started -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnRightArm;
+                @RightArm.performed -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnRightArm;
+                @RightArm.canceled -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnRightArm;
+                @Reset.started -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnReset;
+                @Reset.performed -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnReset;
+                @Reset.canceled -= m_Wrapper.m_InGameInvertedActionsCallbackInterface.OnReset;
+            }
+            m_Wrapper.m_InGameInvertedActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PlayerMove.started += instance.OnPlayerMove;
+                @PlayerMove.performed += instance.OnPlayerMove;
+                @PlayerMove.canceled += instance.OnPlayerMove;
+                @LeftArm.started += instance.OnLeftArm;
+                @LeftArm.performed += instance.OnLeftArm;
+                @LeftArm.canceled += instance.OnLeftArm;
+                @RightArm.started += instance.OnRightArm;
+                @RightArm.performed += instance.OnRightArm;
+                @RightArm.canceled += instance.OnRightArm;
+                @Reset.started += instance.OnReset;
+                @Reset.performed += instance.OnReset;
+                @Reset.canceled += instance.OnReset;
+            }
+        }
+    }
+    public InGameInvertedActions @InGameInverted => new InGameInvertedActions(this);
 
     // In Game
     private readonly InputActionMap m_InGame;
@@ -306,6 +530,13 @@ public class @Player : IInputActionCollection, IDisposable
             if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
             return asset.controlSchemes[m_GamepadSchemeIndex];
         }
+    }
+    public interface IInGameInvertedActions
+    {
+        void OnPlayerMove(InputAction.CallbackContext context);
+        void OnLeftArm(InputAction.CallbackContext context);
+        void OnRightArm(InputAction.CallbackContext context);
+        void OnReset(InputAction.CallbackContext context);
     }
     public interface IInGameActions
     {

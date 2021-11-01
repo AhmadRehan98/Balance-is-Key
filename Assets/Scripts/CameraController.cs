@@ -6,17 +6,19 @@ public class CameraController : MonoBehaviour
 {
 
     public Transform[] followObjects;
-    public Vector3 offset;
+    private Vector3 _offset;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        _offset = CalcAveragePos() - transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    // returns the average position of every element of followObjects
+    Vector3 CalcAveragePos()
     {
+        if (followObjects.Length == 0) return Vector3.zero;
+        
         Vector3 avg = Vector3.zero;
         foreach (Transform t in followObjects)
         {
@@ -24,7 +26,13 @@ public class CameraController : MonoBehaviour
         }
 
         avg /= followObjects.Length;
-        transform.position = avg - offset;
-        
+        return avg;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 avg = CalcAveragePos();
+        transform.position = avg - _offset;
     }
 }
