@@ -11,20 +11,21 @@ public class LevelLayoutGenerator : MonoBehaviour
     public GameObject start_pad; //don't think we need this.
 
     public GameObject end_pad;
+    public GameObject level_geometry;
+    
     // Start is called before the first frame update
 
     void Start()
     {
-        string[] remove_list =
-            {"obstacles_pipe", "obstacles_water_bridge", "obstacles_water_bridge", "obstacles_ramp", "end_pad"};
-        for (int i = 0; i < remove_list.Length; i++)
+        
+        foreach(Transform child in level_geometry.transform)
         {
-            GameObject temp = GameObject.Find(remove_list[i]);
-            if (!(temp is null))
+            if (child.gameObject.tag != "start_pad")
             {
-                Destroy(temp);
+                Destroy(child.gameObject);
             }
         }
+
 
         Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
         Vector3 position_update = start_pad_position;
