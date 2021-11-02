@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
-        print(_moveInput * bodyAcceleration);
+        // print(_moveInput * bodyAcceleration);
         // print(transform.name + " " + _handMoveDirL);
     }
 
