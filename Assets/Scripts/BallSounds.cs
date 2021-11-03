@@ -24,6 +24,7 @@ public class BallSounds : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Ball touched the ground");
+            // TODO: show message telling player to restart from checkpoint
             sm.PlayBallLandSoft();
         }
     }
