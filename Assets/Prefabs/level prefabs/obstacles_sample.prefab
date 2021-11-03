@@ -418,6 +418,8 @@ GameObject:
   - component: {fileID: 6035116478828458851}
   - component: {fileID: 6035116478828458850}
   - component: {fileID: 6035116478828458849}
+  - component: {fileID: 3880788870981741655}
+  - component: {fileID: 7571596582477907195}
   m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
@@ -788,6 +790,31 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &3880788870981741655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035116478828458855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d14fc7aa6dc59040ba78c4f5f28e083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &7571596582477907195
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035116478828458855}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 0, z: 100}
+  m_Center: {x: 50, y: 0, z: 50}
 --- !u!1 &6035116479334354615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1141,8 @@ GameObject:
   - component: {fileID: 6035116479487172124}
   - component: {fileID: 6035116479487172115}
   - component: {fileID: 6035116479487172114}
+  - component: {fileID: 7897882765775521865}
+  - component: {fileID: 6279212111111354776}
   m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
@@ -1479,3 +1508,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &7897882765775521865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035116479487172112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d14fc7aa6dc59040ba78c4f5f28e083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6279212111111354776
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6035116479487172112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 0, z: 100}
+  m_Center: {x: 50, y: 0, z: 50}

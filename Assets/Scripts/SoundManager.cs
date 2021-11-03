@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public AudioSource p1FootSteps, p2FootSteps, handMove;
+    public AudioSource p1FootSteps, p2FootSteps, handMove, ballLandSoft;
+    private float lastBallLand;
     // Start is called before the first frame update
     void Start()
     {
-        // FootSteps = gameObject.GetComponent<AudioSource>();
-        // MovingHand = gameObject.AddComponent<AudioSource>();
+        lastBallLand = 0.0f;
     }
 
     // Update is called once per frame
@@ -36,5 +36,21 @@ public class SoundManager : MonoBehaviour
         handMove.volume = Random.Range(0.8f, 1) * scale;
         handMove.pitch = Random.Range(0.8f, 1.1f) * scale;
         handMove.Play();
+    }
+
+    public void PlayBallRolling(float scale = 1.0f)
+    {
+        
+    }
+
+    public void PlayBallLandSoft(float scale = 1.0f)
+    {
+        if (Time.time - lastBallLand >= 0.5f)
+        {
+            ballLandSoft.volume = Random.Range(0.8f, 1) * scale;
+            ballLandSoft.pitch = Random.Range(0.8f, 1.1f) * scale;
+            ballLandSoft.Play();
+            lastBallLand = Time.time;
+        }
     }
 }
