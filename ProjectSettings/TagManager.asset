@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - start_pad
+  - player_setup
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelLayoutGenerator : MonoBehaviour
 {
-    static int level = 1;
+    public static int level = 1;
     public int delta = 3; // level+delta= # of obstacles
     public GameObject[] obstacles;
     public GameObject start_pad; //don't think we need this.
@@ -46,17 +46,17 @@ public class LevelLayoutGenerator : MonoBehaviour
             if (i != level + delta)
             {
                 temp_obstacle = obstacles[Random.Range(0, obstacles.Length)];
-                Instantiate(temp_obstacle, position_update, Quaternion.identity);
+                Instantiate(temp_obstacle, position_update, Quaternion.identity, level_geometry.transform);
                 temp_obstacle.name = "obstacle" + i.ToString();
             }
             else
             {
                 temp_obstacle = end_pad;
-                Instantiate(temp_obstacle, position_update, Quaternion.identity);
+                Instantiate(temp_obstacle, position_update, Quaternion.identity, level_geometry.transform);
                 temp_obstacle.name = "end_pad";
             }
 
-            temp_obstacle.transform.parent = GameObject.Find("Level Geometry").transform;
+            // temp_obstacle.transform.parent = GameObject.Find("Level Geometry").transform;
         }
     }
 
