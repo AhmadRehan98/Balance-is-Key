@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SoundManager
   - Ground
+  - start_pad
+  - player_setup
   layers:
   - Default
   - TransparentFX

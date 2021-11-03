@@ -7,21 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class EndOfLevelReached : MonoBehaviour
 {
-    public GameObject youWon;
-    // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
         print("trigger enter");
         if (other.CompareTag("Player"))
         {
-            if (SceneManager.GetActiveScene().buildIndex <= SceneManager.sceneCount)
+            if (SceneManager.GetActiveScene().buildIndex <= SceneManager.sceneCount) // go to next scene if we're on the main menu scene or tutorial level
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-            else
+            else // otherwise just reset the level and regenerate obstacles 
             {
-                youWon = GameObject.Find("You Won");
-                youWon.GetComponent<TMPro.TextMeshProUGUI>().text = "You Won";
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                LevelLayoutGenerator.level += 1;
             }
 
         }

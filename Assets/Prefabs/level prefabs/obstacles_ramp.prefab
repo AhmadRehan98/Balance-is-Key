@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4717302169588889369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5806019292320508841}
+  - component: {fileID: 2094477149571940826}
+  - component: {fileID: 1318894987441623171}
+  m_Layer: 0
+  m_Name: Checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5806019292320508841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717302169588889369}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.7, z: 44.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6053794475857338725}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2094477149571940826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717302169588889369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.613464, y: 14.810201, z: 124.54482}
+  m_Center: {x: 11.306732, y: 6.9051003, z: -7.2345543}
+--- !u!114 &1318894987441623171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4717302169588889369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d0d7c4fe7e0bd4b8d3ff9a53164ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6053794474687907340
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,9 +611,25 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 0200000001000000
+  m_SelectedEdges:
+  - a: 8
+    b: 9
+  - a: 10
+    b: 8
+  - a: 9
+    b: 11
+  - a: 11
+    b: 10
+  - a: 4
+    b: 5
+  - a: 6
+    b: 4
+  - a: 5
+    b: 7
+  - a: 7
+    b: 6
+  m_SelectedVertices: 08000000090000000a0000000b00000004000000050000000600000007000000
 --- !u!23 &6053794474687907328
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -783,24 +856,24 @@ MonoBehaviour:
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 50, y: 0, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 50, y: 5, z: 0}
+  - {x: -0.000028848652, y: 50.5, z: 0.000000059602435}
+  - {x: 49.999992, y: 50.5, z: 0.000000059602073}
   - {x: 50, y: 0, z: 0}
   - {x: 50, y: 0, z: -5}
-  - {x: 50, y: 5, z: 0}
-  - {x: 50, y: 5, z: -5}
+  - {x: 49.999992, y: 50.5, z: 0.000000059602073}
+  - {x: 49.999992, y: 50.5, z: -5.000002}
   - {x: 50, y: 0, z: -5}
   - {x: 0, y: 0, z: -5}
-  - {x: 50, y: 5, z: -5}
-  - {x: 0, y: 5, z: -5}
+  - {x: 49.999992, y: 50.5, z: -5.000002}
+  - {x: -0.000028550628, y: 50.5, z: -5.000002}
   - {x: 0, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 5, z: -5}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 50, y: 5, z: 0}
-  - {x: 0, y: 5, z: -5}
-  - {x: 50, y: 5, z: -5}
+  - {x: -0.000028550628, y: 50.5, z: -5.000002}
+  - {x: -0.000028848652, y: 50.5, z: 0.000000059602435}
+  - {x: -0.000028848652, y: 50.5, z: 0.000000059602435}
+  - {x: 49.999992, y: 50.5, z: 0.000000059602073}
+  - {x: -0.000028550628, y: 50.5, z: -5.000002}
+  - {x: 49.999992, y: 50.5, z: -5.000002}
   - {x: 0, y: 0, z: -5}
   - {x: 50, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
@@ -808,24 +881,24 @@ MonoBehaviour:
   m_Textures0:
   - {x: 0, y: 0}
   - {x: -50, y: 0}
-  - {x: 0, y: 5}
-  - {x: -50, y: 5}
-  - {x: 0, y: 0}
-  - {x: -5, y: 0}
-  - {x: 0, y: 5}
-  - {x: -5, y: 5}
-  - {x: 50, y: 0}
-  - {x: 0, y: 0}
-  - {x: 50, y: 5}
-  - {x: 0, y: 5}
+  - {x: 0.000028848652, y: 50.5}
+  - {x: -49.999992, y: 50.5}
+  - {x: 0, y: -0.000007553856}
+  - {x: -5, y: -0.000007553856}
+  - {x: 0.000000059602073, y: 50.499992}
+  - {x: -5.000002, y: 50.499992}
+  - {x: 50, y: 0.0000001888464}
+  - {x: 0, y: 0.0000001888464}
+  - {x: 49.999992, y: 50.5}
+  - {x: -0.000028550628, y: 50.5}
   - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 5, y: 5}
-  - {x: 0, y: 5}
-  - {x: 0, y: 0}
-  - {x: 50, y: 0}
-  - {x: 0, y: -5}
-  - {x: 50, y: -5}
+  - {x: 5.000002, y: 50.5}
+  - {x: -0.000000059602435, y: 50.5}
+  - {x: -0.000028848652, y: 0.000000059602435}
+  - {x: 49.999992, y: 0.000000059602073}
+  - {x: -0.000028550628, y: -5.000002}
+  - {x: 49.999992, y: -5.000002}
   - {x: 0, y: -5}
   - {x: -50, y: -5}
   - {x: 0, y: 0}
@@ -834,9 +907,9 @@ MonoBehaviour:
   m_Textures3: []
   m_Tangents:
   - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 3.623766e-15, w: -1}
+  - {x: -1, y: 0, z: 3.623766e-15, w: -1}
+  - {x: -1, y: 0, z: 7.247532e-15, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
@@ -846,9 +919,9 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0.00000002980231, y: 0, z: -1, w: -1}
+  - {x: 0.00000002980231, y: 0, z: -1, w: -1}
+  - {x: 0.00000005960462, y: -2.0295248e-21, z: -1, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
@@ -867,9 +940,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 04000000
+  m_SelectedEdges:
+  - a: 16
+    b: 17
+  - a: 18
+    b: 16
+  - a: 17
+    b: 19
+  - a: 19
+    b: 18
+  m_SelectedVertices: 10000000110000001200000013000000
 --- !u!23 &6053794475465733820
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -889,7 +970,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 31c3948707f812243af4196e0a057300, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1096,24 +1177,24 @@ MonoBehaviour:
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 50, y: 0, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 50, y: 5, z: 0}
+  - {x: -0.00004625322, y: 50.25, z: 0.0001525879}
+  - {x: 50, y: 50.25, z: 0.00014925005}
   - {x: 50, y: 0, z: 0}
   - {x: 50, y: 0, z: -5}
-  - {x: 50, y: 5, z: 0}
-  - {x: 50, y: 5, z: -5}
+  - {x: 50, y: 50.25, z: 0.00014925005}
+  - {x: 50, y: 50.25, z: -4.999851}
   - {x: 50, y: 0, z: -5}
   - {x: 0, y: 0, z: -5}
-  - {x: 50, y: 5, z: -5}
-  - {x: 0, y: 5, z: -5}
+  - {x: 50, y: 50.25, z: -4.999851}
+  - {x: -0.000045955196, y: 50.25, z: -4.999848}
   - {x: 0, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 5, z: -5}
-  - {x: 0, y: 5, z: 0}
-  - {x: 0, y: 5, z: 0}
-  - {x: 50, y: 5, z: 0}
-  - {x: 0, y: 5, z: -5}
-  - {x: 50, y: 5, z: -5}
+  - {x: -0.000045955196, y: 50.25, z: -4.999848}
+  - {x: -0.00004625322, y: 50.25, z: 0.0001525879}
+  - {x: -0.00004625322, y: 50.25, z: 0.0001525879}
+  - {x: 50, y: 50.25, z: 0.00014925005}
+  - {x: -0.000045955196, y: 50.25, z: -4.999848}
+  - {x: 50, y: 50.25, z: -4.999851}
   - {x: 0, y: 0, z: -5}
   - {x: 50, y: 0, z: -5}
   - {x: 0, y: 0, z: 0}
@@ -1121,24 +1202,24 @@ MonoBehaviour:
   m_Textures0:
   - {x: 0, y: 0}
   - {x: -50, y: 0}
-  - {x: 0, y: 5}
-  - {x: -50, y: 5}
+  - {x: 0.00004625322, y: 50.25}
+  - {x: -50, y: 50.25}
   - {x: 0, y: 0}
   - {x: -5, y: 0}
-  - {x: 0, y: 5}
-  - {x: -5, y: 5}
-  - {x: 50, y: 0}
-  - {x: 0, y: 0}
-  - {x: 50, y: 5}
-  - {x: 0, y: 5}
+  - {x: 0.00014925005, y: 50.25}
+  - {x: -4.999851, y: 50.25}
+  - {x: 50, y: -0.000014803303}
+  - {x: 0, y: -0.000014803303}
+  - {x: 50, y: 50.249985}
+  - {x: -0.000045955196, y: 50.249985}
   - {x: 5, y: 0}
   - {x: 0, y: 0}
-  - {x: 5, y: 5}
-  - {x: 0, y: 5}
-  - {x: 0, y: 0}
-  - {x: 50, y: 0}
-  - {x: 0, y: -5}
-  - {x: 50, y: -5}
+  - {x: 4.999848, y: 50.25}
+  - {x: -0.0001525879, y: 50.25}
+  - {x: -0.00004625322, y: 0.0001525879}
+  - {x: 50, y: 0.00014925005}
+  - {x: -0.000045955196, y: -4.999848}
+  - {x: 50, y: -4.999851}
   - {x: 0, y: -5}
   - {x: -50, y: -5}
   - {x: 0, y: 0}
@@ -1147,21 +1228,21 @@ MonoBehaviour:
   m_Textures3: []
   m_Tangents:
   - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
-  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: -1.0670088e-20, z: 0.000000033378573, w: -1}
+  - {x: -1, y: -1.0670088e-20, z: 0.000000033378573, w: -1}
+  - {x: -1, y: -2.1104187e-20, z: 0.000000066757146, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 0, y: 0, z: 1, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 1.0636375e-20, z: -0.000000033378573, w: -1}
+  - {x: 1, y: 1.0636375e-20, z: -0.000000033378573, w: -1}
+  - {x: 1, y: 2.1508738e-20, z: -0.000000066757146, w: -1}
   - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
-  - {x: 0, y: 0, z: -1, w: -1}
+  - {x: 0.000000029802319, y: -1.6298013e-21, z: -1, w: -1}
+  - {x: 0.000000029802319, y: -1.6298013e-21, z: -1, w: -1}
+  - {x: 0.000000059604638, y: -3.2701374e-21, z: -1, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
@@ -1180,9 +1261,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 0}
   m_IsSelectable: 1
-  m_SelectedFaces: 
-  m_SelectedEdges: []
-  m_SelectedVertices: 
+  m_SelectedFaces: 04000000
+  m_SelectedEdges:
+  - a: 16
+    b: 17
+  - a: 18
+    b: 16
+  - a: 17
+    b: 19
+  - a: 19
+    b: 18
+  m_SelectedVertices: 10000000110000001200000013000000
 --- !u!23 &6053794475690375458
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1202,7 +1291,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 31c3948707f812243af4196e0a057300, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1276,6 +1365,7 @@ Transform:
   - {fileID: 6053794474687907341}
   - {fileID: 6053794475690375471}
   - {fileID: 6053794475465733817}
+  - {fileID: 5806019292320508841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     // body input vector
     private Vector3 _moveInput = Vector3.zero;
 
-
+    private Vector3[] _startingTransformPositions;
+    
     void Start()
     {
         // assign component references
@@ -53,6 +54,14 @@ public class PlayerController : MonoBehaviour
         _handStartingPosR = _handRbR ? new Vector3(_handRbR.transform.localPosition.x, 0, _handRbR.transform.localPosition.z) : Vector3.zero;
         _handTargetVecL = _handMinVec;
         _handTargetVecR = _handMinVec;
+
+        _startingTransformPositions = new Vector3[transform.parent.childCount];
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
+            _startingTransformPositions[i] = transform.parent.GetChild(i).transform.localPosition;
+        }
+        
+        
     }
 
 
@@ -96,6 +105,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnResetScene(InputAction.CallbackContext input)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
+            transform.parent.GetChild(i).transform.localPosition = _startingTransformPositions[i];
+        }
+        transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
 }
