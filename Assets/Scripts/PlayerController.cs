@@ -19,14 +19,15 @@ public class PlayerController : MonoBehaviour
     public float bodyAcceleration = 50f; // net force increase per FixedUpdate call
 
     // rigid bodies
-    private Rigidbody _handRbL, _handRbR, _bodyRb;
+    private Rigidbody _bodyRb;
+    public Rigidbody handRbL, handRbR;
 
     // hand private vars
     private Vector3 _handMinVec, _handMaxVec; // based on handMinDistance and handMaxDistance. For use with Vector3.Lerp()
     private Vector3 _handTargetVecL, _handTargetVecR; // desired position of hands based on user input
     private Vector3 _handMoveDirL, _handMoveDirR; // direction and magnitude to move hand in to reach desired position
     private Vector3 _handStartingPosL, _handStartingPosR; // local starting position of hands
-        
+
     // body input vector
     private Vector3 _moveInput = Vector3.zero;
 
@@ -37,21 +38,16 @@ public class PlayerController : MonoBehaviour
         // assign component references
         _bodyRb = GetComponent<Rigidbody>();
         Rigidbody[] childRbs = GetComponentsInChildren<Rigidbody>();
-        _handRbL = childRbs.Length >= 2 ? childRbs[1] : null;
-        _handRbR = childRbs.Length >= 3 ? childRbs[2] : null;
-
-        if (!_handRbL || !_handRbR)
-            Debug.LogWarning("1 or more Hands for " + transform.name + " are missing, or are missing Rigidbody component");
-
-        else if (!Mathf.Approximately(_handRbL.position.y, _handRbR.position.y))
+        
+        if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
             Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
 
-        
-        _handMinVec = new Vector3(0, _handRbL.transform.localPosition.y, 0);
+
+        _handMinVec = new Vector3(0, handRbL.transform.localPosition.y, 0);
         _handMaxVec = new Vector3(0, handMaxDistance, 0);
 
-        _handStartingPosL = _handRbL ? new Vector3(_handRbL.transform.localPosition.x, 0, _handRbL.transform.localPosition.z) : Vector3.zero;
-        _handStartingPosR = _handRbR ? new Vector3(_handRbR.transform.localPosition.x, 0, _handRbR.transform.localPosition.z) : Vector3.zero;
+        _handStartingPosL = handRbL ? new Vector3(handRbL.transform.localPosition.x, 0, handRbL.transform.localPosition.z) : Vector3.zero;
+        _handStartingPosR = handRbR ? new Vector3(handRbR.transform.localPosition.x, 0, handRbR.transform.localPosition.z) : Vector3.zero;
         _handTargetVecL = _handMinVec;
         _handTargetVecR = _handMinVec;
 
@@ -67,21 +63,25 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         // calculate force vector to go in direction of target hand position and apply impulse force each frame
-        if (_handRbL)
+        if (handRbL)
         {
-            _handMoveDirL = _handTargetVecL - _handRbL.transform.localPosition + _handStartingPosL;
-            _handRbL.AddForce(_handMoveDirL * handSpeed, ForceMode.VelocityChange);
+            Vector3 yPos = new Vector3(0, handRbL.transform.localPosition.y, 0);
+            _handMoveDirL = _handTargetVecL - yPos;
+            handRbL.AddForce(_handMoveDirL * handSpeed, ForceMode.VelocityChange);
         }
 
-        if (_handRbR)
+        if (handRbR)
         {
-            _handMoveDirR = _handTargetVecR - _handRbR.transform.localPosition + _handStartingPosR;
-            _handRbR.AddForce(_handMoveDirR * handSpeed, ForceMode.VelocityChange);
+            Vector3 yPos = new Vector3(0, handRbR.transform.localPosition.y, 0);
+            _handMoveDirR = _handTargetVecR - yPos;
+            handRbR.AddForce(_handMoveDirR * handSpeed, ForceMode.VelocityChange);
         }
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
+        // print(_moveInput * bodyAcceleration);
         // print(transform.name + " " + _handMoveDirL);
     }
 
