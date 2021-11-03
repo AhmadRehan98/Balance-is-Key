@@ -173,7 +173,7 @@ MonoBehaviour:
   p1FootSteps: {fileID: 4812233898475259918}
   p2FootSteps: {fileID: 4812233898475259918}
   handMove: {fileID: 4812233896766391599}
-  ballLandSoft: {fileID: 0}
+  ballLandSoft: {fileID: 5417785435298464348}
 --- !u!1 &4812233896766391585
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c802659ac2908034d86c2d4b69c65b36, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
