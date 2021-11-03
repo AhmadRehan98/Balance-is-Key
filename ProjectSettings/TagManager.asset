@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - start_pad
   - player_setup
+  - Ball
   layers:
   - Default
   - TransparentFX

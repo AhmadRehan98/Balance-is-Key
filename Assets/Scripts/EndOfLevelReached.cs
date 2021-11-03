@@ -10,7 +10,7 @@ public class EndOfLevelReached : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         print("trigger enter");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball") || other.CompareTag("Player") && GameObject.FindWithTag("Ball") == null)
         {
             if (SceneManager.GetActiveScene().buildIndex <= SceneManager.sceneCount) // go to next scene if we're on the main menu scene or tutorial level
             {
