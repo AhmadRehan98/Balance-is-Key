@@ -521,16 +521,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
         type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
-        type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
@@ -724,16 +714,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.45714283
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
         type: 3}

@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     // body parameters
     public float bodyAcceleration = 50f; // net force increase per FixedUpdate call
-    
+
 
     // rigid bodies
     private Rigidbody _bodyRb;
@@ -34,18 +34,18 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveInput = Vector3.zero;
 
     // starting local positions for checkpoint system
-    private Vector3[] _startingTransformPositions;
-    
+    private List<Vector3> _startingTransformPositions;
+
     // camera transform for relative inputs
     private Transform _camTransform;
-    
+
     void Start()
     {
         // assign component references
         _bodyRb = GetComponent<Rigidbody>();
         print(_bodyRb.name);
         Rigidbody[] childRbs = GetComponentsInChildren<Rigidbody>();
-        
+
         if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
             Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
 
@@ -58,19 +58,23 @@ public class PlayerController : MonoBehaviour
         _handTargetVecL = _handMinVec;
         _handTargetVecR = _handMinVec;
 
-        _startingTransformPositions = new Vector3[transform.parent.childCount];
-        for (int i = 0; i < transform.parent.childCount; i++)
+        // store local positions of all transforms in the player setup, and their children (if any)
+        _startingTransformPositions = new List<Vector3>();
+        for (int i = 0; i < transform.parent.parent.childCount; i++)
         {
-            _startingTransformPositions[i] = transform.parent.GetChild(i).transform.localPosition;
+            _startingTransformPositions.Add(transform.parent.parent.GetChild(i).transform.localPosition);
+            for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
+            {
+                _startingTransformPositions.Add(transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition);
+            }
         }
-
+        
         if (Camera.main is { }) _camTransform = Camera.main.transform;
     }
 
 
     void FixedUpdate()
     {
-        
         // calculate force vector to go in direction of target hand position and apply impulse force each frame
         if (handRbL)
         {
@@ -90,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
-        
+
         // print(_moveInput * bodyAcceleration);
         // print(transform.name + " " + _handMoveDirL);
     }
@@ -100,17 +104,16 @@ public class PlayerController : MonoBehaviour
         if (_camTransform != null)
         {
             Vector2 inVec = input.ReadValue<Vector2>();
-            
+
             Vector3 forward = _camTransform.forward;
             forward.y = 0;
             forward.Normalize();
-            
-            Vector3 right = _camTransform.right;
-            right.y = 0; 
-            right.Normalize();
-            
-            _moveInput = inVec.y * forward + inVec.x * right;
 
+            Vector3 right = _camTransform.right;
+            right.y = 0;
+            right.Normalize();
+
+            _moveInput = inVec.y * forward + inVec.x * right;
         }
         else
         {
@@ -134,10 +137,20 @@ public class PlayerController : MonoBehaviour
     public void OnResetScene(InputAction.CallbackContext input)
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        for (int i = 0; i < transform.parent.childCount; i++)
+        int currTransformIdx = 0;
+        for (int i = 0; i < transform.parent.parent.childCount; i++)
         {
-            transform.parent.GetChild(i).transform.localPosition = _startingTransformPositions[i];
+            transform.parent.parent.GetChild(i).transform.localPosition = _startingTransformPositions[currTransformIdx];
+            currTransformIdx += 1;
+            for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
+            {
+                transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition = _startingTransformPositions[currTransformIdx];
+                currTransformIdx += 1;
+            }
         }
-        transform.parent.position = CheckpointController.lastCheckpoint.position;
+
+        transform.parent.parent.position = CheckpointController.lastCheckpoint.position;
+        ;
+        ;
     }
 }
