@@ -21,7 +21,6 @@ public class EndOfLevelReached : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 LevelLayoutGenerator.level += 1;
             }
-
         }
     }
 }
