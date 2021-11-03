@@ -20,12 +20,12 @@ public class SoundManager : MonoBehaviour
 
     public void PlayFootStep(float scale=1.0f)
     {
-        p1FootSteps.volume = Random.Range(0.25f, 0.4f) * scale;
+        p1FootSteps.volume = Random.Range(0.15f, 0.25f) * scale;
         p1FootSteps.pitch = Random.Range(0.5f, 0.6f) * scale;
         if (!p1FootSteps.isPlaying)
             p1FootSteps.Play();
         
-        p2FootSteps.volume = Random.Range(0.25f, 0.4f) * scale;
+        p2FootSteps.volume = Random.Range(0.15f, 0.25f) * scale;
         p2FootSteps.pitch = Random.Range(0.6f, 0.7f) * scale;
         if (!p2FootSteps.isPlaying)
             p2FootSteps.Play();
