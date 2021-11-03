@@ -2840,12 +2840,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!54 &105560511 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 4960868777349092098, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5420238783533867248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &110564521
 Mesh:
   m_ObjectHideFlags: 0
@@ -3578,8 +3572,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158606525}
-  m_LocalRotation: {x: -0.055210296, y: -0.942106, z: 0.19736505, w: -0.26539633}
-  m_LocalPosition: {x: -13.540398, y: 4.6824265, z: -1.8947866}
+  m_LocalRotation: {x: 0.08160327, y: 0.71471894, z: -0.08472479, w: 0.6894487}
+  m_LocalPosition: {x: -15.9405575, y: 8.846455, z: -2.537209}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7055,7 +7049,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339451611}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1746c43027333634781228693ac1e9c1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -31635,12 +31629,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!54 &1669903132 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 7354169270974252146, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-    type: 3}
-  m_PrefabInstance: {fileID: 5420238783533867248}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1670768621
 Mesh:
   m_ObjectHideFlags: 0
@@ -40245,6 +40233,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404569953762722767, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: a667a2a9-a6f2-491a-ba12-98df645e1640
+      objectReference: {fileID: 0}
+    - target: {fileID: 404569953762722767, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 466704793772501220, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589052795242603071, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589052795242603071, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 595595885926386957, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Drag
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 595595885926386957, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
       propertyPath: m_Mass
@@ -40252,18 +40270,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1050991302011657704, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
+      propertyPath: handSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050991302011657704, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
       propertyPath: bodyAcceleration
-      value: 75
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050991302011657704, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: handDampeningCoeff
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2252013376286208851, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: cdc4745650ee6f84bbc389cdbcbe3502,
+        type: 2}
+    - target: {fileID: 2361872361560383909, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831242548249973951, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: a667a2a9-a6f2-491a-ba12-98df645e1640
+      objectReference: {fileID: 0}
+    - target: {fileID: 2831242548249973951, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3068131599492586109, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Drag
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3068131599492586109, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3097199216395121999, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3097199216395121999, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189134744316381848, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: handSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3189134744316381848, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
       propertyPath: bodyAcceleration
-      value: 75
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3189134744316381848, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: handDampeningCoeff
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438024863668249635, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: cdc4745650ee6f84bbc389cdbcbe3502,
+        type: 2}
+    - target: {fileID: 4960868777349092098, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960868777349092098, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5420238782809961035, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
@@ -41537,138 +41627,23 @@ PrefabInstance:
       objectReference: {fileID: 1203134713}
     - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 105560511}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -3.3999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -3.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimit.limit
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConfiguredInWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.damper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.spring
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446963, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 1
+      propertyPath: m_YMotion
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6010806762524446964, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
-      propertyPath: m_LinearLimit.limit
-      value: 1
+      propertyPath: m_YMotion
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446964, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+    - target: {fileID: 7354169270974252146, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
-      propertyPath: m_ConfiguredInWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446964, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.damper
+      propertyPath: m_Drag
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446964, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
+    - target: {fileID: 7354169270974252146, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
         type: 3}
-      propertyPath: m_LinearLimitSpring.spring
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010806762524446964, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
+      propertyPath: m_Mass
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedBody
-      value: 
-      objectReference: {fileID: 1669903132}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -3.3999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: -3.4400005
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimit.limit
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConfiguredInWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.damper
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.spring
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267011, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_AutoConfigureConnectedAnchor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267012, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimit.limit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267012, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_ConfiguredInWorldSpace
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267012, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.damper
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8195819893186267012, guid: d6bb7dbf3af61374fb09a43b88fe27b8,
-        type: 3}
-      propertyPath: m_LinearLimitSpring.spring
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6bb7dbf3af61374fb09a43b88fe27b8, type: 3}

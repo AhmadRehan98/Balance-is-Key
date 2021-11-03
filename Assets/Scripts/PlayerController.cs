@@ -14,9 +14,11 @@ public class PlayerController : MonoBehaviour
     // hand parameters
     public float handMaxDistance; // min and max distance hand can travel
     public float handSpeed; // speed hands move at
+    public float handDampeningCoeff = 0.5f; // 0 == no dampening, 1 = infinite dampening (ie no movement)
 
     // body parameters
     public float bodyAcceleration = 50f; // net force increase per FixedUpdate call
+    
 
     // rigid bodies
     private Rigidbody _bodyRb;
@@ -31,7 +33,11 @@ public class PlayerController : MonoBehaviour
     // body input vector
     private Vector3 _moveInput = Vector3.zero;
 
+    // starting local positions for checkpoint system
     private Vector3[] _startingTransformPositions;
+    
+    // camera transform for relative inputs
+    private Transform _camTransform;
     
     void Start()
     {
@@ -57,8 +63,8 @@ public class PlayerController : MonoBehaviour
         {
             _startingTransformPositions[i] = transform.parent.GetChild(i).transform.localPosition;
         }
-        
-        
+
+        if (Camera.main is { }) _camTransform = Camera.main.transform;
     }
 
 
@@ -69,30 +75,50 @@ public class PlayerController : MonoBehaviour
         if (handRbL)
         {
             Vector3 yPos = new Vector3(0, handRbL.transform.localPosition.y, 0);
+            Vector3 dampVec = new Vector3(0, handRbL.velocity.y * handDampeningCoeff, 0);
             _handMoveDirL = _handTargetVecL - yPos;
-            handRbL.AddForce(_handMoveDirL * handSpeed, ForceMode.VelocityChange);
+            handRbL.AddForce(_handMoveDirL * handSpeed - dampVec, ForceMode.VelocityChange);
         }
 
         if (handRbR)
         {
             Vector3 yPos = new Vector3(0, handRbR.transform.localPosition.y, 0);
+            Vector3 dampVec = new Vector3(0, handRbR.velocity.y * handDampeningCoeff, 0);
             _handMoveDirR = _handTargetVecR - yPos;
-            handRbR.AddForce(_handMoveDirR * handSpeed, ForceMode.VelocityChange);
+            handRbR.AddForce(_handMoveDirR * handSpeed - dampVec, ForceMode.VelocityChange);
         }
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
-        print(_moveInput * bodyAcceleration);
+        
         // print(_moveInput * bodyAcceleration);
         // print(transform.name + " " + _handMoveDirL);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext input)
     {
-        Vector2 inVec = input.ReadValue<Vector2>();
-        _moveInput.x = inVec.x;
-        _moveInput.y = 0;
-        _moveInput.z = inVec.y;
+        if (_camTransform != null)
+        {
+            Vector2 inVec = input.ReadValue<Vector2>();
+            
+            Vector3 forward = _camTransform.forward;
+            forward.y = 0;
+            forward.Normalize();
+            
+            Vector3 right = _camTransform.right;
+            right.y = 0; 
+            right.Normalize();
+            
+            _moveInput = inVec.y * forward + inVec.x * right;
+
+        }
+        else
+        {
+            Vector2 inVec = input.ReadValue<Vector2>();
+            _moveInput.x = inVec.x;
+            _moveInput.y = 0;
+            _moveInput.z = inVec.y;
+        }
     }
 
     public void OnLeftArm(InputAction.CallbackContext input)

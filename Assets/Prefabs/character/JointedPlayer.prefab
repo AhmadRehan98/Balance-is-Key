@@ -45,8 +45,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752501222289108955}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0.5
+  m_Mass: 0.03
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -82,7 +82,8 @@ MonoBehaviour:
   player: 1
   handMaxDistance: 7
   handSpeed: 1
-  bodyAcceleration: 150
+  handDampeningCoeff: 0.5
+  bodyAcceleration: 25
   handRbL: {fileID: 1143920534934514731}
   handRbR: {fileID: 7044747143838075494}
 --- !u!114 &5667177935021358310
@@ -208,7 +209,7 @@ ConfigurableJoint:
   m_Anchor: {x: -3, y: 1.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -3.3999996, z: -3.44}
+  m_ConnectedAnchor: {x: 0, y: -3.3999996, z: -3.4400005}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -284,7 +285,7 @@ ConfigurableJoint:
   m_ProjectionMode: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
-  m_ConfiguredInWorldSpace: 0
+  m_ConfiguredInWorldSpace: 1
   m_SwapBodies: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -380,7 +381,7 @@ ConfigurableJoint:
   m_ProjectionMode: 0
   m_ProjectionDistance: 0.1
   m_ProjectionAngle: 180
-  m_ConfiguredInWorldSpace: 0
+  m_ConfiguredInWorldSpace: 1
   m_SwapBodies: 0
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -517,6 +518,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.45714283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
         type: 3}
@@ -713,6 +724,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.45714283
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 7609413649395390466, guid: cbe31ff5519be2c4dbe1da47bb912e1e,
         type: 3}
