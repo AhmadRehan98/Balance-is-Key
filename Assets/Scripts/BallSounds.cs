@@ -21,7 +21,7 @@ public class BallSounds : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Ball"))
         {
             Debug.Log("Ball touched the ground");
             // TODO: show message telling player to restart from checkpoint
