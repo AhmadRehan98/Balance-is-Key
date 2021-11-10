@@ -483,40 +483,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1888171113476159622, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.16156252
-      objectReference: {fileID: 0}
-    - target: {fileID: 1888171113476159622, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.076512836
-      objectReference: {fileID: 0}
-    - target: {fileID: 2190731002941518940, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.39
-      objectReference: {fileID: 0}
     - target: {fileID: 4626306775004055485, guid: 0d47264d487929a4992efb40e22f2931,
         type: 3}
       propertyPath: m_Name
       value: New Geometry
-      objectReference: {fileID: 0}
-    - target: {fileID: 4724757153498191512, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 5026754114518456898, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.08411125
-      objectReference: {fileID: 0}
-    - target: {fileID: 5026754114518456898, guid: 0d47264d487929a4992efb40e22f2931,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.038786296
       objectReference: {fileID: 0}
     - target: {fileID: 5438133025876073735, guid: 0d47264d487929a4992efb40e22f2931,
         type: 3}
