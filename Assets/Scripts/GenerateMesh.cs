@@ -88,7 +88,8 @@ public class GenerateMesh : MonoBehaviour
                 float z = zi * _stepSizeZ;
 
                 // create vert at (x, f(x, z), z)
-                verts[getVertIdx(xi, zi)] = new Vector3(x - widthX / 2.0f, _f(x - widthX / 2.0f, z - widthZ / 2.0f), z - widthZ / 2.0f);
+                float y = _f(x - widthX / 2.0f, z - widthZ / 2.0f);
+                verts[getVertIdx(xi, zi)] = new Vector3(x - widthX / 2.0f, y, z - widthZ / 2.0f);
                 uvs[getVertIdx(xi, zi)] = new Vector2(Mathf.Lerp(0, 1, x / widthX), Mathf.Lerp(0, 1, z / widthZ));
 
                 // if xIdx > 0 and zIdx > 0 create tris at indexes
