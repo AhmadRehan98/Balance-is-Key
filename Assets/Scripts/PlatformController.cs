@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform[] players;
+
+    // returns the average position of every element of followObjects
+    Vector3 CalcAveragePos()
     {
+        if (players.Length == 0) return Vector3.zero;
         
+        Vector3 avg = Vector3.zero;
+        foreach (Transform t in players)
+        {
+            avg += t.position;
+        }
+
+        avg /= players.Length;
+        return avg;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = CalcAveragePos();
     }
 }
