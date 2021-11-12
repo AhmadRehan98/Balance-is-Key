@@ -35,7 +35,7 @@ public class GenerateMesh : MonoBehaviour
     {
         x = scaleX * x - offsetX;
         z = scaleZ * z - offsetZ;
-        float y = Mathf.Sqrt(x * x + z * z) + offsetY;
+        float y = Mathf.Sin(x * x *x*x + z * z*z*z);
         return y * scaleY;
     }
 
@@ -88,7 +88,7 @@ public class GenerateMesh : MonoBehaviour
                 float z = zi * _stepSizeZ;
 
                 // create vert at (x, f(x, z), z)
-                verts[getVertIdx(xi, zi)] = new Vector3(x, _f(x, z), z);
+                verts[getVertIdx(xi, zi)] = new Vector3(x - widthX / 2.0f, _f(x - widthX / 2.0f, z - widthZ / 2.0f), z - widthZ / 2.0f);
                 uvs[getVertIdx(xi, zi)] = new Vector2(Mathf.Lerp(0, 1, x / widthX), Mathf.Lerp(0, 1, z / widthZ));
 
                 // if xIdx > 0 and zIdx > 0 create tris at indexes
