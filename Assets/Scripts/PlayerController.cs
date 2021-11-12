@@ -6,6 +6,7 @@ using UnityEngine.Assertions.Comparers;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
     [Range(1, 2)] // only support 2 players for now
@@ -39,33 +40,44 @@ public class PlayerController : MonoBehaviour
     // camera transform for relative inputs
     private Transform _camTransform;
 
+    private bool _hasHands;
+    
     void Start()
     {
         // assign component references
+        
         _bodyRb = GetComponent<Rigidbody>();
-        print(_bodyRb.name);
-        Rigidbody[] childRbs = GetComponentsInChildren<Rigidbody>();
-
-        if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
+        
+        if (handRbL == null && handRbR == null)
+            Debug.LogWarning("Hands for " + transform.name + " are missing");
+        else if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
             Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
-
-
-        _handMinVec = new Vector3(0, handRbL.transform.localPosition.y, 0);
-        _handMaxVec = new Vector3(0, handMaxDistance, 0);
-
-        _handStartingPosL = handRbL ? new Vector3(handRbL.transform.localPosition.x, 0, handRbL.transform.localPosition.z) : Vector3.zero;
-        _handStartingPosR = handRbR ? new Vector3(handRbR.transform.localPosition.x, 0, handRbR.transform.localPosition.z) : Vector3.zero;
-        _handTargetVecL = _handMinVec;
-        _handTargetVecR = _handMinVec;
-
-        // store local positions of all transforms in the player setup, and their children (if any)
-        _startingTransformPositions = new List<Vector3>();
-        for (int i = 0; i < transform.parent.parent.childCount; i++)
+        else
         {
-            _startingTransformPositions.Add(transform.parent.parent.GetChild(i).transform.localPosition);
-            for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
+            _handMinVec = new Vector3(0, handRbL.transform.localPosition.y, 0);
+            _handMaxVec = new Vector3(0, handMaxDistance, 0);
+
+            _handStartingPosL = handRbL ? new Vector3(handRbL.transform.localPosition.x, 0, handRbL.transform.localPosition.z) : Vector3.zero;
+            _handStartingPosR = handRbR ? new Vector3(handRbR.transform.localPosition.x, 0, handRbR.transform.localPosition.z) : Vector3.zero;
+            _handTargetVecL = _handMinVec;
+            _handTargetVecR = _handMinVec;
+        }
+
+        if (transform.parent == null || transform.parent.parent == null)
+        {
+            Debug.LogWarning("Player " + transform.name + " is in improper player setup hierarchy");
+        }
+        else
+        {
+            // store local positions of all transforms in the player setup, and their children (if any) for restarting from checkpoint
+            _startingTransformPositions = new List<Vector3>();
+            for (int i = 0; i < transform.parent.parent.childCount; i++)
             {
-                _startingTransformPositions.Add(transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition);
+                _startingTransformPositions.Add(transform.parent.parent.GetChild(i).transform.localPosition);
+                for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
+                {
+                    _startingTransformPositions.Add(transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition);
+                }
             }
         }
         
@@ -94,9 +106,6 @@ public class PlayerController : MonoBehaviour
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
-
-        // print(_moveInput * bodyAcceleration);
-        // print(transform.name + " " + _handMoveDirL);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext input)
