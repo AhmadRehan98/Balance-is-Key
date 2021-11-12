@@ -18,6 +18,8 @@ public class GenerateMesh : MonoBehaviour
     public int resolutionZ = 10; // number of verts in x and z directions
     public float widthX = 5f, widthZ = 5f;
 
+    public int meshSquareness = 2;
+    
     [Header("Function Offsets")] public float offsetX;
     public float offsetY;
     public float offsetZ;
@@ -35,7 +37,7 @@ public class GenerateMesh : MonoBehaviour
     {
         x = scaleX * x - offsetX;
         z = scaleZ * z - offsetZ;
-        float y = Mathf.Sin(x * x *x*x + z * z*z*z);
+        float y = Mathf.Sin(Mathf.Pow(x, meshSquareness * 2.0f) + Mathf.Pow(z, meshSquareness * 2.0f));
         return y * scaleY;
     }
 
