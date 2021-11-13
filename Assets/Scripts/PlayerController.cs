@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         
         _bodyRb = GetComponent<Rigidbody>();
         
-        if (handRbL == null && handRbR == null)
+        if (handRbL == null || handRbR == null)
             Debug.LogWarning("Hands for " + transform.name + " are missing");
         else if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
             Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
