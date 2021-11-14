@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,12 @@ using UnityEngine;
 public class PlatformController : MonoBehaviour
 {
     public Transform[] players;
+    private Rigidbody _rb;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
 
     // returns the average position of every element of followObjects
     Vector3 CalcAveragePos()
@@ -23,8 +30,9 @@ public class PlatformController : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = CalcAveragePos();
+        _rb.MovePosition(CalcAveragePos());
+        
     }
 }

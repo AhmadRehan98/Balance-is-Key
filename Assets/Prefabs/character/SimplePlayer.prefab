@@ -81,7 +81,7 @@ MonoBehaviour:
   handMaxDistance: 7
   handSpeed: 1
   handDampeningCoeff: 0.3
-  bodyAcceleration: 25
+  bodyAcceleration: 40
   handRbL: {fileID: 0}
   handRbR: {fileID: 0}
 --- !u!114 &7438222925720213220
