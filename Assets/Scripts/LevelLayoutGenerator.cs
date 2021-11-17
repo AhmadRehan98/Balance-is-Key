@@ -36,11 +36,15 @@ public class LevelLayoutGenerator : MonoBehaviour
         {
             if (i == 0)
             {
-                position_update += new Vector3(63, 0, 0);
+                position_update += new Vector3(30, 0, 0);
+            }
+            else if (i<level+delta)
+            {
+                position_update += new Vector3(105, 0, 0);
             }
             else
             {
-                position_update += new Vector3(100, 0, 0);
+                position_update += new Vector3(140, 0, 0);
             }
 
             if (i != level + delta)
