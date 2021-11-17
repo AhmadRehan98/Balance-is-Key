@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7853142830996942318}
   - component: {fileID: 4515865443603243992}
   - component: {fileID: 668426149726008485}
+  - component: {fileID: 278084409057392333}
   m_Layer: 0
   m_Name: pit wall (3)
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &278084409057392333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667675105966860738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809786, y: 0.1616501, z: 0.21696123}
+  m_Center: {x: 0, y: 0, z: 0.00000023841858}
 --- !u!1 &893343182668097650
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +106,7 @@ GameObject:
   - component: {fileID: 7627465890003299422}
   - component: {fileID: 4290337997554623080}
   - component: {fileID: 893821684966257941}
+  - component: {fileID: 8592849638370959287}
   m_Layer: 0
   m_Name: pit wall (2)
   m_TagString: Untagged
@@ -162,6 +177,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8592849638370959287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893343182668097650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809772, y: 0.1616501, z: 0.21696118}
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.00000011920929}
 --- !u!1 &1062672276023983070
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +346,7 @@ GameObject:
   - component: {fileID: 1972316142289904545}
   - component: {fileID: 1345111115431566555}
   - component: {fileID: 4741487490017594665}
+  - component: {fileID: 4887542210295499223}
   m_Layer: 0
   m_Name: pit floor
   m_TagString: Untagged
@@ -388,6 +417,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4887542210295499223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2413921447673995760}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19916177, y: 0.0054809665, z: 0.2073218}
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.00000011920929}
 --- !u!1 &2511040240852478784
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +649,7 @@ GameObject:
   - component: {fileID: 5282646199481579843}
   - component: {fileID: 1954525710567487349}
   - component: {fileID: 3238923195940659208}
+  - component: {fileID: 6995442321329502692}
   m_Layer: 0
   m_Name: pit wall
   m_TagString: Untagged
@@ -677,6 +720,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6995442321329502692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3238162411212406127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809772, y: 0.1616501, z: 0.21696118}
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.00000023841858}
 --- !u!1 &3852218421496689731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1438,7 @@ GameObject:
   - component: {fileID: 1345859441031614281}
   - component: {fileID: 4682917303788962175}
   - component: {fileID: 8579420792485434882}
+  - component: {fileID: 6731531342580127856}
   m_Layer: 0
   m_Name: pit wall (1)
   m_TagString: Untagged
@@ -1452,6 +1509,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6731531342580127856
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8580075491538979685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809786, y: 0.1616501, z: 0.21696123}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0}
 --- !u!1 &8785886644211837122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1531,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4998198545583882599}
-  - component: {fileID: 7968853312598889758}
   m_Layer: 0
   m_Name: pit
   m_TagString: Untagged
@@ -1488,16 +1557,3 @@ Transform:
   m_Father: {fileID: 6919340736636585336}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &7968853312598889758
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8785886644211837122}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
