@@ -144,7 +144,11 @@ public class PlayerController : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         for (int i = 0; i < transform.parent.childCount; i++)
         {
-            transform.parent.GetChild(i).transform.localPosition = _startingTransformPositions[i];
+            Transform c =transform.parent.GetChild(i);
+            c.transform.localPosition = _startingTransformPositions[i];
+            Rigidbody childRb = c.gameObject.GetComponent<Rigidbody>();
+            if(childRb)
+                childRb.velocity = Vector3.zero;
         }
 
         transform.parent.position = CheckpointController.lastCheckpoint.position;

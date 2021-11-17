@@ -8,7 +8,10 @@ public class CheckpointController : MonoBehaviour
     public static Transform lastCheckpoint;
     private void OnTriggerEnter(Collider other)
     {
-        lastCheckpoint = transform;
-        print("Checkpoint reached, checkpoint is now " + lastCheckpoint.position);
+        if (other.CompareTag("Ball"))
+        {
+            lastCheckpoint = transform;
+            print("Checkpoint reached, checkpoint is now " + lastCheckpoint.position);
+        }
     }
 }
