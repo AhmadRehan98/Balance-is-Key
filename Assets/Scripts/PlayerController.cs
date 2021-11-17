@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             _handTargetVecR = _handMinVec;
         }
 
-        if (transform.parent == null || transform.parent.parent == null)
+        if (transform.parent == null)
         {
             Debug.LogWarning("Player " + transform.name + " is in improper player setup hierarchy");
         }
@@ -71,13 +71,9 @@ public class PlayerController : MonoBehaviour
         {
             // store local positions of all transforms in the player setup, and their children (if any) for restarting from checkpoint
             _startingTransformPositions = new List<Vector3>();
-            for (int i = 0; i < transform.parent.parent.childCount; i++)
+            for (int i = 0; i < transform.parent.childCount; i++)
             {
-                _startingTransformPositions.Add(transform.parent.parent.GetChild(i).transform.localPosition);
-                for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
-                {
-                    _startingTransformPositions.Add(transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition);
-                }
+                _startingTransformPositions.Add(transform.parent.GetChild(i).transform.localPosition);
             }
         }
         
@@ -146,20 +142,11 @@ public class PlayerController : MonoBehaviour
     public void OnResetScene(InputAction.CallbackContext input)
     {
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        int currTransformIdx = 0;
-        for (int i = 0; i < transform.parent.parent.childCount; i++)
+        for (int i = 0; i < transform.parent.childCount; i++)
         {
-            transform.parent.parent.GetChild(i).transform.localPosition = _startingTransformPositions[currTransformIdx];
-            currTransformIdx += 1;
-            for (int j = 0; j < transform.parent.parent.GetChild(i).childCount; j++)
-            {
-                transform.parent.parent.GetChild(i).GetChild(j).transform.localPosition = _startingTransformPositions[currTransformIdx];
-                currTransformIdx += 1;
-            }
+            transform.parent.GetChild(i).transform.localPosition = _startingTransformPositions[i];
         }
 
-        transform.parent.parent.position = CheckpointController.lastCheckpoint.position;
-        ;
-        ;
+        transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
 }
