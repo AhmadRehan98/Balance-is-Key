@@ -43,7 +43,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dc7013ba7b6573c47848c939785e75f5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -301,6 +301,7 @@ MonoBehaviour:
   p2FootSteps: {fileID: 4812233898475259918}
   handMove: {fileID: 4812233896766391599}
   ballLandSoft: {fileID: 5417785435298464348}
+  volumeSlider: {fileID: 0}
 --- !u!1 &4812233896766391585
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,7 +668,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e0c335f1672cdf40aaf6035a88dd168, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -794,7 +795,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dd349fc3c5595e24c8f128cb39b6090c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
