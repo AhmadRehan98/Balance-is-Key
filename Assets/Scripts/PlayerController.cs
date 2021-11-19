@@ -153,4 +153,10 @@ public class PlayerController : MonoBehaviour
 
         transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
+    
+    public void onButtonA(InputAction.CallbackContext input)
+    {
+        gameObject.transform.localScale = new Vector3(2, 2, 2);
+    }
+    
 }
