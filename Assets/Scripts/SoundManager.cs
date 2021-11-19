@@ -1,23 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
 
 public class SoundManager : MonoBehaviour
 {
     public AudioSource p1FootSteps, p2FootSteps, handMove, ballLandSoft;
-    private float lastBallLand;
+    private float _lastBallLand;
     // Start is called before the first frame update
     void Start()
     {
-        lastBallLand = 0.0f;
+        if (PlayerPrefs.HasKey("volumeLevel"))
+        {
+            Console.Write("Previous Volume Found");
+            AudioListener.volume = PlayerPrefs.GetFloat("volumeLevel");
+        }
+        _lastBallLand = 0.0f;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void PlayFootStep(float scale=1.0f)
     {
         p1FootSteps.volume = Random.Range(0.15f, 0.25f) * scale;
@@ -45,12 +47,12 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBallLandSoft(float scale = 1.0f)
     {
-        if (Time.time - lastBallLand >= 0.5f)
+        if (Time.time - _lastBallLand >= 0.5f)
         {
             ballLandSoft.volume = Random.Range(0.8f, 1) * scale;
             ballLandSoft.pitch = Random.Range(0.8f, 1.1f) * scale;
             ballLandSoft.Play();
-            lastBallLand = Time.time;
+            _lastBallLand = Time.time;
         }
     }
 }

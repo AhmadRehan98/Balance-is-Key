@@ -9,6 +9,7 @@ TagManager:
   - start_pad
   - player_setup
   - Ball
+  - volumeSlider
   layers:
   - Default
   - TransparentFX
