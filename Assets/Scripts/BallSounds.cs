@@ -19,9 +19,9 @@ public class BallSounds : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Ball"))
+        if (other.relativeVelocity.magnitude > 3)
         {
             Debug.Log("Ball touched the ground");
             // TODO: show message telling player to restart from checkpoint
