@@ -47,7 +47,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBallLandSoft(float scale = 1.0f)
     {
-        if (Time.time - _lastBallLand >= 0.5f)
+        if (Time.time - _lastBallLand >= 1f)
         {
             ballLandSoft.volume = Random.Range(0.8f, 1) * scale;
             ballLandSoft.pitch = Random.Range(0.8f, 1.1f) * scale;
