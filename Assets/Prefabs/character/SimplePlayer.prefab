@@ -186,6 +186,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4217003289445916515}
     m_Modifications:
+    - target: {fileID: 565006208171740147, guid: 8fe5910d479f3bd489c9d646d1213e0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5bc0785c11716646b67f0a6d1b42a63, type: 2}
     - target: {fileID: 2473393583083530102, guid: 8fe5910d479f3bd489c9d646d1213e0b,
         type: 3}
       propertyPath: m_Name
@@ -260,7 +265,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 80c0960a33b17f244994fde9ec1616b8, type: 2}
+      objectReference: {fileID: 2100000, guid: 9030a1fe491aaaf40bcd14e1363fb3a1, type: 2}
+    - target: {fileID: 4796579673463698369, guid: 8fe5910d479f3bd489c9d646d1213e0b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d5bc0785c11716646b67f0a6d1b42a63, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe5910d479f3bd489c9d646d1213e0b, type: 3}
 --- !u!4 &919102961310078751 stripped
