@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 1
-  handMaxDistance: 7
+  handMaxDistance: 8
   handSpeed: 1
   handDampeningCoeff: 0.3
   bodyAcceleration: 40
