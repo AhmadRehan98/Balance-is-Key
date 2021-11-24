@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class TasselMoving : MonoBehaviour
 {
+    public float volumeMin = 0.025f, volumeMax = 0.05f;
     private Vector3 lastPos;
     public AudioSource audiosrc;
     // private SoundManager sm;
@@ -32,7 +33,7 @@ public class TasselMoving : MonoBehaviour
         // audiosrc.pitch = Random.Range(0.95f, 1.05f);
         if (y_movement > positionSensetivity && !audiosrc.isPlaying)
         {
-            audiosrc.volume = Random.Range(0.1f, 0.2f);
+            audiosrc.volume = Random.Range(volumeMin, volumeMax);
             audiosrc.Play();
             // sm.PlayHandMove();
         }
