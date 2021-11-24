@@ -32,13 +32,10 @@ public class IsMoving : MonoBehaviour
     {
         float x_movement = Math.Abs(gameObject.GetComponent<Rigidbody>().transform.position.x - lastPos.x);
         float z_movement = Math.Abs(gameObject.GetComponent<Rigidbody>().transform.position.z - lastPos.z);
-        if (x_movement > positionSensetivity) {
-            Debug.Log("x: " + x_movement + " sens: " + positionSensetivity);
-        }
-
-        if (z_movement > positionSensetivity) {
-            Debug.Log("z: " + z_movement + " sens: " + positionSensetivity);
-        }
+        // if (x_movement > positionSensetivity)
+        //     Debug.Log("x: " + x_movement + " sens: " + positionSensetivity);
+        // if (z_movement > positionSensetivity)
+        //     Debug.Log("z: " + z_movement + " sens: " + positionSensetivity);
 
         if (x_movement > positionSensetivity || z_movement > positionSensetivity)
         {
