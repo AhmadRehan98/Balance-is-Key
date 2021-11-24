@@ -38,7 +38,7 @@ public class GenerateMesh : MonoBehaviour
         x = scaleX * x - offsetX;
         z = scaleZ * z - offsetZ;
         float y = Mathf.Sin(Mathf.Pow(x, meshSquareness * 2.0f) + Mathf.Pow(z, meshSquareness * 2.0f));
-        return y * scaleY;
+        return y * scaleY + offsetY;
     }
 
     [ContextMenu("Generate Mesh")]
