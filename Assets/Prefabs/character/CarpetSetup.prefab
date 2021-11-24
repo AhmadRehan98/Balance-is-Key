@@ -12,7 +12,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.631013, y: 1.4950027, z: 3.6329966}
+  m_ConnectedAnchor: {x: 3.6310058, y: 1.4949999, z: 3.633006}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -215,7 +215,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 3.631013, y: 1.4950027, z: -3.6329966}
+  m_ConnectedAnchor: {x: 3.6310058, y: 1.4949999, z: -3.633006}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -311,7 +311,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.631013, y: 1.4950027, z: -3.6329966}
+  m_ConnectedAnchor: {x: -3.6310058, y: 1.4949999, z: -3.633006}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -407,7 +407,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -3.631013, y: 1.4950027, z: 3.6329966}
+  m_ConnectedAnchor: {x: -3.6310058, y: 1.4949999, z: 3.633006}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -886,6 +886,11 @@ PrefabInstance:
       propertyPath: handRbR
       value: 
       objectReference: {fileID: 3880717465092306092}
+    - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Name
@@ -1144,12 +1149,12 @@ PrefabInstance:
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 3.000001
+      value: 3.000002
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.348999
+      value: 1.349
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
@@ -1270,7 +1275,7 @@ PrefabInstance:
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.348999
+      value: 1.349
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
@@ -1406,7 +1411,7 @@ PrefabInstance:
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.348999
+      value: 1.349
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
@@ -1444,6 +1449,11 @@ PrefabInstance:
       propertyPath: handRbR
       value: 
       objectReference: {fileID: 3880717465393700803}
+    - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: player
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Name
@@ -1627,12 +1637,12 @@ PrefabInstance:
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -3.000001
+      value: -3.000002
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 1.348999
+      value: 1.349
       objectReference: {fileID: 0}
     - target: {fileID: 7775791990716125551, guid: 56bf09e9c8a8bc24abccfeceae72be60,
         type: 3}

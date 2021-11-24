@@ -6,6 +6,7 @@ public class LoadAccessories : MonoBehaviour
 {
     private GameObject child, hat, belt;
 
+    [Range(1, 2)]
     public int player; 
     // Start is called before the first frame update
     void Start()
