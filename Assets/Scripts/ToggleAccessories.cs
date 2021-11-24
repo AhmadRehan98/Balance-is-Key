@@ -36,7 +36,7 @@ public class ToggleAccessories : MonoBehaviour
         
     }
 
-    public void RemoveHat()
+    public void ToggleHat()
     {
         if (player == 1) {
             StaticClass.hat_visible_p1 = !StaticClass.hat_visible_p1;
@@ -48,7 +48,7 @@ public class ToggleAccessories : MonoBehaviour
         }
     }
 
-    public void RemoveBelt()
+    public void ToggleBelt()
     {
         if (player == 1) {
             StaticClass.belt_visible_p1 = !StaticClass.belt_visible_p1;
