@@ -199,11 +199,6 @@ public class GenerateMesh : MonoBehaviour
         {
             DestroyImmediate(c);
         }
-
-        for (int i = transform.childCount - 1; i >= 0; i--)
-        {
-            DestroyImmediate(transform.GetChild(i).gameObject);
-        }
     }
 
     // saving an asset causes issues during build, so we can exclude this method unless it is run in the editor
