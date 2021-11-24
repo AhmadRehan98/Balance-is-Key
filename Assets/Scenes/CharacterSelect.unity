@@ -504,7 +504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &925601342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1674,6 +1674,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 8d9627c1-0043-4568-b5a2-c071fa4658f3
     m_ActionName: In Game/Button A
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: db0a0745-5479-44bd-9c5b-07f8affbcd8f
+    m_ActionName: In Game/Button B[/DualShock4GamepadHID/buttonEast,/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7a6b112f-6c5f-41f8-b6c6-b2eb4ea7e560
+    m_ActionName: In Game/Button X[/DualShock4GamepadHID/buttonWest,/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 172ef89d-d448-4dfa-9414-effcc2e9b963
+    m_ActionName: In Game/Button Y[/DualShock4GamepadHID/buttonNorth,/XInputControllerWindows/buttonNorth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: In Game
