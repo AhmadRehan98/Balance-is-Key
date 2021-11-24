@@ -49,6 +49,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button A"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d9627c1-0043-4568-b5a2-c071fa4658f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -172,6 +180,17 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Reset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e621522-51c0-4576-be8a-8a9005866931"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -196,6 +215,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_InGame_LeftArm = m_InGame.FindAction("LeftArm", throwIfNotFound: true);
         m_InGame_RightArm = m_InGame.FindAction("RightArm", throwIfNotFound: true);
         m_InGame_Reset = m_InGame.FindAction("Reset", throwIfNotFound: true);
+        m_InGame_ButtonA = m_InGame.FindAction("Button A", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +269,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_InGame_LeftArm;
     private readonly InputAction m_InGame_RightArm;
     private readonly InputAction m_InGame_Reset;
+    private readonly InputAction m_InGame_ButtonA;
     public struct InGameActions
     {
         private @Player m_Wrapper;
@@ -257,6 +278,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @LeftArm => m_Wrapper.m_InGame_LeftArm;
         public InputAction @RightArm => m_Wrapper.m_InGame_RightArm;
         public InputAction @Reset => m_Wrapper.m_InGame_Reset;
+        public InputAction @ButtonA => m_Wrapper.m_InGame_ButtonA;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -278,6 +300,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Reset.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
                 @Reset.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
                 @Reset.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
+                @ButtonA.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
+                @ButtonA.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
+                @ButtonA.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -294,6 +319,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @Reset.started += instance.OnReset;
                 @Reset.performed += instance.OnReset;
                 @Reset.canceled += instance.OnReset;
+                @ButtonA.started += instance.OnButtonA;
+                @ButtonA.performed += instance.OnButtonA;
+                @ButtonA.canceled += instance.OnButtonA;
             }
         }
     }
@@ -313,5 +341,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnLeftArm(InputAction.CallbackContext context);
         void OnRightArm(InputAction.CallbackContext context);
         void OnReset(InputAction.CallbackContext context);
+        void OnButtonA(InputAction.CallbackContext context);
     }
 }

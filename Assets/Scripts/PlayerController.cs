@@ -9,9 +9,12 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [Range(1, 2)] // only support 2 players for now
-    public int player = 1;
-
+    // Component references
+    public Rigidbody handRbL, handRbR;
+    private Rigidbody _bodyRb;
+    private Transform _camTransform; // camera transform for relative inputs
+    private Animator _animator;
+    
     // hand parameters
     public float handMaxDistance; // min and max distance hand can travel
     public float handSpeed; // speed hands move at
@@ -20,34 +23,27 @@ public class PlayerController : MonoBehaviour
     // body parameters
     public float bodyAcceleration = 50f; // net force increase per FixedUpdate call
 
-
-    // rigid bodies
-    private Rigidbody _bodyRb;
-    public Rigidbody handRbL, handRbR;
-
     // hand private vars
     private Vector3 _handMinVec, _handMaxVec; // based on handMinDistance and handMaxDistance. For use with Vector3.Lerp()
     private Vector3 _handTargetVecL, _handTargetVecR; // desired position of hands based on user input
     private Vector3 _handMoveDirL, _handMoveDirR; // direction and magnitude to move hand in to reach desired position
     private Vector3 _handStartingPosL, _handStartingPosR; // local starting position of hands
 
-    // body input vector
+    // user input vector
     private Vector3 _moveInput = Vector3.zero;
 
     // starting local positions for checkpoint system
     private List<Vector3> _startingTransformPositions;
 
-    // camera transform for relative inputs
-    private Transform _camTransform;
 
-    private bool _hasHands;
-    
     void Start()
     {
         // assign component references
-        
         _bodyRb = GetComponent<Rigidbody>();
-        
+        _animator = GetComponentInChildren<Animator>();
+        if (_animator == null)
+            Debug.LogWarning(transform.name + "Missing AnimatorController");
+
         if (handRbL == null || handRbR == null)
             Debug.LogWarning("Hands for " + transform.name + " are missing");
         else if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
@@ -76,7 +72,7 @@ public class PlayerController : MonoBehaviour
                 _startingTransformPositions.Add(transform.parent.GetChild(i).transform.localPosition);
             }
         }
-        
+
         if (Camera.main is { }) _camTransform = Camera.main.transform;
     }
 
@@ -102,6 +98,9 @@ public class PlayerController : MonoBehaviour
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
+        // change animation blend based on user input
+        _animator.SetFloat("inputX", _moveInput.x);
+        _animator.SetFloat("inputY", _moveInput.z);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext input)
@@ -144,13 +143,19 @@ public class PlayerController : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         for (int i = 0; i < transform.parent.childCount; i++)
         {
-            Transform c =transform.parent.GetChild(i);
+            Transform c = transform.parent.GetChild(i);
             c.transform.localPosition = _startingTransformPositions[i];
             Rigidbody childRb = c.gameObject.GetComponent<Rigidbody>();
-            if(childRb)
+            if (childRb)
                 childRb.velocity = Vector3.zero;
         }
 
         transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
+    
+    public void onButtonA(InputAction.CallbackContext input)
+    {
+        gameObject.transform.localScale = new Vector3(2, 2, 2);
+    }
+    
 }

@@ -1916,9 +1916,10 @@ GameObject:
   - component: {fileID: 1633554168676454842}
   - component: {fileID: 6582948035594474982}
   - component: {fileID: 6582948035594474983}
+  - component: {fileID: 8448084635528943098}
   m_Layer: 0
   m_Name: floor 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2013,8 +2014,20 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.063976854, y: 0.005480962, z: 0.21696118}
-  m_Center: {x: -0.000000096857555, y: -4.656613e-10, z: 0}
+  m_Size: {x: 0.063976854, y: 0.005490441, z: 0.21696118}
+  m_Center: {x: -0.000000096874615, y: 0.0000047390276, z: -2.3904122e-14}
+--- !u!114 &8448084635528943098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6785003764523151108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294d38582cf641541bc0f3e3f9ec63f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7654259269519653192
 GameObject:
   m_ObjectHideFlags: 0

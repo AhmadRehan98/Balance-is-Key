@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 342354316231739374}
   m_Layer: 0
   m_Name: floor 1 (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 186709276112536180}
   m_Layer: 0
   m_Name: floor 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -677,7 +677,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: 0.015333302}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: 0.015333302}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -713,7 +713,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: -0.017666575}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: -0.017666575}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -863,7 +863,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: 0.017499948}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: 0.017499948}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -899,7 +899,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: -0.015833383}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: -0.015833383}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1083,7 +1083,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: 0.017833378}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: 0.017833378}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1119,7 +1119,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: -0.016166661}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: -0.016166661}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1269,7 +1269,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: 0.016166635}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: 0.016166635}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1305,7 +1305,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: -0.01683324}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: -0.01683324}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1455,7 +1455,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: 0.01600006}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: 0.01600006}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1491,7 +1491,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: -0.01833323}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: -0.01833323}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1529,7 +1529,7 @@ GameObject:
   - component: {fileID: 1211501651167381774}
   m_Layer: 0
   m_Name: tile (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 1211501651795995310}
   m_Layer: 0
   m_Name: tile (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1871,7 +1871,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: 0.016666615}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: 0.016666615}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1907,7 +1907,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: -0.016666716}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: -0.016666716}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1945,7 +1945,7 @@ GameObject:
   - component: {fileID: 1211501652000902857}
   m_Layer: 0
   m_Name: tile (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2192,7 +2192,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: 0.017000046}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: 0.017000046}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2228,7 +2228,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.009449997, y: 0.04999981, z: -0.016999993}
+  m_ConnectedAnchor: {x: 0.009449997, y: 0.05000019, z: -0.016999993}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2266,7 +2266,7 @@ GameObject:
   - component: {fileID: 1211501652091126352}
   m_Layer: 0
   m_Name: tile (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2476,7 +2476,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: 0.016833393}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: 0.016833393}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -2512,7 +2512,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.008949989, y: 0.04999981, z: -0.017499898}
+  m_ConnectedAnchor: {x: -0.008949989, y: 0.05000019, z: -0.017499898}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -3467,7 +3467,7 @@ GameObject:
   - component: {fileID: 8222891200664427518}
   m_Layer: 0
   m_Name: tile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

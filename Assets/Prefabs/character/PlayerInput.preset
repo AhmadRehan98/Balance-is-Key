@@ -52,7 +52,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActionEvents.Array.size
-    value: 4
+    value: 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
@@ -277,6 +277,18 @@ Preset:
   - target: {fileID: 0}
     propertyPath: m_ActionEvents.Array.data[3].m_ActionName
     value: In Game/Reset[/XInputControllerWindows/start,/DualShock4GamepadHID/start]
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+    value: 8d9627c1-0043-4568-b5a2-c071fa4658f3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+    value: In Game/Button A[/DualShock4GamepadHID/buttonSouth]
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_NeverAutoSwitchControlSchemes
