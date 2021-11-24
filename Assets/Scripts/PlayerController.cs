@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
     // starting local positions for checkpoint system
     private List<Vector3> _startingTransformPositions;
+    
+    // for toggling accessories/cosmetics
+    ToggleAccessories togAcc;
 
 
     void Start()
@@ -74,6 +77,8 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Camera.main is { }) _camTransform = Camera.main.transform;
+
+        togAcc = gameObject.GetComponent<ToggleAccessories>();
     }
 
 
@@ -155,7 +160,12 @@ public class PlayerController : MonoBehaviour
     
     public void onButtonA(InputAction.CallbackContext input)
     {
-        gameObject.transform.localScale = new Vector3(2, 2, 2);
+        togAcc.ToggleHat();
+    }
+
+    public void onButtonB(InputAction.CallbackContext input)
+    {
+        togAcc.ToggleBelt();
     }
     
 }

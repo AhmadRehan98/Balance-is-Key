@@ -156,6 +156,46 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b552b129-4a25-4013-ba3c-c0a4586b8739
     m_ActionName: In Game/Reset[/XInputControllerWindows/start,/DualShock4GamepadHID/start]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 538244706818552081}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: onButtonA
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_ActionId: 8d9627c1-0043-4568-b5a2-c071fa4658f3
+    m_ActionName: In Game/Button A
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 538244706818552081}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: onButtonB
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_ActionId: db0a0745-5479-44bd-9c5b-07f8affbcd8f
+    m_ActionName: In Game/Button B
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7a6b112f-6c5f-41f8-b6c6-b2eb4ea7e560
+    m_ActionName: In Game/Button X
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 172ef89d-d448-4dfa-9414-effcc2e9b963
+    m_ActionName: In Game/Button Y
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: In Game
