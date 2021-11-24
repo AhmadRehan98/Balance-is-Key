@@ -52,11 +52,11 @@ public class ToggleAccessories : MonoBehaviour
     {
         if (player == 1) {
             StaticClass.belt_visible_p1 = !StaticClass.belt_visible_p1;
-            hat.SetActive(StaticClass.belt_visible_p1);
+            belt.SetActive(StaticClass.belt_visible_p1);
         }
         else if (player == 2) {
             StaticClass.belt_visible_p2 = !StaticClass.belt_visible_p2;
-            hat.SetActive(StaticClass.belt_visible_p2);
+            belt.SetActive(StaticClass.belt_visible_p2);
         }
     }
 }
