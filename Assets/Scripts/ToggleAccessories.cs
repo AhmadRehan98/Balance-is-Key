@@ -5,8 +5,9 @@ using UnityEngine.InputSystem.XR.Haptics;
 
 public class ToggleAccessories : MonoBehaviour
 {
-    private GameObject child, hat, belt; 
-    bool hat_visible, belt_visible;
+    private GameObject child, hat, belt;
+
+    public int player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,12 @@ public class ToggleAccessories : MonoBehaviour
         child = child.transform.GetChild(0).gameObject;
         belt = child.transform.GetChild(0).gameObject;
         hat = child.transform.GetChild(1).gameObject;
-        // Debug.Log(belt.name);
-        // Debug.Log(hat.name);
-        hat_visible = belt_visible = true;
+        Debug.Log(belt.name);
+        Debug.Log(hat.name);
+        if (player == 1)
+            StaticClass.hat_visible_p1 = StaticClass.belt_visible_p1 = true;
+        else if (player == 2)
+            StaticClass.hat_visible_p2 = StaticClass.belt_visible_p2 = true;
     }
 
     // Update is called once per frame
@@ -34,13 +38,25 @@ public class ToggleAccessories : MonoBehaviour
 
     public void RemoveHat()
     {
-        hat_visible = !hat_visible;
-        hat.SetActive(hat_visible);
+        if (player == 1) {
+            StaticClass.hat_visible_p1 = !StaticClass.hat_visible_p1;
+            hat.SetActive(StaticClass.hat_visible_p1);
+        }
+        else if (player == 2) {
+            StaticClass.hat_visible_p2 = !StaticClass.hat_visible_p2;
+            hat.SetActive(StaticClass.hat_visible_p2);
+        }
     }
 
     public void RemoveBelt()
     {
-        belt_visible = !belt_visible;
-        belt.SetActive(belt_visible);
+        if (player == 1) {
+            StaticClass.belt_visible_p1 = !StaticClass.belt_visible_p1;
+            hat.SetActive(StaticClass.belt_visible_p1);
+        }
+        else if (player == 2) {
+            StaticClass.belt_visible_p2 = !StaticClass.belt_visible_p2;
+            hat.SetActive(StaticClass.belt_visible_p2);
+        }
     }
 }

@@ -37,6 +37,21 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 1.348999
       objectReference: {fileID: 0}
+    - target: {fileID: 1126439741435887637, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126439741435887637, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 8d9627c1-0043-4568-b5a2-c071fa4658f3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1126439741435887637, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: In Game/Button A
+      objectReference: {fileID: 0}
     - target: {fileID: 2351993816921753893, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -50,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 7536785714712202792, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
         type: 3}
       propertyPath: m_Name
-      value: RoundedPlatformSetup Variant
+      value: RoundedPlatformSetup (no ball)
       objectReference: {fileID: 0}
     - target: {fileID: 7536785714712202799, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
         type: 3}
@@ -107,6 +122,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7855782534447572065, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7855782534447572065, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 8d9627c1-0043-4568-b5a2-c071fa4658f3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7855782534447572065, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: In Game/Button A
+      objectReference: {fileID: 0}
     - target: {fileID: 7971340413823957628, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
         type: 3}
       propertyPath: m_IsActive
@@ -119,3 +149,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba, type: 3}
+--- !u!1 &3551549401184215187 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4319697830423623516, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 773217358251218895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6047508776318813415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6437354878601827112, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 773217358251218895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6276313528241120936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3551549401184215187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770b480a6bfb59a47aacaf0c7bfc333b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 1
+--- !u!114 &1635562377253843029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047508776318813415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 770b480a6bfb59a47aacaf0c7bfc333b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 2

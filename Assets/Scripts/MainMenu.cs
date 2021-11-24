@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit Button Pressed");
         Application.Quit();
     }
+    
+    public void LoadPreviousScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }
