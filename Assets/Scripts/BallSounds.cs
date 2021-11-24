@@ -21,7 +21,8 @@ public class BallSounds : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.relativeVelocity.magnitude > 3)
+        Debug.Log(other.relativeVelocity.y);
+        if ((other.collider.tag == "Ground" || other.collider.tag == "Dirt") && other.relativeVelocity.magnitude > 1)
         {
             Debug.Log("Ball touched the ground");
             // TODO: show message telling player to restart from checkpoint

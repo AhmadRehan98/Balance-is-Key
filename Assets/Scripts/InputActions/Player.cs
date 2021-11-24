@@ -49,6 +49,38 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button A"",
+                    ""type"": ""Button"",
+                    ""id"": ""8d9627c1-0043-4568-b5a2-c071fa4658f3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button B"",
+                    ""type"": ""Button"",
+                    ""id"": ""db0a0745-5479-44bd-9c5b-07f8affbcd8f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button X"",
+                    ""type"": ""Button"",
+                    ""id"": ""7a6b112f-6c5f-41f8-b6c6-b2eb4ea7e560"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Button Y"",
+                    ""type"": ""Button"",
+                    ""id"": ""172ef89d-d448-4dfa-9414-effcc2e9b963"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -172,6 +204,50 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Reset"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e621522-51c0-4576-be8a-8a9005866931"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ca69b82-f894-428f-8650-7ba321e75a09"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button B"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4befa79f-1e53-4715-9716-e50d030cfbc4"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button X"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9051819e-5a30-4641-8718-ef4cf1387da7"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button Y"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -196,6 +272,10 @@ public class @Player : IInputActionCollection, IDisposable
         m_InGame_LeftArm = m_InGame.FindAction("LeftArm", throwIfNotFound: true);
         m_InGame_RightArm = m_InGame.FindAction("RightArm", throwIfNotFound: true);
         m_InGame_Reset = m_InGame.FindAction("Reset", throwIfNotFound: true);
+        m_InGame_ButtonA = m_InGame.FindAction("Button A", throwIfNotFound: true);
+        m_InGame_ButtonB = m_InGame.FindAction("Button B", throwIfNotFound: true);
+        m_InGame_ButtonX = m_InGame.FindAction("Button X", throwIfNotFound: true);
+        m_InGame_ButtonY = m_InGame.FindAction("Button Y", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +329,10 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_InGame_LeftArm;
     private readonly InputAction m_InGame_RightArm;
     private readonly InputAction m_InGame_Reset;
+    private readonly InputAction m_InGame_ButtonA;
+    private readonly InputAction m_InGame_ButtonB;
+    private readonly InputAction m_InGame_ButtonX;
+    private readonly InputAction m_InGame_ButtonY;
     public struct InGameActions
     {
         private @Player m_Wrapper;
@@ -257,6 +341,10 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @LeftArm => m_Wrapper.m_InGame_LeftArm;
         public InputAction @RightArm => m_Wrapper.m_InGame_RightArm;
         public InputAction @Reset => m_Wrapper.m_InGame_Reset;
+        public InputAction @ButtonA => m_Wrapper.m_InGame_ButtonA;
+        public InputAction @ButtonB => m_Wrapper.m_InGame_ButtonB;
+        public InputAction @ButtonX => m_Wrapper.m_InGame_ButtonX;
+        public InputAction @ButtonY => m_Wrapper.m_InGame_ButtonY;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -278,6 +366,18 @@ public class @Player : IInputActionCollection, IDisposable
                 @Reset.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
                 @Reset.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
                 @Reset.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnReset;
+                @ButtonA.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
+                @ButtonA.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
+                @ButtonA.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonA;
+                @ButtonB.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonB;
+                @ButtonB.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonB;
+                @ButtonB.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonB;
+                @ButtonX.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonX;
+                @ButtonX.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonX;
+                @ButtonX.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonX;
+                @ButtonY.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
+                @ButtonY.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
+                @ButtonY.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -294,6 +394,18 @@ public class @Player : IInputActionCollection, IDisposable
                 @Reset.started += instance.OnReset;
                 @Reset.performed += instance.OnReset;
                 @Reset.canceled += instance.OnReset;
+                @ButtonA.started += instance.OnButtonA;
+                @ButtonA.performed += instance.OnButtonA;
+                @ButtonA.canceled += instance.OnButtonA;
+                @ButtonB.started += instance.OnButtonB;
+                @ButtonB.performed += instance.OnButtonB;
+                @ButtonB.canceled += instance.OnButtonB;
+                @ButtonX.started += instance.OnButtonX;
+                @ButtonX.performed += instance.OnButtonX;
+                @ButtonX.canceled += instance.OnButtonX;
+                @ButtonY.started += instance.OnButtonY;
+                @ButtonY.performed += instance.OnButtonY;
+                @ButtonY.canceled += instance.OnButtonY;
             }
         }
     }
@@ -313,5 +425,9 @@ public class @Player : IInputActionCollection, IDisposable
         void OnLeftArm(InputAction.CallbackContext context);
         void OnRightArm(InputAction.CallbackContext context);
         void OnReset(InputAction.CallbackContext context);
+        void OnButtonA(InputAction.CallbackContext context);
+        void OnButtonB(InputAction.CallbackContext context);
+        void OnButtonX(InputAction.CallbackContext context);
+        void OnButtonY(InputAction.CallbackContext context);
     }
 }
