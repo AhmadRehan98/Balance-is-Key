@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6566615283793423035}
+  - component: {fileID: 966565375086076944}
+  - component: {fileID: 9141283903414867747}
   m_Layer: 0
   m_Name: PhysicsTassel
   m_TagString: Untagged
@@ -23,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566615283793423032}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.631, y: 1.495, z: 3.633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -32,47 +34,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6566615284159077214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6566615284159077211}
-  - component: {fileID: 6566615284159077208}
-  - component: {fileID: 6566615284159077209}
-  - component: {fileID: 6566615284159077210}
-  m_Layer: 0
-  m_Name: TasselBall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6566615284159077211
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566615284159077214}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6566615284997660898}
-  m_Father: {fileID: 6566615283793423035}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6566615284159077208
+--- !u!54 &966565375086076944
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566615284159077214}
+  m_GameObject: {fileID: 6566615283793423032}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -80,21 +48,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 0
   m_CollisionDetection: 0
---- !u!153 &6566615284159077209
+--- !u!153 &9141283903414867747
 ConfigurableJoint:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566615284159077214}
-  m_ConnectedBody: {fileID: 6566615284580988943}
+  m_GameObject: {fileID: 6566615283793423032}
+  m_ConnectedBody: {fileID: 0}
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0000016015802, y: -0.0000019073489, z: 0.0000017701676}
+  m_ConnectedAnchor: {x: 3.631, y: 1.495, z: 3.633}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -177,21 +145,38 @@ ConfigurableJoint:
   m_EnableCollision: 0
   m_EnablePreprocessing: 1
   m_MassScale: 1
-  m_ConnectedMassScale: 100
---- !u!114 &6566615284159077210
-MonoBehaviour:
+  m_ConnectedMassScale: 1
+--- !u!1 &6566615284159077214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6566615284159077211}
+  m_Layer: 0
+  m_Name: TasselBall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6566615284159077211
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566615284159077214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51ceca50237776c4e86e175f0b69286b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mesh: {fileID: 6566615284997660899}
-  objectTransform: {fileID: 6566615284159077211}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6566615284997660898}
+  m_Father: {fileID: 6566615283793423035}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6566615284580988940
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,8 +186,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6566615284580988942}
-  - component: {fileID: 6566615284580988943}
-  - component: {fileID: 6566615284580988937}
   m_Layer: 0
   m_Name: Tassel
   m_TagString: Untagged
@@ -225,36 +208,6 @@ Transform:
   m_Father: {fileID: 6566615283793423035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 90}
---- !u!54 &6566615284580988943
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566615284580988940}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &6566615284580988937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6566615284580988940}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c6cbc040aaa9ac449c04528676b1704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gravityScale: 5
-  centerOfMassOffset: {x: -0.5, y: 0, z: 0.5}
 --- !u!1 &6566615284997660899
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +247,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566615284997660899}
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 4300000, guid: f6ab1edb437fee64ca781cfcc7406b3d, type: 2}
 --- !u!23 &6566615284997660829
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -375,7 +328,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566615285219187785}
-  m_Mesh: {fileID: -7781274256488932565, guid: 77f60ab5ab33ac543bc5dcf83407ea45, type: 3}
+  m_Mesh: {fileID: 4300000, guid: f0f0f578f1b457f48a112aa12264b607, type: 2}
 --- !u!23 &6566615285219187787
 MeshRenderer:
   m_ObjectHideFlags: 0

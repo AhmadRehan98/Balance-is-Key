@@ -18,6 +18,7 @@ public class DoorTrigger : MonoBehaviour
         if (other.CompareTag("Ball") || other.CompareTag("Player") && GameObject.FindWithTag("Ball") == null)
         {
             _animator.speed = 0.5f;
+            
         }
     }
 }
