@@ -823,7 +823,7 @@ MonoBehaviour:
   - {fileID: 1030441006806421989}
   handMove: {fileID: 4812233896766391599}
   ballLandSoft: {fileID: 5417785435298464348}
-  tourchBurn: {fileID: 5349556361008349536}
+  torchBurn: {fileID: 5349556361008349536}
   doorCrack: {fileID: 4503657475816922345}
 --- !u!1 &4812233896766391585
 GameObject:
