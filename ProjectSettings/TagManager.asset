@@ -10,6 +10,8 @@ TagManager:
   - player_setup
   - Ball
   - volumeSlider
+  - Dirt
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - PlatformBorder
+  - IgnorePlatform
   - Platform
   - 
   - 
