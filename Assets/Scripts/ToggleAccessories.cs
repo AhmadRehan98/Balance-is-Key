@@ -24,39 +24,17 @@ public class ToggleAccessories : MonoBehaviour
         hat = child.transform.GetChild(1).gameObject;
         // Debug.Log(belt.name);
         // Debug.Log(hat.name);
-        if (player == 1)
-            StaticClass.hat_visible_p1 = StaticClass.belt_visible_p1 = true;
-        else if (player == 2)
-            StaticClass.hat_visible_p2 = StaticClass.belt_visible_p2 = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ToggleHat()
     {
-        if (player == 1) {
-            StaticClass.hat_visible_p1 = !StaticClass.hat_visible_p1;
-            hat.SetActive(StaticClass.hat_visible_p1);
-        }
-        else if (player == 2) {
-            StaticClass.hat_visible_p2 = !StaticClass.hat_visible_p2;
-            hat.SetActive(StaticClass.hat_visible_p2);
-        }
+        StaticClass.hatEnabled[player] = !StaticClass.hatEnabled[player];
+        hat.SetActive(StaticClass.hatEnabled[player]);
     }
 
     public void ToggleBelt()
     {
-        if (player == 1) {
-            StaticClass.belt_visible_p1 = !StaticClass.belt_visible_p1;
-            belt.SetActive(StaticClass.belt_visible_p1);
-        }
-        else if (player == 2) {
-            StaticClass.belt_visible_p2 = !StaticClass.belt_visible_p2;
-            belt.SetActive(StaticClass.belt_visible_p2);
-        }
+        StaticClass.beltEnabled[player] = !StaticClass.beltEnabled[player];
+        belt.SetActive(StaticClass.beltEnabled[player]);
     }
 }

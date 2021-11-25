@@ -80,7 +80,7 @@ public class @Player : IInputActionCollection, IDisposable
                     ""id"": ""172ef89d-d448-4dfa-9414-effcc2e9b963"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [

@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     private List<Vector3> _startingTransformPositions;
     
     // for toggling accessories/cosmetics
-    ToggleAccessories togAcc;
+    Accessories _accessories;
 
 
     void Start()
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
         if (Camera.main is { }) _camTransform = Camera.main.transform;
 
-        togAcc = gameObject.GetComponent<ToggleAccessories>();
+        _accessories = gameObject.GetComponent<Accessories>();
     }
 
 
@@ -104,8 +104,8 @@ public class PlayerController : MonoBehaviour
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
         // change animation blend based on user input
-        _animator.SetFloat("inputX", _moveInput.x);
-        _animator.SetFloat("inputY", _moveInput.z);
+        _animator.SetFloat("inputY", _moveInput.x);
+        _animator.SetFloat("inputX", _moveInput.z);
     }
 
     public void OnPlayerMove(InputAction.CallbackContext input)
@@ -160,12 +160,20 @@ public class PlayerController : MonoBehaviour
     
     public void onButtonA(InputAction.CallbackContext input)
     {
-        togAcc.ToggleHat();
+        if(SceneManager.GetActiveScene().name == "CharacterSelect") 
+            _accessories.ToggleHat();  
     }
 
     public void onButtonB(InputAction.CallbackContext input)
     {
-        togAcc.ToggleBelt();
+        if(SceneManager.GetActiveScene().name == "CharacterSelect") 
+            _accessories.ToggleBelt();
+    }
+    
+    public void onButtonY(InputAction.CallbackContext input)
+    {
+        if(SceneManager.GetActiveScene().name == "CharacterSelect") 
+            _accessories.NextSkin();
     }
     
 }

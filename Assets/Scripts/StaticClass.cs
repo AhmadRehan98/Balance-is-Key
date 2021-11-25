@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public static class StaticClass
 {
-    public static bool hat_visible_p1 { get; set; }
-    public static bool belt_visible_p1 { get; set; }
-    public static bool hat_visible_p2 { get; set; }
-    public static bool belt_visible_p2 { get; set; }
+    public const int MAXPlayers = 2;
     
+    public static bool[] hatEnabled = {true, true};
+    public static bool[] beltEnabled = {true, true};
     
+    public static Material[] variants = Resources.LoadAll("Materials/variants", typeof(Material)).Cast<Material>().ToArray();
+    public static int[] skin = {0, 1};
+
 }
