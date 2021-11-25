@@ -72,12 +72,12 @@ public class CameraController : MonoBehaviour
         if (viewportDistance > maxViewportDistance)
         {
             ZoomLevel = Mathf.SmoothDamp(ZoomLevel, ZoomLevel + autoZoomStep, ref zoom_Velocity, zoomSpeed);
-            print(zoomValue);
+            // print(zoomValue);
         }
         else if (viewportDistance < minViewportDistance)
         {
             ZoomLevel = Mathf.SmoothDamp(ZoomLevel, ZoomLevel - autoZoomStep, ref zoom_Velocity, zoomSpeed);
-            print(zoomValue);
+            // print(zoomValue);
         }
 
         // Calculate the new camera position. Steps:

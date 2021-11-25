@@ -22,8 +22,8 @@ public class ToggleAccessories : MonoBehaviour
         child = child.transform.GetChild(0).gameObject;
         belt = child.transform.GetChild(0).gameObject;
         hat = child.transform.GetChild(1).gameObject;
-        Debug.Log(belt.name);
-        Debug.Log(hat.name);
+        // Debug.Log(belt.name);
+        // Debug.Log(hat.name);
         if (player == 1)
             StaticClass.hat_visible_p1 = StaticClass.belt_visible_p1 = true;
         else if (player == 2)
