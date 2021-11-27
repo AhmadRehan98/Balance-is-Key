@@ -62,6 +62,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8105019215847606731, guid: 2a3172c117660a24cb9f892cbdc17541,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6249477113991786028, guid: 2a3172c117660a24cb9f892cbdc17541,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -82,8 +87,19 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cba26dd03e604f545b9e3957a38de398, type: 2}
+    - target: {fileID: 5936535407796972957, guid: 2a3172c117660a24cb9f892cbdc17541,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a3172c117660a24cb9f892cbdc17541, type: 3}
+--- !u!1 &416127175739208798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
+  m_PrefabInstance: {fileID: 650498188010014991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8106507828106841227 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8756987021385532804, guid: 2a3172c117660a24cb9f892cbdc17541,
@@ -96,6 +112,88 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 650498188010014991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4000602406329774144 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4718657407863703217, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
+  m_PrefabInstance: {fileID: 650498188010014991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7139999976573536305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1580367086865497794, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
+  m_PrefabInstance: {fileID: 650498188010014991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1384755146193995438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7336174882296246367, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
+  m_PrefabInstance: {fileID: 650498188010014991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7969295399202116022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1756518931666331463, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
+  m_PrefabInstance: {fileID: 650498188010014991}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1825336368280125465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416127175739208798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ace3ea2bb5754b5408584a0cb915b4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ikActive: 1
+  rightHandObj: {fileID: 0}
+  lookObj: {fileID: 0}
+--- !u!114 &4460846372058528698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416127175739208798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacc08aedf5800342bcb4974bb402e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ikActive: 1
+  leftHandObj: {fileID: 0}
+  lookObj: {fileID: 0}
+--- !u!114 &1444058413744649325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4000602406329774144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebf981a3b6f4824086b7f1215d948a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tassel: {fileID: 0}
+  Hand: {fileID: 7139999976573536305}
+--- !u!114 &6144542053004070889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384755146193995438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ebf981a3b6f4824086b7f1215d948a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tassel: {fileID: 0}
+  Hand: {fileID: 7969295399202116022}
 --- !u!1001 &650498188058684014
 PrefabInstance:
   m_ObjectHideFlags: 0
