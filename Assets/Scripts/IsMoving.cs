@@ -13,19 +13,13 @@ public class IsMoving : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sm = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        sm = GameObject.FindGameObjectWithTag("SoundManager")?.GetComponent<SoundManager>();
         lastPos = gameObject.GetComponent<Rigidbody>().transform.position;
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        
+        if (sm == null)
+        {
+            Debug.LogWarning("No sound manager found in scene");
+        }
     }
 
     private void OnCollisionStay(Collision other)
@@ -39,9 +33,9 @@ public class IsMoving : MonoBehaviour
 
         if (x_movement > positionSensetivity || z_movement > positionSensetivity)
         {
-            if (other.collider.tag == "Ground")
+            if (other.collider.tag == "Ground" && sm != null)
                 sm.PlayFootStepsStone();
-            else if (other.collider.tag == "Dirt")
+            else if (other.collider.tag == "Dirt" && sm != null)
                 sm.PlayFootStepsDirt();
         }
         // Debug.Log("Colliding with:" + other.collider.tag + " at speed: " + 
