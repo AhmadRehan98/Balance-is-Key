@@ -6,6 +6,7 @@ using UnityEngine;
 public class StretchPlatform : MonoBehaviour
 {
     public Transform ne, nw, se, sw;
+    public Rigidbody platformTarget;
 
     private Rect _targetShape;
     private Rect _startShape;
@@ -45,8 +46,8 @@ public class StretchPlatform : MonoBehaviour
     private void FixedUpdate()
     {
         recalculateRect();
-        transform.localPosition = new Vector3(_targetShape.x, 0, _targetShape.y);
+        platformTarget.MovePosition(new Vector3(_targetShape.x, platformTarget.position.y, _targetShape.y));
         transform.localScale = new Vector3( _targetShape.width / _startShape.width, 1, 1);
-        transform.localRotation = Quaternion.Euler(0, Vector3.Angle(ne.localPosition - se.localPosition, ne.localPosition - nw.localPosition), 0);
+        // transform.localRotation = Quaternion.Euler(0, Vector3.Angle(ne.localPosition - se.localPosition, ne.localPosition - nw.localPosition), 0);
     }
 }
