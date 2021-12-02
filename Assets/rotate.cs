@@ -18,7 +18,7 @@ public class rotate : MonoBehaviour
     {
         foreach (GameObject fan in fan_array)
         {
-            fan.transform.Rotate(0, spinspeed * Time.deltaTime, 0);
+            fan.transform.Rotate(0, -1*spinspeed * Time.deltaTime, 0);
         }
     }
 }
