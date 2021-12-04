@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 3509683483320055308}
   - component: {fileID: 2487055525416763155}
   - component: {fileID: 3081208031841770653}
+  - component: {fileID: 7063990595402208842}
   m_Layer: 0
   m_Name: HeavyBall
   m_TagString: Ball
@@ -234,6 +235,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityScale: 3
   centerOfMassOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &7063990595402208842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760694485869491667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08c8019043ebf154bb2c32ef1c93af60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9192924659960545671
 GameObject:
   m_ObjectHideFlags: 0
