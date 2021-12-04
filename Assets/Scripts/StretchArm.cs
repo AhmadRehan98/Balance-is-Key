@@ -25,7 +25,7 @@ public class StretchArm : MonoBehaviour
         if (Vector3.Distance(Hand.transform.position, Tassel.transform.position) > delta)
         {
             scale = gameObject.transform.localScale;
-            Debug.Log("here");
+            //Debug.Log("here");
             if (stretch)
             {
                 gameObject.transform.localScale = new Vector3(scale.x, scale.y + step, scale.z);

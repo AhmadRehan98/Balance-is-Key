@@ -17,7 +17,7 @@ public class BallRolling : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        Debug.Log(other.relativeVelocity.magnitude);
+        //Debug.Log(other.relativeVelocity.magnitude);
         if (other.relativeVelocity.magnitude > velocitySensetivity)
         {
             sm.PlayBallRolling(other.relativeVelocity.magnitude * 0.5f);
@@ -31,7 +31,7 @@ public class BallRolling : MonoBehaviour
     private void OnCollisionExit(Collision other)
     {
         sm.PauseBallRolling();
-        Debug.Log("exited collision");
+        //Debug.Log("exited collision");
     }
 
     
