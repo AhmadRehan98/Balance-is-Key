@@ -578,15 +578,25 @@ PrefabInstance:
       propertyPath: handRbR
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 538244706818552081, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 2818272570144610633}
     - target: {fileID: 701387394219417825, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: Tassel
       value: 
       objectReference: {fileID: 8141566834875483500}
+    - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Name
-      value: SimplePlayer
+      value: p2
       objectReference: {fileID: 0}
     - target: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
@@ -857,6 +867,11 @@ PrefabInstance:
       propertyPath: handRbR
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 538244706818552081, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 2818272570144610633}
     - target: {fileID: 701387394219417825, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: Tassel
@@ -865,6 +880,16 @@ PrefabInstance:
     - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: player
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: hatEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: beltEnabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1375344992311476733, guid: e5a428057ca530b478d371f1a41d1289,
@@ -872,10 +897,20 @@ PrefabInstance:
       propertyPath: variantSkin
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1550683008312007323, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3583180757883927187, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Name
-      value: SimplePlayer (1)
+      value: p1
       objectReference: {fileID: 0}
     - target: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
@@ -1373,6 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d6df4db8a4c3e4bb0652a51e4ff277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handStrength: 0.01
   player1: {fileID: 1265300774}
   player2: {fileID: 696047840}
   platformTarget: {fileID: 6649820185012608362}
@@ -1901,9 +1937,9 @@ ConfigurableJoint:
   m_XMotion: 0
   m_YMotion: 0
   m_ZMotion: 0
-  m_AngularXMotion: 0
+  m_AngularXMotion: 1
   m_AngularYMotion: 0
-  m_AngularZMotion: 0
+  m_AngularZMotion: 1
   m_LinearLimitSpring:
     spring: 0
     damper: 0
@@ -1919,7 +1955,7 @@ ConfigurableJoint:
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 0
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:
@@ -1930,7 +1966,7 @@ ConfigurableJoint:
     bounciness: 0
     contactDistance: 0
   m_AngularZLimit:
-    limit: 0
+    limit: 30
     bounciness: 0
     contactDistance: 0
   m_TargetPosition: {x: 0, y: 0, z: 0}
@@ -1952,7 +1988,7 @@ ConfigurableJoint:
     maximumForce: 3.4028233e+38
   m_TargetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_TargetAngularVelocity: {x: 0, y: 0, z: 0}
-  m_RotationDriveMode: 0
+  m_RotationDriveMode: 1
   m_AngularXDrive:
     serializedVersion: 3
     positionSpring: 0
@@ -1965,8 +2001,8 @@ ConfigurableJoint:
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
     serializedVersion: 3
-    positionSpring: 0
-    positionDamper: 0
+    positionSpring: 100
+    positionDamper: 100
     maximumForce: 3.4028233e+38
   m_ProjectionMode: 0
   m_ProjectionDistance: 0.1
