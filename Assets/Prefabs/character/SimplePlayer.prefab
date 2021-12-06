@@ -214,11 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab582fd6ba037542af6a7bf539dfdba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handRbL: {fileID: 0}
-  handRbR: {fileID: 0}
-  handMaxDistance: 7
-  handSpeed: 1
-  handDampeningCoeff: 0.3
+  platform: {fileID: 0}
   bodyAcceleration: 40
 --- !u!114 &3940715364128915264
 MonoBehaviour:

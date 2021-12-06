@@ -15,7 +15,7 @@ MonoBehaviour:
   hatEnabled: 1
   beltEnabled: 1
   variantSkin: 0
-  player: 1
+  player: 0
 --- !u!114 &1635562377253843029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   hatEnabled: 1
   beltEnabled: 1
   variantSkin: 0
-  player: 2
+  player: 1
 --- !u!1001 &773217358251218895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,6 +94,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 1.348999
       objectReference: {fileID: 0}
+    - target: {fileID: 2610605821310529309, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cba26dd03e604f545b9e3957a38de398, type: 2}
     - target: {fileID: 5088520315749501801, guid: 49c631d12ea5a5c4ab6ec3ac3b2671ba,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
