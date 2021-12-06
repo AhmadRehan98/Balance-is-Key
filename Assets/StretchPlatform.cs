@@ -5,49 +5,37 @@ using UnityEngine;
 
 public class StretchPlatform : MonoBehaviour
 {
-    public Transform ne, nw, se, sw;
-    public Rigidbody platformTarget;
+    public Transform player1, player2;
+    public Transform platformTarget;
+    public Transform cornerNE, cornerSW; // opposite corners, just to get starting dimensions
+    
+    private float _xStartWidth, _zStartWidth;
 
-    private Rect _targetShape;
-    private Rect _startShape;
-
-    private float verticalWidth()
-    {
-        Vector3 northEdge = Vector3.Lerp(ne.localPosition, nw.localPosition, 0.5f);
-        Vector3 southEdge = Vector3.Lerp(se.localPosition, sw.localPosition, 0.5f);
-
-        return (northEdge - southEdge).magnitude;
-    }
-
-    private float horizontalWidth()
-    {
-        Vector3 westEdge = Vector3.Lerp(nw.localPosition, sw.localPosition, 0.5f);
-        Vector3 eastEdge = Vector3.Lerp(ne.localPosition, se.localPosition, 0.5f);
-
-        return (westEdge - eastEdge).magnitude;
-    }
-
-    private void recalculateRect()
-    {
-        Vector3 avgPos = (ne.localPosition + nw.localPosition + se.localPosition + sw.localPosition) / 4.0f;
-        _targetShape.x = avgPos.x;
-        _targetShape.y = avgPos.z;
-        _targetShape.width = horizontalWidth();
-        _targetShape.height = verticalWidth();
-    }
-
-
+    private Rigidbody _rb;
+    
     private void Start()
     {
-        _startShape = new Rect(0, 0, horizontalWidth(), verticalWidth());
-        _targetShape = new Rect(_startShape);
+        _xStartWidth = Mathf.Abs(cornerNE.position.x - cornerSW.position.x);
+        _zStartWidth = Mathf.Abs(cornerNE.position.z - cornerSW.position.z);
+        _rb = GetComponent<Rigidbody>();
+
     }
 
     private void FixedUpdate()
     {
-        recalculateRect();
-        platformTarget.MovePosition(new Vector3(_targetShape.x, platformTarget.position.y, _targetShape.y));
-        transform.localScale = new Vector3( _targetShape.width / _startShape.width, 1, 1);
-        // transform.localRotation = Quaternion.Euler(0, Vector3.Angle(ne.localPosition - se.localPosition, ne.localPosition - nw.localPosition), 0);
+        float targetWidth = Vector3.Distance(platformTarget.position, player1.position) + Vector3.Distance(platformTarget.localPosition,player2.localPosition) ;
+        float targetScale = targetWidth / _xStartWidth;
+
+        Vector3 center = Vector3.Lerp(player1.position, player2.position, 0.5f);
+        
+        transform.localScale = new Vector3(targetScale, 1, 1);
+        _rb.MovePosition(center);
+        
     }
+
+    public void RaiseCorner(int player, int hand, float t)
+    {
+        
+    }
+    
 }
