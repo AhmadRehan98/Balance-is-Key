@@ -20,10 +20,10 @@ public class @Player : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""PlayerMove"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Value"",
                     ""id"": ""52456bde-c085-473c-93b7-bcc561b292c9"",
-                    ""expectedControlType"": ""Stick"",
-                    ""processors"": ""InvertVector2(invertX=false,invertY=false),NormalizeVector2,StickDeadzone"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": ""InvertVector2(invertX=false,invertY=false),StickDeadzone"",
                     ""interactions"": """"
                 },
                 {

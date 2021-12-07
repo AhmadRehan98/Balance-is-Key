@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         // }
 
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
-        _bodyRb.AddForce(_moveInput * bodyAcceleration, ForceMode.Force);
+        _bodyRb.AddForce(_moveInput, ForceMode.Force);
         // change animation blend based on user input
         _animator.SetFloat("inputY", _moveInput.x);
         _animator.SetFloat("inputX", _moveInput.z);
@@ -112,10 +112,11 @@ public class PlayerController : MonoBehaviour
 
     public void OnPlayerMove(InputAction.CallbackContext input)
     {
+        Vector2 inVec = input.ReadValue<Vector2>();
+        float mag = Mathf.Lerp(0, 1,inVec.magnitude);
+        print($"{inVec} {inVec.magnitude}");
         if (_camTransform != null)
         {
-            Vector2 inVec = input.ReadValue<Vector2>();
-
             Vector3 forward = _camTransform.forward;
             forward.y = 0;
             forward.Normalize();
@@ -128,11 +129,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Vector2 inVec = input.ReadValue<Vector2>();
             _moveInput.x = inVec.x;
             _moveInput.y = 0;
             _moveInput.z = inVec.y;
         }
+        _moveInput.Normalize();
+        _moveInput *= Mathf.Lerp(0f, bodyAcceleration, mag);
     }
 
     public void OnLeftArm(InputAction.CallbackContext input)
