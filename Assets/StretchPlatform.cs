@@ -66,7 +66,8 @@ public class StretchPlatform : MonoBehaviour
         Vector3 center = Vector3.Lerp(player1.position, player2.position, 0.5f);
 
         transform.localScale = new Vector3(targetXScale, remainingVolume / _startScale.z, _startScale.z);
-        _rb.MovePosition(center);
+        // _rb.MovePosition(center);
+        platformTarget.GetComponent<Rigidbody>().MovePosition(center);
 
 
         //     _rb.AddForceAtPosition(Vector3.up * cornerForce.Item2 * handStrength, transform.position + cornerForce.Item1, ForceMode.Impulse);

@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 inVec = input.ReadValue<Vector2>();
         float mag = Mathf.Lerp(0, 1,inVec.magnitude);
-        print($"{inVec} {inVec.magnitude}");
+        // print($"{inVec} {inVec.magnitude}");
         if (_camTransform != null)
         {
             Vector3 forward = _camTransform.forward;
