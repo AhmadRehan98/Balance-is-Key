@@ -135,10 +135,10 @@ public class PlayerController : MonoBehaviour
                 childRb.angularVelocity = Vector3.zero;
             }
         }
-
-        transform.parent.position = CheckpointController.lastCheckpoint.position;
         OnScreenStats.NumResets++;
         OnScreenStats.PauseTimer = false;
+        if(CheckpointController.lastCheckpoint)
+            transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
 
     public void OnPause(InputAction.CallbackContext input)

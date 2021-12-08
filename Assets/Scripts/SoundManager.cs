@@ -98,8 +98,8 @@ public class SoundManager : MonoBehaviour
 
     public void PlayBallRolling(float scale = 1.0f)
     {
-        ballRolling.volume = Random.Range(0.15f, 0.25f);
-        ballRolling.pitch = Random.Range(1.4f, 1.6f) * scale;
+        ballRolling.volume = Random.Range(0.03f, 0.07f);
+        ballRolling.pitch = Random.Range(1.0f, 1.2f) * scale;
         if (!ballRolling.isPlaying)
         {
             ballRolling.Play();

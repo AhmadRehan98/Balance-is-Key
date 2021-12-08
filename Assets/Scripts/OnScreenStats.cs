@@ -26,6 +26,7 @@ public class OnScreenStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(NumResets);
         if (!PauseTimer)
         {
             currentTime = Time.time - startTime;

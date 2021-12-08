@@ -28,7 +28,7 @@ public class StretchArm : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log(how_much_stretched);
+        // Debug.Log(how_much_stretched);
         last_dist = Vector3.Distance(Hand.transform.position, Tassel.transform.position);
         if (Vector3.Distance(Hand.transform.position, Tassel.transform.position) > delta)
         {
