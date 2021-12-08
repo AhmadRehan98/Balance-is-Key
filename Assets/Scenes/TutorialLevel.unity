@@ -1740,7 +1740,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49830
+  m_Name: pb_Mesh-175546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2238,6 +2238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimplePlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_RootOrder
@@ -2526,7 +2531,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49722
+  m_Name: pb_Mesh-175438
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

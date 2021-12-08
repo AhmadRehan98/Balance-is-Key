@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour
 {
     public AudioSource[] p1FootStepsDirt, p2FootStepsDirt,
                          p1FootStepsStone, p2FootStepsStone;
-    public AudioSource handMove, ballLandSoft, torchBurn, doorCrack, ballRolling;
+    public AudioSource handMove, ballLandSoft, torchBurn, doorCrack, ballRolling, armStretch;
     private float _lastBallLand;
     // Start is called before the first frame update
     void Start()
@@ -111,6 +111,12 @@ public class SoundManager : MonoBehaviour
         ballRolling.Pause();
     }
 
+    public void PlayArmStretch(float scale = 1.0f)
+    {
+        if (!armStretch.isPlaying)
+            armStretch.Play();
+    }
+    
     public void PlayBallLandSoft(float scale = 1.0f)
     {
         if (Time.time - _lastBallLand >= 1f)
