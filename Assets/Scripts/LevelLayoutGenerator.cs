@@ -53,12 +53,15 @@ public class LevelLayoutGenerator : MonoBehaviour
         }
 
         Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
+        float height = start_pad_position.y;
         playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position +
                                                new Vector3(0, 1, 0);
         Vector3 latest_forward = start_pad_position;
         Vector3 latest_curly = start_pad_position;
         GameObject temp_obstacle, joint_clone, clone;
         int obstacleIndex;
+        float height_delta = 0.001f;
+        int counter_descent = 1;
 
         for (int i = 0; i < numberOfPrefabs() + 1; i++)
         {
@@ -71,8 +74,9 @@ public class LevelLayoutGenerator : MonoBehaviour
                 } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
 
                 temp_obstacle = obstacles[obstacleIndex];
-                clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment, Quaternion.identity,
+                clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                     level_geometry.transform);
+                counter_descent += 1;
                 latest_forward += start_pad_increment;
                 clone.name = "obstacle" + i.ToString();
             }
@@ -89,10 +93,12 @@ public class LevelLayoutGenerator : MonoBehaviour
                 {
                     if (isTurn)
                     {
-                        joint_clone = Instantiate(joint, latest_forward + joint_increment, Quaternion.identity,
+                        joint_clone = Instantiate(joint, latest_forward + joint_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                             level_geometry.transform);
-                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment, Quaternion.identity,
+                        counter_descent += 1;
+                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                             level_geometry.transform);
+                        counter_descent += 1;
                         clone.transform.RotateAround(clone.transform.Find("rotate_right").position, Vector3.up, 90);
                         latest_curly = clone.transform.position;
                         isForward = (!isForward);
@@ -100,8 +106,9 @@ public class LevelLayoutGenerator : MonoBehaviour
                     }
                     else
                     {
-                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment, Quaternion.identity,
+                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                             level_geometry.transform);
+                        counter_descent += 1;
                         latest_forward += forward_increment;
                     }
                 }
@@ -109,20 +116,23 @@ public class LevelLayoutGenerator : MonoBehaviour
                 {
                     if (isTurn)
                     {
-                        joint_clone = Instantiate(joint1, latest_curly + joint1_increment, Quaternion.identity,
+                        joint_clone = Instantiate(joint1, latest_curly + joint1_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                             level_geometry.transform);
+                        counter_descent += 1;
                         latest_forward = latest_curly + joint1_increment;
-                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment_curly_turn,
+                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment_curly_turn-new Vector3(0,height_delta*counter_descent,0),
                             Quaternion.identity,
                             level_geometry.transform);
+                        counter_descent += 1;
                         latest_forward += forward_increment_curly_turn;
                         isForward = (!isForward);
                         joint_clone.name = "joint-" + (i - 1).ToString() + "-" + i.ToString();
                     }
                     else
                     {
-                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment, Quaternion.identity,
+                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                             level_geometry.transform);
+                        counter_descent += 1;
                         clone.transform.RotateAround(clone.transform.Find("rotate_right").position, Vector3.up, 90);
                         clone.transform.position = latest_curly + curly_increment;
                         latest_curly += curly_increment;
@@ -135,13 +145,15 @@ public class LevelLayoutGenerator : MonoBehaviour
             {
                 if (isForward)
                 {
-                    clone = Instantiate(end_pad, latest_forward + forward_end_pad_increment, Quaternion.identity,
+                    clone = Instantiate(end_pad, latest_forward + forward_end_pad_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                         level_geometry.transform);
+                    counter_descent += 1;
                 }
                 else
                 {
-                    clone = Instantiate(end_pad, latest_forward + forward_increment, Quaternion.identity,
+                    clone = Instantiate(end_pad, latest_forward + forward_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                         level_geometry.transform);
+                    counter_descent += 1;
                     clone.transform.RotateAround(clone.transform.Find("rotate_right").position, Vector3.up, 90);
                     clone.transform.position = latest_curly + curly_end_pad_increment;
                 }
