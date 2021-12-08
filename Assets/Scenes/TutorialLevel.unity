@@ -13336,6 +13336,42 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 512661634}
+    - target: {fileID: 1915476004, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9430911
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476004, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.3313311
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476004, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.026666557
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476004, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.009368617
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476005, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_RotationAtRest.x
+      value: 38.71526
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476005, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].x
+      value: 38.715256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476005, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_RotationOffsets.Array.data[0].y
+      value: -3.239292
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476005, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].y
+      value: 9.194725
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915476005, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
+      propertyPath: m_TranslationOffsets.Array.data[0].z
+      value: -11.452301
+      objectReference: {fileID: 0}
     - target: {fileID: 3949057470666537148, guid: 264009b5f97cde64c950ba84e4aecb6c,
         type: 3}
       propertyPath: m_RootOrder
@@ -13395,6 +13431,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StretchyCarpetSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675601480078989977, guid: 264009b5f97cde64c950ba84e4aecb6c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.51000214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675601480078989978, guid: 264009b5f97cde64c950ba84e4aecb6c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.51000214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7675601480078989979, guid: 264009b5f97cde64c950ba84e4aecb6c,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.28488246
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
