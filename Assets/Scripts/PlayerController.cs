@@ -49,21 +49,6 @@ public class PlayerController : MonoBehaviour
         if (_animator == null)
             Debug.LogWarning(transform.name + "Missing AnimatorController");
 
-        // if (handRbL == null || handRbR == null)
-        //     Debug.LogWarning("Hands for " + transform.name + " are missing");
-        // else if (!Mathf.Approximately(handRbL.position.y, handRbR.position.y))
-        //     Debug.LogWarning("Hands for " + transform.name + " have different starting heights");
-        // else
-        // {
-        //     _handMinVec = new Vector3(0, handRbL.transform.localPosition.y, 0);
-        //     _handMaxVec = new Vector3(0, handMaxDistance, 0);
-        //
-        //     _handStartingPosL = handRbL ? new Vector3(handRbL.transform.localPosition.x, 0, handRbL.transform.localPosition.z) : Vector3.zero;
-        //     _handStartingPosR = handRbR ? new Vector3(handRbR.transform.localPosition.x, 0, handRbR.transform.localPosition.z) : Vector3.zero;
-        //     _handTargetVecL = _handMinVec;
-        //     _handTargetVecR = _handMinVec;
-        // }
-
         if (transform.parent == null)
         {
             Debug.LogWarning("Player " + transform.name + " is in improper player setup hierarchy");
@@ -86,23 +71,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        // calculate force vector to go in direction of target hand position and apply impulse force each frame
-        // if (handRbL)
-        // {
-        //     Vector3 yPos = new Vector3(0, handRbL.transform.localPosition.y, 0);
-        //     Vector3 dampVec = new Vector3(0, handRbL.velocity.y * handDampeningCoeff, 0);
-        //     _handMoveDirL = _handTargetVecL - yPos;
-        //     handRbL.AddForce(_handMoveDirL * handSpeed - dampVec, ForceMode.VelocityChange);
-        // }
-        //
-        // if (handRbR)
-        // {
-        //     Vector3 yPos = new Vector3(0, handRbR.transform.localPosition.y, 0);
-        //     Vector3 dampVec = new Vector3(0, handRbR.velocity.y * handDampeningCoeff, 0);
-        //     _handMoveDirR = _handTargetVecR - yPos;
-        //     handRbR.AddForce(_handMoveDirR * handSpeed - dampVec, ForceMode.VelocityChange);
-        // }
-
         // for player movement, adjust the net force vector every frame by adding a force in the direction of the user input
         _bodyRb.AddForce(_moveInput, ForceMode.Force);
         // change animation blend based on user input
@@ -139,19 +107,20 @@ public class PlayerController : MonoBehaviour
 
     public void OnLeftArm(InputAction.CallbackContext input)
     {
-        // _handTargetVecL = Vector3.Lerp(_handMinVec, _handMaxVec, input.ReadValue<float>());
         platform.RaiseCorner(_accessories.player, 0, input.ReadValue<float>());
     }
 
     public void OnRightArm(InputAction.CallbackContext input)
     {
-        // _handTargetVecR = Vector3.Lerp(_handMinVec, _handMaxVec, input.ReadValue<float>());
         platform.RaiseCorner(_accessories.player, 1, input.ReadValue<float>());
     }
 
     public void OnResetScene(InputAction.CallbackContext input)
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (input.started == false) // when button is released dont do anything
+        {
+            return;
+        }
         for (int i = 0; i < transform.parent.childCount; i++)
         {
             Transform c = transform.parent.GetChild(i);
@@ -166,18 +135,30 @@ public class PlayerController : MonoBehaviour
     
     public void onButtonA(InputAction.CallbackContext input)
     {
+        if (input.started == false) // when button is released dont do anything
+        {
+            return;
+        }
         if(SceneManager.GetActiveScene().name == "CharacterSelect") 
             _accessories.ToggleHat();  
     }
 
     public void onButtonB(InputAction.CallbackContext input)
     {
+        if (input.started == false) // when button is released dont do anything
+        {
+            return;
+        }
         if(SceneManager.GetActiveScene().name == "CharacterSelect") 
             _accessories.ToggleBelt();
     }
     
     public void onButtonY(InputAction.CallbackContext input)
     {
+        if (input.started == false) // when button is released dont do anything
+        {
+            return;
+        }
         if(SceneManager.GetActiveScene().name == "CharacterSelect") 
             _accessories.NextSkin();
     }
