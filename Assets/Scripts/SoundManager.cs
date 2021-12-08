@@ -113,6 +113,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayArmStretch(float scale = 1.0f)
     {
+        armStretch.pitch = scale;
         if (!armStretch.isPlaying)
             armStretch.Play();
     }

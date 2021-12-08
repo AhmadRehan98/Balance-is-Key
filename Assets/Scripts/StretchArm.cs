@@ -48,7 +48,7 @@ public class StretchArm : MonoBehaviour
 
             if (how_much_stretched >= stretch_amount_to_play_sfx)
             {
-                sm.PlayArmStretch();
+                //sm.PlayArmStretch();
             }
             if (last_dist < Vector3.Distance(Hand.transform.position, Tassel.transform.position))
             {

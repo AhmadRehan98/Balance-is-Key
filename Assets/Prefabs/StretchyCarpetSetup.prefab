@@ -1618,6 +1618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3949057470666537148}
+  - component: {fileID: 8888254384879937311}
   m_Layer: 0
   m_Name: StretchyCarpetSetup
   m_TagString: Untagged
@@ -1650,6 +1651,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8888254384879937311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3949057470666537155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4fa03a3aaab094288646bcbb4677fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPoint: {fileID: 2094232037776030790}
+  endPoint: {fileID: 5057957164979419447}
 --- !u!1 &3949057471479906744
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,7 +2866,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Tassel
       value: 
-      objectReference: {fileID: 5057957164628983078}
+      objectReference: {fileID: 2094232037776030790}
     - target: {fileID: 772395057886280246, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
@@ -3121,12 +3136,12 @@ PrefabInstance:
         type: 3}
       propertyPath: lookObj
       value: 
-      objectReference: {fileID: 5057957164628983075}
+      objectReference: {fileID: 2094232037776030787}
     - target: {fileID: 5020103662053306129, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: rightHandObj
       value: 
-      objectReference: {fileID: 5057957164628983075}
+      objectReference: {fileID: 2094232037776030787}
     - target: {fileID: 5029877296706044743, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
@@ -3141,7 +3156,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Tassel
       value: 
-      objectReference: {fileID: 2094232037776030790}
+      objectReference: {fileID: 5057957164628983078}
     - target: {fileID: 5324181259903967725, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
@@ -3251,12 +3266,12 @@ PrefabInstance:
         type: 3}
       propertyPath: lookObj
       value: 
-      objectReference: {fileID: 5057957164979419442}
+      objectReference: {fileID: 5057957164628983075}
     - target: {fileID: 6995783792786937010, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: leftHandObj
       value: 
-      objectReference: {fileID: 2094232037776030787}
+      objectReference: {fileID: 5057957164628983075}
     - target: {fileID: 7079594271080466525, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
