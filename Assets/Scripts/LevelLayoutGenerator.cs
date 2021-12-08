@@ -7,9 +7,12 @@ using Random = UnityEngine.Random;
 
 public class LevelLayoutGenerator : MonoBehaviour
 {
-    public static int level = 1;
-    public int delta = 4; // level+delta= # of obstacles
+    public int delta = 2; // level+delta= # of obstacles
+
+    public Transform playerSetupObject;
+
     public GameObject[] obstacles;
+    public int[] difficulty;
     public GameObject start_pad; //don't think we need this.
 
     public GameObject end_pad;
@@ -18,50 +21,66 @@ public class LevelLayoutGenerator : MonoBehaviour
     private Vector3 forward_increment_curly_turn = new Vector3(0, 0, 43);
     private Vector3 start_pad_increment = new Vector3(0, 0, 30);
     private Vector3 forward_end_pad_increment = new Vector3(0, 0, 140);
-    private Vector3 joint_increment = new Vector3(0, 0, 1078-945);
+    private Vector3 joint_increment = new Vector3(0, 0, 1078 - 945);
     private Vector3 curly_increment = new Vector3(105, 0, 0);
     private Vector3 curly_end_pad_increment = new Vector3(140, 0, 0);
     private Vector3 joint1_increment = new Vector3(-175, 0, -499);
     public GameObject joint, joint1;
 
     private Boolean isForward = true;
+
     private Boolean isTurn = false;
     // Start is called before the first frame update
 
+    private int numberOfPrefabs()
+    {
+        return (StaticClass.levelsCompleted+1) * delta; // TODO: change this
+    }
+
     void Start()
     {
-        
-        foreach(Transform child in level_geometry.transform)
+        if (playerSetupObject == null)
+        {
+            Debug.LogError("no player setup");
+        }
+
+        foreach (Transform child in level_geometry.transform)
         {
             if (child.gameObject.tag != "start_pad")
             {
                 Destroy(child.gameObject);
             }
         }
-        Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
-        GameObject.Find("CarpetSetup").transform.position=GameObject.Find("start_pad").transform.Find("start_floor").position+new Vector3(0,5,0);
-        Vector3 latest_forward = start_pad_position;
-        Vector3 latest_curly= start_pad_position;
-        GameObject temp_obstacle,joint_clone,clone;
 
-        for (int i = 0; i < level + delta + 1; i++)
+        Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
+        playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position + new Vector3(0, 5, 0);
+        Vector3 latest_forward = start_pad_position;
+        Vector3 latest_curly = start_pad_position;
+        GameObject temp_obstacle, joint_clone, clone;
+
+        for (int i = 0; i < numberOfPrefabs() + 1; i++)
         {
             if (i == 0)
             {
                 temp_obstacle = obstacles[Random.Range(0, obstacles.Length)];
-                clone=Instantiate(temp_obstacle, latest_forward+start_pad_increment, Quaternion.identity, level_geometry.transform);
+                clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment, Quaternion.identity, level_geometry.transform);
                 latest_forward += start_pad_increment;
-                clone.name="obstacle" + i.ToString();
+                clone.name = "obstacle" + i.ToString();
             }
-            else if (i < level + delta)
+            else if (i < numberOfPrefabs())
             {
+                int obstacleIndex;
+                do
+                {
+                    obstacleIndex = Random.Range(0, obstacles.Length);
+                } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
 
-                temp_obstacle = obstacles[Random.Range(0, obstacles.Length)];
+                temp_obstacle = obstacles[obstacleIndex];
                 if (isForward)
                 {
                     if (isTurn)
                     {
-                        joint_clone=Instantiate(joint, latest_forward + joint_increment, Quaternion.identity,
+                        joint_clone = Instantiate(joint, latest_forward + joint_increment, Quaternion.identity,
                             level_geometry.transform);
                         clone = Instantiate(temp_obstacle, latest_forward + forward_increment, Quaternion.identity,
                             level_geometry.transform);
@@ -74,14 +93,14 @@ public class LevelLayoutGenerator : MonoBehaviour
                     {
                         clone = Instantiate(temp_obstacle, latest_forward + forward_increment, Quaternion.identity,
                             level_geometry.transform);
-                        latest_forward+=forward_increment;
+                        latest_forward += forward_increment;
                     }
                 }
                 else
                 {
                     if (isTurn)
                     {
-                        joint_clone=Instantiate(joint1, latest_curly + joint1_increment, Quaternion.identity,
+                        joint_clone = Instantiate(joint1, latest_curly + joint1_increment, Quaternion.identity,
                             level_geometry.transform);
                         latest_forward = latest_curly + joint1_increment;
                         clone = Instantiate(temp_obstacle, latest_forward + forward_increment_curly_turn, Quaternion.identity,
@@ -99,9 +118,8 @@ public class LevelLayoutGenerator : MonoBehaviour
                         latest_curly += curly_increment;
                     }
                 }
-                
-                clone.name="obstacle" + i.ToString();
-                
+
+                clone.name = "obstacle" + i.ToString();
             }
             else
             {
@@ -113,10 +131,11 @@ public class LevelLayoutGenerator : MonoBehaviour
                 else
                 {
                     clone = Instantiate(end_pad, latest_forward + forward_increment, Quaternion.identity,
-                            level_geometry.transform);
-                        clone.transform.RotateAround(clone.transform.Find("rotate_right").position, Vector3.up, 90);
-                        clone.transform.position = latest_curly + curly_end_pad_increment;
+                        level_geometry.transform);
+                    clone.transform.RotateAround(clone.transform.Find("rotate_right").position, Vector3.up, 90);
+                    clone.transform.position = latest_curly + curly_end_pad_increment;
                 }
+
                 clone.name = "end_pad";
             }
 
@@ -125,7 +144,7 @@ public class LevelLayoutGenerator : MonoBehaviour
             // temp_obstacle.transform.parent = GameObject.Find("Level Geometry").transform;
         }
     }
-    
+
     /*
      void Start1()
     {

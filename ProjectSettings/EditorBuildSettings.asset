@@ -14,16 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialLevel.unity
     guid: 948105649562b5c4ca0618e5ea9f9f7c
+  - enabled: 1
+    path: Assets/Scenes/levelGenerator.unity
+    guid: 61363312c19e38448bd7496b1ea0e381
   - enabled: 0
     path: Assets/Scenes/old scenes/TerrainTest.unity
     guid: 020777b87e5ccd54f9a9d3554c64b547
   - enabled: 0
     path: Assets/Scenes/old scenes/Level 1_old.unity
     guid: f6edfe6b1c42d044ca5e3e2d3a56ce51
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: a8dac9b6e196e8e45ab3096eef87c2d7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 2.unity
     guid: 4d2c1945398fc5747b8d93aa04f91456
   m_configObjects:
