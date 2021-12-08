@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a3172c117660a24cb9f892cbdc17541
+guid: 4a7a42cc112d8a94b89970712df72cae
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -17,11 +17,14 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
-    motionNodeName: Balance_char_geo_grp
+    motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Bind_Spine1' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -31,119 +34,13 @@ ModelImporter:
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
-    extraExposedTransformPaths:
-    - Balance_char_geo_grp
-    - Balance_char_geo_grp/Mesh_Mesh_Body
-    - Balance_char_geo_grp/Mesh_Mesh_eye_L
-    - Balance_char_geo_grp/Mesh_Mesh_eye_R
-    - WORLD_SCALE_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/arm_L_pv_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/arm_L_pv_pos/ARM_L_PV_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/arm_R_pv_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/arm_R_pv_pos/ARM_R_PV_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/wrist_L_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/wrist_L_IK_pos/WRIST_L_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/wrist_R_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Arm_IK_grp/wrist_R_IK_pos/WRIST_R_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_L_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_L_IK_pos/ANKLE_L_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_L_IK_pos/ANKLE_L_IK_CTRL/ball_L_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_L_IK_pos/ANKLE_L_IK_CTRL/ball_L_IK_pos/BALL_L_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_R_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_R_IK_pos/ANKLE_R_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_R_IK_pos/ANKLE_R_IK_CTRL/ball_R_IK_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/ankle_R_IK_pos/ANKLE_R_IK_CTRL/ball_R_IK_pos/BALL_R_IK_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/leg_L_pv_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/leg_L_pv_pos/LEG_L_PV_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/leg_R_pv_pos
-    - WORLD_SCALE_CTRL/Controller_grp/Leg_IK_grp/leg_R_pv_pos/LEG_R_PV_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/PV_lin_grp
-    - WORLD_SCALE_CTRL/Controller_grp/PV_lin_grp/arm_L_PV_line
-    - WORLD_SCALE_CTRL/Controller_grp/PV_lin_grp/arm_R_PV_line
-    - WORLD_SCALE_CTRL/Controller_grp/PV_lin_grp/leg_L_PV_line
-    - WORLD_SCALE_CTRL/Controller_grp/PV_lin_grp/leg_R_PV_line
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/pelvis_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/pelvis_pos/PELVIS_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos/SPINE_01_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos/SPINE_01_CTRL/spine_02_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos/SPINE_01_CTRL/spine_02_pos/SPINE_02_CTRL
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos/SPINE_01_CTRL/spine_02_pos/SPINE_02_CTRL/head_pos
-    - WORLD_SCALE_CTRL/Controller_grp/world_pos/WORLD_CTRL/cog_pos/COG_CTRL/spine_01_pos/SPINE_01_CTRL/spine_02_pos/SPINE_02_CTRL/head_pos/HEAD_CTRL
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_LeftUpLeg
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_LeftUpLeg/Bind_LeftLeg
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_LeftUpLeg/Bind_LeftLeg/Bind_LeftFoot
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_LeftUpLeg/Bind_LeftLeg/Bind_LeftFoot/Bind_LeftToeBase
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_LeftUpLeg/Bind_LeftLeg/Bind_LeftFoot/Bind_LeftToeBase/Bind_LeftToe_End
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_RightUpLeg
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_RightUpLeg/Bind_RightLeg
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_RightUpLeg/Bind_RightLeg/Bind_RightFoot
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_RightUpLeg/Bind_RightLeg/Bind_RightFoot/Bind_RightToeBase
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Hips/Bind_RightUpLeg/Bind_RightLeg/Bind_RightFoot/Bind_RightToeBase/Bind_RightToe_End
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_Head
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_Head/Bind_HeadTop_End
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_LeftShoulder
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_LeftShoulder/Bind_LeftArm
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_LeftShoulder/Bind_LeftArm/Bind_LeftForeArm
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_LeftShoulder/Bind_LeftArm/Bind_LeftForeArm/Bind_LeftHand
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_RightShoulder
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_RightShoulder/Bind_RightArm
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_RightShoulder/Bind_RightArm/Bind_RightForeArm
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/Bind_Root/Bind_Spine/Bind_Spine1/Bind_RightShoulder/Bind_RightArm/Bind_RightForeArm/Bind_RightHand
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/arm_L_IK
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/arm_R_IK
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/ball_L_IK
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/ball_R_IK
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/leg_L_IK
-    - WORLD_SCALE_CTRL/DO_NOT_TOUCH/IK_handles/leg_R_IK
+    extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 1
-      lastFrame: 120
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 80
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -182,7 +79,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human:
@@ -354,7 +251,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: cog_pos
       parentName: WORLD_CTRL
-      position: {x: -0, y: 0.007208004, z: 0.0005267526}
+      position: {x: -0, y: 0.90100056, z: 0.06584408}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: COG_CTRL
@@ -364,7 +261,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: spine_01_pos
       parentName: COG_CTRL
-      position: {x: -0, y: 0.002778176, z: 0.00006762766}
+      position: {x: -0, y: 0.347272, z: 0.008453458}
       rotation: {x: 0.018823162, y: -0, z: -0, w: 0.99982285}
       scale: {x: 1, y: 1, z: 1}
     - name: SPINE_01_CTRL
@@ -374,7 +271,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: spine_02_pos
       parentName: SPINE_01_CTRL
-      position: {x: -0, y: 0.0030999247, z: -0.000037807928}
+      position: {x: -0, y: 0.3874906, z: -0.004725991}
       rotation: {x: -0.000000011432134, y: 0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: SPINE_02_CTRL
@@ -384,7 +281,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: head_pos
       parentName: SPINE_02_CTRL
-      position: {x: -0, y: 0.0022739265, z: 0.00008217132}
+      position: {x: -0, y: 0.2842408, z: 0.010271415}
       rotation: {x: -0.01882315, y: 0, z: -0, w: 0.99982285}
       scale: {x: 1, y: 1, z: 1}
     - name: HEAD_CTRL
@@ -404,12 +301,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Arm_IK_grp
       parentName: Controller_grp
-      position: {x: -0, y: 0.01308533, z: 0.0006732793}
+      position: {x: -0, y: 1.6356664, z: 0.08415991}
       rotation: {x: 0.01882315, y: -0, z: -0, w: 0.99982285}
       scale: {x: 1, y: 1, z: 1}
     - name: wrist_R_IK_pos
       parentName: Arm_IK_grp
-      position: {x: 0.01641296, y: 0.0013972186, z: 0.00015546409}
+      position: {x: 2.05162, y: 0.17465232, z: 0.019433012}
       rotation: {x: -0.01882315, y: 0, z: -0, w: 0.99982285}
       scale: {x: 1, y: 1, z: 1}
     - name: WRIST_R_IK_CTRL
@@ -419,7 +316,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: wrist_L_IK_pos
       parentName: Arm_IK_grp
-      position: {x: -0.01641299, y: 0.0013971883, z: 0.00015546204}
+      position: {x: -2.0516238, y: 0.17464854, z: 0.019432755}
       rotation: {x: -0.01882315, y: 0, z: -0, w: 0.99982285}
       scale: {x: 1, y: 1, z: 1}
     - name: WRIST_L_IK_CTRL
@@ -429,17 +326,17 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: arm_L_pv_pos
       parentName: Arm_IK_grp
-      position: {x: -0.012173728, y: 0.0017735504, z: -0.016000003}
+      position: {x: -1.5217161, y: 0.22169381, z: -2.0000002}
       rotation: {x: 0.52227056, y: -0.4765275, z: 0.52279985, w: 0.47627228}
       scale: {x: 1, y: 1, z: 1}
     - name: ARM_L_PV_CTRL
       parentName: arm_L_pv_pos
-      position: {x: 0.000060536153, y: -3.9968027e-18, z: -8.881786e-19}
+      position: {x: 0.007567019, y: -4.9960036e-16, z: -1.1102232e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: arm_R_pv_pos
       parentName: Arm_IK_grp
-      position: {x: 0.012168741, y: 0.0017720484, z: -0.016000003}
+      position: {x: 1.5210927, y: 0.22150606, z: -2.0000002}
       rotation: {x: -0.47627228, y: 0.5227999, z: 0.4765275, w: 0.5222706}
       scale: {x: 1, y: 1, z: 1}
     - name: ARM_R_PV_CTRL
@@ -449,12 +346,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Leg_IK_grp
       parentName: Controller_grp
-      position: {x: -0, y: 0.007281175, z: 0.0005267526}
+      position: {x: -0, y: 0.9101469, z: 0.06584408}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: ankle_R_IK_pos
       parentName: Leg_IK_grp
-      position: {x: 0.003506, y: -0.007284677, z: 0.000029703804}
+      position: {x: 0.43825, y: -0.9105846, z: 0.0037129757}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: ANKLE_R_IK_CTRL
@@ -464,7 +361,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ball_R_IK_pos
       parentName: ANKLE_R_IK_CTRL
-      position: {x: -0, y: -0.0013223394, z: 7.146626e-17}
+      position: {x: -0, y: -0.16529243, z: 8.933283e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: BALL_R_IK_CTRL
@@ -474,7 +371,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ankle_L_IK_pos
       parentName: Leg_IK_grp
-      position: {x: -0.0035059962, y: -0.007284677, z: 0.000029703453}
+      position: {x: -0.43824953, y: -0.9105846, z: 0.0037129316}
       rotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
     - name: ANKLE_L_IK_CTRL
@@ -484,7 +381,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: ball_L_IK_pos
       parentName: ANKLE_L_IK_CTRL
-      position: {x: 2.8957689e-11, y: 0.0013223398, z: -9.992007e-19}
+      position: {x: 0.0000000036197112, y: 0.16529249, z: -1.2490009e-16}
       rotation: {x: 0, y: -0, z: -0.000000012897518, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: BALL_L_IK_CTRL
@@ -494,7 +391,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: leg_R_pv_pos
       parentName: Leg_IK_grp
-      position: {x: 0.003506, y: -0.0042879414, z: 0.009167805}
+      position: {x: 0.43825, y: -0.5359927, z: 1.1459757}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: LEG_R_PV_CTRL
@@ -504,7 +401,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: leg_L_pv_pos
       parentName: Leg_IK_grp
-      position: {x: -0.0035059962, y: -0.00428794, z: 0.009167805}
+      position: {x: -0.43824953, y: -0.5359925, z: 1.1459757}
       rotation: {x: 1, y: -0, z: 0, w: 6.123234e-17}
       scale: {x: 1, y: 1, z: 1}
     - name: LEG_L_PV_CTRL
@@ -544,7 +441,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_Root
       parentName: DO_NOT_TOUCH
-      position: {x: -0, y: 0.007208004, z: 0.0005267526}
+      position: {x: -0, y: 0.90100056, z: 0.06584408}
       rotation: {x: 0, y: -0.08109905, z: -0, w: 0.99670607}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_Hips
@@ -554,113 +451,113 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_LeftUpLeg
       parentName: Bind_Hips
-      position: {x: -0.0035059962, y: -0.0013354805, z: 0.00022943628}
+      position: {x: -0.43824953, y: -0.16693507, z: 0.028679537}
       rotation: {x: 0.9995396, y: -2.3283064e-10, z: -0.000000007450581, w: -0.030340936}
       scale: {x: 1, y: 1.0000002, z: 1.0000004}
     - name: Bind_LeftLeg
       parentName: Bind_LeftUpLeg
-      position: {x: -4.541887e-12, y: 0.0029417803, z: -0.00025587407}
+      position: {x: -5.6773586e-10, y: 0.36772254, z: -0.03198426}
       rotation: {x: -0.065663725, y: 0.000000007447091, z: -2.0197062e-10, w: 0.9978419}
       scale: {x: 1, y: 1.0000007, z: 1.0000007}
     - name: Bind_LeftFoot
       parentName: Bind_LeftLeg
-      position: {x: -1.5920568e-13, y: 0.0022272635, z: 0.00022692775}
+      position: {x: -1.9900711e-11, y: 0.27840793, z: 0.02836597}
       rotation: {x: -0.68166274, y: -0.0000000037558783, z: -0.0000000036900436, w: 0.73166656}
       scale: {x: 1, y: 1.0000002, z: 1.0000004}
     - name: Bind_LeftToeBase
       parentName: Bind_LeftFoot
-      position: {x: -3.094899e-11, y: 0.0024966425, z: 0.0007595815}
+      position: {x: -0.0000000038686236, y: 0.3120803, z: 0.094947696}
       rotation: {x: -0, y: -2.2204458e-16, z: -2.2204458e-16, w: 1}
       scale: {x: 1, y: 1.0000002, z: 1.0000002}
     - name: Bind_LeftToe_End
       parentName: Bind_LeftToeBase
-      position: {x: 1.3322675e-18, y: 0.0024997701, z: -1.8461794e-18}
+      position: {x: 1.6653345e-16, y: 0.31247127, z: -2.3077243e-16}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_RightUpLeg
       parentName: Bind_Hips
-      position: {x: 0.003506, y: -0.0013354765, z: 0.00022943664}
+      position: {x: 0.43825, y: -0.16693456, z: 0.028679581}
       rotation: {x: 0.030340921, y: 0.000000007450581, z: -0.0000000011641532, w: 0.9995396}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_RightLeg
       parentName: Bind_RightUpLeg
-      position: {x: -0, y: -0.002941785, z: 0.00025587407}
+      position: {x: -0, y: -0.36772314, z: 0.03198426}
       rotation: {x: -0.065663725, y: -0.0000000074376345, z: 0.0000000025290516, w: 0.9978419}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_RightFoot
       parentName: Bind_RightLeg
-      position: {x: 2.220446e-18, y: -0.0022272624, z: -0.00022692772}
+      position: {x: 2.7755573e-16, y: -0.2784078, z: -0.028365966}
       rotation: {x: -0.68166274, y: 0.0000000047436948, z: 0.0000000027022267, w: 0.73166656}
       scale: {x: 1, y: 0.9999999, z: 1.0000001}
     - name: Bind_RightToeBase
       parentName: Bind_RightFoot
-      position: {x: -1.3322675e-18, y: -0.0024966418, z: -0.0007595815}
+      position: {x: -1.6653345e-16, y: -0.31208023, z: -0.094947696}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 0.9999999}
     - name: Bind_RightToe_End
       parentName: Bind_RightToeBase
-      position: {x: -0, y: -0.0024981056, z: 1.0457517e-17}
+      position: {x: -0, y: -0.31226322, z: 1.3071896e-15}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_Spine
       parentName: Bind_Root
-      position: {x: -0, y: 0.002778176, z: 0.00006762766}
+      position: {x: -0, y: 0.347272, z: 0.008453458}
       rotation: {x: 0.018761158, y: 0.08108468, z: -0.0015265403, w: 0.9965295}
       scale: {x: 1, y: 1, z: 1}
     - name: Bind_Spine1
       parentName: Bind_Spine
-      position: {x: -4.163336e-20, y: 0.0030999247, z: -0.000037807928}
+      position: {x: -5.2041704e-18, y: 0.3874906, z: -0.004725991}
       rotation: {x: -0.00000001117587, y: -0, z: 2.3283062e-10, w: 1}
       scale: {x: 1, y: 0.9999998, z: 1}
     - name: Bind_Head
       parentName: Bind_Spine1
-      position: {x: 6.938894e-20, y: 0.0022739265, z: 0.00008217132}
+      position: {x: 8.6736166e-18, y: 0.2842408, z: 0.010271415}
       rotation: {x: -0.018823147, y: -0.000000007446197, z: -2.3278944e-10, w: 0.9998228}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: Bind_HeadTop_End
       parentName: Bind_Head
-      position: {x: -0, y: 0.01070403, z: -0.0008558985}
+      position: {x: -0, y: 1.3380038, z: -0.10698731}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 0.99999964}
     - name: Bind_LeftShoulder
       parentName: Bind_Spine1
-      position: {x: -0.0039033277, y: 0.0024947305, z: 0.00009511499}
+      position: {x: -0.487916, y: 0.31184134, z: 0.011889375}
       rotation: {x: 0.5340727, y: -0.4637279, z: 0.5318881, w: 0.46563694}
       scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
     - name: Bind_LeftArm
       parentName: Bind_LeftShoulder
-      position: {x: -0.00000027031217, y: 0.0025724997, z: 0.00006109554}
+      position: {x: -0.000033789023, y: 0.32156247, z: 0.0076369424}
       rotation: {x: -0.03739357, y: 0.00013397634, z: -0.0035806, w: 0.9992943}
       scale: {x: 1.0000002, y: 1.0000005, z: 1.0000001}
     - name: Bind_LeftForeArm
       parentName: Bind_LeftArm
-      position: {x: -0.00041366823, y: 0.005736384, z: -0.00004591028}
+      position: {x: -0.05170853, y: 0.71704805, z: -0.0057387855}
       rotation: {x: -0.0013160814, y: 0.0013511718, z: 0.023431765, w: 0.99972373}
       scale: {x: 1, y: 0.99999994, z: 1.0000001}
     - name: Bind_LeftHand
       parentName: Bind_LeftForeArm
-      position: {x: 0.00040264858, y: 0.0042534033, z: -0.000014976791}
+      position: {x: 0.050331075, y: 0.53167546, z: -0.001872099}
       rotation: {x: -0.000000076368444, y: 0.000000029322106, z: 0.000000030210682,
         w: 1}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: Bind_RightShoulder
       parentName: Bind_Spine1
-      position: {x: 0.0039033277, y: 0.0024947645, z: 0.00009511009}
+      position: {x: 0.487916, y: 0.31184557, z: 0.011888762}
       rotation: {x: -0.46563694, y: 0.5318881, z: 0.46372786, w: 0.5340728}
       scale: {x: 1.0000002, y: 1.0000005, z: 1}
     - name: Bind_RightArm
       parentName: Bind_RightShoulder
-      position: {x: 0.00000015482473, y: -0.0025463805, z: -0.00006469863}
+      position: {x: 0.000019353092, y: -0.31829756, z: -0.008087329}
       rotation: {x: -0.03739366, y: 0.00013399124, z: -0.0035805106, w: 0.9992943}
       scale: {x: 1.0000001, y: 1, z: 1.0000002}
     - name: Bind_RightForeArm
       parentName: Bind_RightArm
-      position: {x: 0.00041396345, y: -0.0057627074, z: 0.000047505204}
+      position: {x: 0.051745433, y: -0.72033846, z: 0.005938151}
       rotation: {x: -0.0013132612, y: 0.0013511957, z: 0.023430543, w: 0.99972373}
       scale: {x: 1.0000005, y: 1.0000002, z: 1.0000004}
     - name: Bind_RightHand
       parentName: Bind_RightForeArm
-      position: {x: -0.000402648, y: -0.0042533623, z: 0.000015015895}
+      position: {x: -0.050331, y: -0.53167033, z: 0.0018769869}
       rotation: {x: 0.000000029802315, y: 5.893524e-10, z: -0.000000029616096, w: 1}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
     - name: IK_handles
@@ -670,32 +567,32 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: arm_R_IK
       parentName: IK_handles
-      position: {x: 0.01641296, y: 0.014475707, z: 0.0008812239}
+      position: {x: 2.05162, y: 1.8094635, z: 0.11015299}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: arm_L_IK
       parentName: IK_handles
-      position: {x: -0.01641299, y: 0.014475677, z: 0.0008812208}
+      position: {x: -2.0516238, y: 1.8094597, z: 0.110152595}
       rotation: {x: 0, y: 0, z: 0.01874293, w: 0.99982435}
       scale: {x: 1, y: 1, z: 1}
     - name: leg_R_IK
       parentName: IK_handles
-      position: {x: 0.003506, y: 0.00075608003, z: 0.000764206}
+      position: {x: 0.43825, y: 0.094510004, z: 0.09552575}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: leg_L_IK
       parentName: IK_handles
-      position: {x: -0.0035059962, y: 0.0007560803, z: 0.0007642057}
+      position: {x: -0.43824953, y: 0.09451005, z: 0.09552571}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: ball_R_IK
       parentName: IK_handles
-      position: {x: 0.003506, y: -0.0000035155483, z: 0.0032608435}
+      position: {x: 0.43825, y: -0.00043944357, z: 0.40760544}
       rotation: {x: -0.70710474, y: 0, z: -0, w: 0.7071088}
       scale: {x: 1, y: 1, z: 1}
     - name: ball_L_IK
       parentName: IK_handles
-      position: {x: -0.0035059967, y: -0.0000035223538, z: 0.0032608416}
+      position: {x: -0.4382496, y: -0.00044029424, z: 0.4076052}
       rotation: {x: 0.7071098, y: 0, z: 6.3108872e-30, w: 0.7071037}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
@@ -705,16 +602,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.79999995
+    globalScale: 100
     rootMotionBoneName: 
-    hasTranslationDoF: 1
+    hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2a3172c117660a24cb9f892cbdc17541,
+    type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
