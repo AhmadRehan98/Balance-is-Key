@@ -174,7 +174,7 @@ MonoBehaviour:
   player1: {fileID: 884976012923579834}
   player2: {fileID: 884976013494911040}
   platformTarget: {fileID: 7675601480078989974}
-  corners:
+  handTargetTransforms:
   - {fileID: 3949057471479906740}
   - {fileID: 3949057471568833582}
   - {fileID: 3949057470636075399}
