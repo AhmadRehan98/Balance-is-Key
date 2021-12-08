@@ -26,6 +26,7 @@ public class StretchArm : MonoBehaviour
         {
             scale = gameObject.transform.localScale;
             
+            //Debug.Log("here");
             if (stretch)
             {
                 gameObject.transform.localScale = new Vector3(scale.x, scale.y + step, scale.z);

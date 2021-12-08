@@ -168,10 +168,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ae99060ba94201343918020078bc124d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.47
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -825,6 +825,7 @@ MonoBehaviour:
   ballLandSoft: {fileID: 5417785435298464348}
   torchBurn: {fileID: 5349556361008349536}
   doorCrack: {fileID: 4503657475816922345}
+  ballRolling: {fileID: 6067314661359245803}
 --- !u!1 &4812233896766391585
 GameObject:
   m_ObjectHideFlags: 0
