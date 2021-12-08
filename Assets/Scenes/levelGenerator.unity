@@ -5097,7 +5097,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1200066242}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &826363798
+--- !u!64 &826363801
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
