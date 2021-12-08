@@ -81,6 +81,14 @@ public class @Player : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""5130658a-f329-4cfd-abab-d49e8d61a997"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
                 }
             ],
             ""bindings"": [
@@ -197,7 +205,7 @@ public class @Player : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""25385858-fa1e-418d-841e-577881e36c16"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""path"": ""<Gamepad>/select"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -248,6 +256,17 @@ public class @Player : IInputActionCollection, IDisposable
                     ""action"": ""Button Y"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc2b76e9-d0cd-48d6-abf7-cc0d03454591"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -276,6 +295,7 @@ public class @Player : IInputActionCollection, IDisposable
         m_InGame_ButtonB = m_InGame.FindAction("Button B", throwIfNotFound: true);
         m_InGame_ButtonX = m_InGame.FindAction("Button X", throwIfNotFound: true);
         m_InGame_ButtonY = m_InGame.FindAction("Button Y", throwIfNotFound: true);
+        m_InGame_Pause = m_InGame.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -333,6 +353,7 @@ public class @Player : IInputActionCollection, IDisposable
     private readonly InputAction m_InGame_ButtonB;
     private readonly InputAction m_InGame_ButtonX;
     private readonly InputAction m_InGame_ButtonY;
+    private readonly InputAction m_InGame_Pause;
     public struct InGameActions
     {
         private @Player m_Wrapper;
@@ -345,6 +366,7 @@ public class @Player : IInputActionCollection, IDisposable
         public InputAction @ButtonB => m_Wrapper.m_InGame_ButtonB;
         public InputAction @ButtonX => m_Wrapper.m_InGame_ButtonX;
         public InputAction @ButtonY => m_Wrapper.m_InGame_ButtonY;
+        public InputAction @Pause => m_Wrapper.m_InGame_Pause;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -378,6 +400,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @ButtonY.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
                 @ButtonY.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
                 @ButtonY.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnButtonY;
+                @Pause.started -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_InGameActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_InGameActionsCallbackInterface = instance;
             if (instance != null)
@@ -406,6 +431,9 @@ public class @Player : IInputActionCollection, IDisposable
                 @ButtonY.started += instance.OnButtonY;
                 @ButtonY.performed += instance.OnButtonY;
                 @ButtonY.canceled += instance.OnButtonY;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -429,5 +457,6 @@ public class @Player : IInputActionCollection, IDisposable
         void OnButtonB(InputAction.CallbackContext context);
         void OnButtonX(InputAction.CallbackContext context);
         void OnButtonY(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

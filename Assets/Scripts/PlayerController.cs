@@ -163,6 +163,11 @@ public class PlayerController : MonoBehaviour
 
         transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
+
+    public void OnPause(InputAction.CallbackContext input)
+    {
+        PauseMenu.PauseButtonPressed = true;
+    }
     
     public void onButtonA(InputAction.CallbackContext input)
     {
