@@ -197,6 +197,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 172ef89d-d448-4dfa-9414-effcc2e9b963
     m_ActionName: In Game/Button Y
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 538244706818552081}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+    m_ActionId: 5130658a-f329-4cfd-abab-d49e8d61a997
+    m_ActionName: In Game/Pause
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: In Game
