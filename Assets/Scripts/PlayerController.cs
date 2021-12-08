@@ -143,6 +143,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnPause(InputAction.CallbackContext input)
     {
+        if (input.started == false) // when button is released dont do anything
+        {
+            return;
+        }
         PauseMenu.PauseButtonPressed = true;
     }
     
