@@ -117,6 +117,11 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
+        ResetPlayerSetup();
+    }
+
+    public void ResetPlayerSetup()
+    {
         for (int i = 0; i < transform.parent.childCount; i++)
         {
             Transform c = transform.parent.GetChild(i);
@@ -130,6 +135,7 @@ public class PlayerController : MonoBehaviour
                 childRb.angularVelocity = Vector3.zero;
             }
         }
+
         transform.parent.position = CheckpointController.lastCheckpoint.position;
         OnScreenStats.NumResets++;
         OnScreenStats.PauseTimer = false;

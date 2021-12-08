@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4077556107261843349}
-  - component: {fileID: 1395066303794971628}
   m_Layer: 0
   m_Name: pit
   m_TagString: Untagged
@@ -33,22 +32,10 @@ Transform:
   - {fileID: 1238700422001965852}
   - {fileID: 1446072625217010348}
   - {fileID: 7391633632827454803}
+  - {fileID: 3169520031404337630}
   m_Father: {fileID: 2147415520564663178}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1395066303794971628
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 299196831952256560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &440427458860275603
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +100,7 @@ GameObject:
   - component: {fileID: 8027170127130417595}
   - component: {fileID: 4410810529051367309}
   - component: {fileID: 782343711056330992}
+  - component: {fileID: 2350730706200605524}
   m_Layer: 0
   m_Name: pit wall (1)
   m_TagString: Untagged
@@ -183,6 +171,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2350730706200605524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781873197363535255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809786, y: 0.1616501, z: 0.21696123}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1211819623052211271
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,6 +6001,7 @@ GameObject:
   - component: {fileID: 3784415730273710001}
   - component: {fileID: 7409712710780838279}
   - component: {fileID: 5852920060546856698}
+  - component: {fileID: 1357026721969652883}
   m_Layer: 0
   m_Name: pit wall
   m_TagString: Untagged
@@ -6070,6 +6072,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1357026721969652883
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5853284488496393117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809772, y: 0.1616501, z: 0.21696118}
+  m_Center: {x: 0.00000011920929, y: 0, z: -0.00000023841858}
 --- !u!1 &5980305368109900151
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,6 +6285,7 @@ GameObject:
   - component: {fileID: 7391633632827454803}
   - component: {fileID: 8025840984582359593}
   - component: {fileID: 4325264839971888091}
+  - component: {fileID: 9041394555111168534}
   m_Layer: 0
   m_Name: pit floor
   m_TagString: Untagged
@@ -6340,6 +6356,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9041394555111168534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680158146192340738}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.19916177, y: 0.0054809665, z: 0.2073218}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
 --- !u!1 &6850618793057516978
 GameObject:
   m_ObjectHideFlags: 0
@@ -11559,6 +11588,7 @@ GameObject:
   - component: {fileID: 1446072625217010348}
   - component: {fileID: 5062361652434662554}
   - component: {fileID: 8190981894905766887}
+  - component: {fileID: 1608819185349920523}
   m_Layer: 0
   m_Name: pit wall (2)
   m_TagString: Untagged
@@ -11629,6 +11659,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1608819185349920523
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8191628055530520192}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809772, y: 0.1616501, z: 0.21696118}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
 --- !u!1 &8319299127089786156
 GameObject:
   m_ObjectHideFlags: 0
@@ -11673,6 +11716,7 @@ GameObject:
   - component: {fileID: 1238700422001965852}
   - component: {fileID: 4855121214506087722}
   - component: {fileID: 8398635778686050903}
+  - component: {fileID: 6546727764796339107}
   m_Layer: 0
   m_Name: pit wall (3)
   m_TagString: Untagged
@@ -11743,6 +11787,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6546727764796339107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399009123037970224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0054809786, y: 0.1616501, z: 0.21696123}
+  m_Center: {x: 0.00000011920929, y: 0, z: -0.000000059604645}
 --- !u!1001 &54542846372393037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11922,6 +11979,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6395218544301276333, guid: 2e2c83c681435d345b01c70d3d36fb1b,
     type: 3}
   m_PrefabInstance: {fileID: 104564732929300039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &349923917069286532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4077556107261843349}
+    m_Modifications:
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194996856892999174, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+        type: 3}
+      propertyPath: m_Name
+      value: FogReset
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39fb31acbba0a6b45afb057913c1b4f2, type: 3}
+--- !u!4 &3169520031404337630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3397764013160191322, guid: 39fb31acbba0a6b45afb057913c1b4f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 349923917069286532}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &607275710093657365
 PrefabInstance:
