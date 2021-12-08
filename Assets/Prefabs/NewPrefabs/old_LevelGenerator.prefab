@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1112834792842625751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112834792842625745}
+  - component: {fileID: 1112834792842625744}
+  m_Layer: 0
+  m_Name: old_LevelGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112834792842625745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112834792842625751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.390385, y: 137.78404, z: 192.46118}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112834792842625744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112834792842625751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51d72701ac1026041b202f7c11bf10e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delta: 3
+  obstacles:
+  - {fileID: 5465088478876515149, guid: d73438f0df0eb574a8a34f654d39aa16, type: 3}
+  - {fileID: 342354316837458596, guid: 055195f3490cb244bad483258679bc97, type: 3}
+  - {fileID: 1042979553146564073, guid: 7214b293bdf273242a3a3517c2382b0f, type: 3}
+  - {fileID: 6919340736636585337, guid: 99764be3b3e218e4aadb9cf181ecf811, type: 3}
+  - {fileID: 2483915591648903975, guid: 1bd961486ad6a204fa2247a7101de5c9, type: 3}
+  - {fileID: 6605110322420327490, guid: b6e06823e9f838f4182058279f5cc371, type: 3}
+  - {fileID: 7430834261342230844, guid: 32e920354d233134d887d49ba66a4531, type: 3}
+  start_pad: {fileID: 6704819893330019639, guid: 29f9b6969ccf4fe43944a90574fedb05,
+    type: 3}
+  end_pad: {fileID: 647121759736240552, guid: 06e3fa9159fbe374881118ce321d2253, type: 3}
+  level_geometry: {fileID: 0}

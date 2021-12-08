@@ -8,10 +8,11 @@ using UnityEngine.SceneManagement;
 public class EndOfLevelReached : MonoBehaviour
 {
     private GameObject winText;
+
     private void Start()
     {
-       winText = GameObject.Find("You Won");
-       winText?.SetActive(false);
+        winText = GameObject.Find("You Won");
+        winText?.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,16 +24,20 @@ public class EndOfLevelReached : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
-            else // otherwise show the you won text
+            else
             {
-                
-                print(winText);
-                if (winText != null)
+                StaticClass.levelsCompleted += 1;
+                if (StaticClass.levelsCompleted < StaticClass.maxLevels)
                 {
-                    winText.SetActive(true);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 }
-                // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                // LevelLayoutGenerator.level += 1;
+                else
+                {
+                    if (winText != null)
+                    {
+                        winText.SetActive(true);
+                    }    
+                }
             }
         }
     }

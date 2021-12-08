@@ -547,6 +547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: p1
       objectReference: {fileID: 0}
+    - target: {fileID: 3842240122087182375, guid: e5a428057ca530b478d371f1a41d1289,
+        type: 3}
+      propertyPath: lookObj
+      value: 
+      objectReference: {fileID: 965351176335960349}
     - target: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_RootOrder
