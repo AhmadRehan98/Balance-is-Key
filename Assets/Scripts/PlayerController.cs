@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
             if (childRb)
                 childRb.velocity = Vector3.zero;
         }
-
+        
         transform.parent.position = CheckpointController.lastCheckpoint.position;
     }
 
