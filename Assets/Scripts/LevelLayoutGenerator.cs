@@ -34,7 +34,7 @@ public class LevelLayoutGenerator : MonoBehaviour
 
     private int numberOfPrefabs()
     {
-        return (StaticClass.levelsCompleted+1) * delta; // TODO: change this
+        return (StaticClass.levelsCompleted + 1) * delta; // TODO: change this
     }
 
     void Start()
@@ -53,26 +53,35 @@ public class LevelLayoutGenerator : MonoBehaviour
         }
 
         Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
-        playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position + new Vector3(0, 1, 0);
+        playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position +
+                                               new Vector3(0, 1, 0);
         Vector3 latest_forward = start_pad_position;
         Vector3 latest_curly = start_pad_position;
         GameObject temp_obstacle, joint_clone, clone;
+        int obstacleIndex;
 
         for (int i = 0; i < numberOfPrefabs() + 1; i++)
         {
             if (i == 0)
             {
-                temp_obstacle = obstacles[Random.Range(0, obstacles.Length)];
-                clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment, Quaternion.identity, level_geometry.transform);
+                do
+                {
+                    obstacleIndex = Random.Range(0, obstacles.Length);
+                //} while (obstacleIndex != 11);
+                } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
+
+                temp_obstacle = obstacles[obstacleIndex];
+                clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment, Quaternion.identity,
+                    level_geometry.transform);
                 latest_forward += start_pad_increment;
                 clone.name = "obstacle" + i.ToString();
             }
             else if (i < numberOfPrefabs())
             {
-                int obstacleIndex;
                 do
                 {
                     obstacleIndex = Random.Range(0, obstacles.Length);
+                //} while (obstacleIndex != 11);
                 } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
 
                 temp_obstacle = obstacles[obstacleIndex];
@@ -103,7 +112,8 @@ public class LevelLayoutGenerator : MonoBehaviour
                         joint_clone = Instantiate(joint1, latest_curly + joint1_increment, Quaternion.identity,
                             level_geometry.transform);
                         latest_forward = latest_curly + joint1_increment;
-                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment_curly_turn, Quaternion.identity,
+                        clone = Instantiate(temp_obstacle, latest_forward + forward_increment_curly_turn,
+                            Quaternion.identity,
                             level_geometry.transform);
                         latest_forward += forward_increment_curly_turn;
                         isForward = (!isForward);
