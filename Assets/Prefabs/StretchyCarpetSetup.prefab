@@ -167,7 +167,7 @@ ParentConstraint:
   m_TranslationAtRest: {x: -0.64816284, y: 8.9152775, z: -17.41769}
   m_RotationAtRest: {x: 10.340042, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 8.969999, z: -12}
+  - {x: 0, y: 8.970001, z: -12}
   m_RotationOffsets:
   - {x: 10.340045, y: 0, z: 0}
   m_AffectTranslationX: 1
@@ -181,30 +181,6 @@ ParentConstraint:
   m_Sources:
   - sourceTransform: {fileID: 1564621003}
     weight: 1
---- !u!75 &2794336396914168783
-ConstantForce:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505459042416424704}
-  m_Enabled: 0
-  m_Force: {x: 0, y: -10, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
---- !u!75 &6959731699354960890
-ConstantForce:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505459042918554362}
-  m_Enabled: 0
-  m_Force: {x: 0, y: -10, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &1283909763713097396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,7 +2377,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.2848836, z: 0}
+  m_ConnectedAnchor: {x: 0, y: -0.2848837, z: 0}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -2546,7 +2522,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000047683716, y: 0.5100002, z: 5.5000005}
+  m_ConnectedAnchor: {x: -0.00000047683716, y: 0.51, z: 5.5000005}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -2642,7 +2618,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.5, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.00000047683716, y: 0.5100002, z: 5.5000005}
+  m_ConnectedAnchor: {x: 0.00000047683716, y: 0.51, z: 5.5000005}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3045,7 +3021,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lookObj
       value: 
-      objectReference: {fileID: 1917000224764986382}
+      objectReference: {fileID: 293740987459950750}
     - target: {fileID: 4125774954964368103, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
@@ -3403,15 +3379,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5a428057ca530b478d371f1a41d1289, type: 3}
---- !u!4 &884976012923579834 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
-    type: 3}
-  m_PrefabInstance: {fileID: 3949057470137037529}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &505459042416424704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3588839534179354073, guid: e5a428057ca530b478d371f1a41d1289,
+    type: 3}
+  m_PrefabInstance: {fileID: 3949057470137037529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &884976012923579834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4217003289445916515, guid: e5a428057ca530b478d371f1a41d1289,
     type: 3}
   m_PrefabInstance: {fileID: 3949057470137037529}
   m_PrefabAsset: {fileID: 0}
@@ -3421,6 +3397,18 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 3949057470137037529}
   m_PrefabAsset: {fileID: 0}
+--- !u!75 &2794336396914168783
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505459042416424704}
+  m_Enabled: 0
+  m_Force: {x: 0, y: -10, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1001 &3949057471779757859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3617,7 +3605,7 @@ PrefabInstance:
         type: 3}
       propertyPath: lookObj
       value: 
-      objectReference: {fileID: 1917000224764986382}
+      objectReference: {fileID: 293740987459950750}
     - target: {fileID: 4125774954964368103, guid: e5a428057ca530b478d371f1a41d1289,
         type: 3}
       propertyPath: m_Layer
@@ -3988,3 +3976,15 @@ Rigidbody:
     type: 3}
   m_PrefabInstance: {fileID: 3949057471779757859}
   m_PrefabAsset: {fileID: 0}
+--- !u!75 &6959731699354960890
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505459042918554362}
+  m_Enabled: 0
+  m_Force: {x: 0, y: -10, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
