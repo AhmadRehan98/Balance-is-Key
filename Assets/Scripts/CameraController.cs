@@ -90,7 +90,7 @@ public class CameraController : MonoBehaviour
     private void FixedUpdate()
     {
         target_position = CalcAveragePos();
-        transform.position = CalcCameraPos();
+        // transform.position = CalcCameraPos();
         transform.rotation = Quaternion.LookRotation(target_position - transform.position); // this is not final
     }
 }

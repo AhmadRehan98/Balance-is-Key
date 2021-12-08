@@ -6338,6 +6338,7 @@ GameObject:
   - component: {fileID: 1211501651167381778}
   - component: {fileID: 1211501651167381777}
   - component: {fileID: 1211501651167381774}
+  - component: {fileID: 3581111617556398939}
   m_Layer: 0
   m_Name: tile (1)
   m_TagString: Ground
@@ -6424,6 +6425,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3581111617556398939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211501651167381773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023868527, y: 0.006577894, z: 0.031111984}
+  m_Center: {x: 0.00000000698492, y: 1.1641534e-10, z: 0.000000004656613}
 --- !u!1 &1211501651732269125
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,6 +6484,7 @@ GameObject:
   - component: {fileID: 1211501651795995312}
   - component: {fileID: 1211501651795995311}
   - component: {fileID: 1211501651795995310}
+  - component: {fileID: 3161469984873811209}
   m_Layer: 0
   m_Name: tile (4)
   m_TagString: Ground
@@ -6556,6 +6571,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &3161469984873811209
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211501651795995307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023868527, y: 0.006577894, z: 0.031111984}
+  m_Center: {x: 0.00000000698492, y: 1.1641534e-10, z: 0.0000001238659}
 --- !u!1 &1211501651972529866
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,6 +6782,7 @@ GameObject:
   - component: {fileID: 1211501652000902861}
   - component: {fileID: 1211501652000902860}
   - component: {fileID: 1211501652000902857}
+  - component: {fileID: 2128893340526817863}
   m_Layer: 0
   m_Name: tile (3)
   m_TagString: Ground
@@ -6840,6 +6869,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2128893340526817863
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211501652000902856}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023868527, y: 0.006577894, z: 0.031111984}
+  m_Center: {x: 0.00000000698492, y: 1.1641534e-10, z: 0.000000004656613}
 --- !u!1 &1211501652009123756
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,6 +7117,7 @@ GameObject:
   - component: {fileID: 1211501652091126356}
   - component: {fileID: 1211501652091126355}
   - component: {fileID: 1211501652091126352}
+  - component: {fileID: 829718159921334015}
   m_Layer: 0
   m_Name: tile (2)
   m_TagString: Ground
@@ -7161,6 +7204,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &829718159921334015
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211501652091126351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023868527, y: 0.006577894, z: 0.031111984}
+  m_Center: {x: 0.00000000698492, y: 1.1641534e-10, z: 0.000000004656613}
 --- !u!1 &1211501652180865807
 GameObject:
   m_ObjectHideFlags: 0
@@ -13077,7 +13133,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5702812162489140746}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -13561,6 +13617,7 @@ GameObject:
   - component: {fileID: 145269636937136761}
   - component: {fileID: 3269400257425553559}
   - component: {fileID: 8222891200664427518}
+  - component: {fileID: 3416470938888266657}
   m_Layer: 0
   m_Name: tile
   m_TagString: Ground
@@ -13647,6 +13704,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &3416470938888266657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222891200664427517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023868527, y: 0.006577894, z: 0.031111984}
+  m_Center: {x: 0.00000000698492, y: 1.1641534e-10, z: -0.00000011455268}
 --- !u!1 &9102774110630583234
 GameObject:
   m_ObjectHideFlags: 0

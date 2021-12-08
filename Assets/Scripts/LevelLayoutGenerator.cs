@@ -53,7 +53,7 @@ public class LevelLayoutGenerator : MonoBehaviour
         }
 
         Vector3 start_pad_position = GameObject.Find("start_pad").transform.position;
-        playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position + new Vector3(0, 5, 0);
+        playerSetupObject.transform.position = GameObject.Find("start_pad").transform.Find("start_floor").position + new Vector3(0, 1, 0);
         Vector3 latest_forward = start_pad_position;
         Vector3 latest_curly = start_pad_position;
         GameObject temp_obstacle, joint_clone, clone;
