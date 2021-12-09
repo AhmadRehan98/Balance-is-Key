@@ -1779,6 +1779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StretchyCarpetSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 7675601480078989972, guid: 264009b5f97cde64c950ba84e4aecb6c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 264009b5f97cde64c950ba84e4aecb6c, type: 3}
 --- !u!43 &236698771

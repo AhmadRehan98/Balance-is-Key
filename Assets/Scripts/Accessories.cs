@@ -31,8 +31,9 @@ public class Accessories : MonoBehaviour
         Transform child = gameObject.transform.GetChild(0);
         _body = child.GetChild(0).GetChild(0).gameObject;
         child = child.GetChild(1).GetChild(1).GetChild(0);
-        _belt = child.transform.GetChild(0).gameObject;
-        _hat = child.transform.GetChild(1).gameObject;
+        _belt = child.transform.GetChild(0).GetChild(2).gameObject;
+        _hat = child.transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetChild(0).gameObject;
+        print($"body={_body.name} belt={_belt.name} hat={_hat.name}");
 
 
         if (_body == null)
