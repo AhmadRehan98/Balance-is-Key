@@ -38,6 +38,7 @@ public class LevelLayoutGenerator : MonoBehaviour
         return (StaticClass.levelsCompleted + 1) * delta; // TODO: change this
     }
 
+    
     void Start()
     {
         if (playerSetupObject == null)
@@ -68,18 +69,8 @@ public class LevelLayoutGenerator : MonoBehaviour
         {
             if (i == 0)
             {
-                if (forceObsticle >= 0)
-                    obstacleIndex = forceObsticle;
-                else
-                {
-                    do
-                    {
-                        obstacleIndex = Random.Range(0, obstacles.Length);
-                        //} while (obstacleIndex != 11);
-                    } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);    
-                }
-                
-                temp_obstacle = obstacles[obstacleIndex];
+               
+                temp_obstacle = obstacles[GetObstacleIndex()];
                 clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                     level_geometry.transform);
                 counter_descent += 1;
@@ -88,13 +79,7 @@ public class LevelLayoutGenerator : MonoBehaviour
             }
             else if (i < numberOfPrefabs())
             {
-                do
-                {
-                    obstacleIndex = Random.Range(0, obstacles.Length);
-                //} while (obstacleIndex != 11);
-                } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
-
-                temp_obstacle = obstacles[obstacleIndex];
+                temp_obstacle = obstacles[GetObstacleIndex(i)];
                 if (isForward)
                 {
                     if (isTurn)
@@ -171,6 +156,28 @@ public class LevelLayoutGenerator : MonoBehaviour
 
             // temp_obstacle.transform.parent = GameObject.Find("Level Geometry").transform;
         }
+    }
+
+    private int GetObstacleIndex(int i=0)
+    {
+        int obstacleIndex;
+        if (forceObsticle >= 0)
+        {
+            return forceObsticle;
+        }
+        else if (StaticClass.levelsCompleted == 2 && i==numberOfPrefabs()-1)
+        {
+            return 1;
+        }
+        else
+        {
+            do
+            {
+                obstacleIndex = Random.Range(0, obstacles.Length);
+            } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
+        }
+
+        return obstacleIndex;
     }
 
     /*

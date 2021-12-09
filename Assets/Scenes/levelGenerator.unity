@@ -3827,7 +3827,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh227254
+  m_Name: pb_Mesh59254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7324,7 +7324,7 @@ PrefabInstance:
     - target: {fileID: 9038474748866965946, guid: 40fa9e05454431649bb6aee1a48826b7,
         type: 3}
       propertyPath: forceObsticle
-      value: 8
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 9038474748866965946, guid: 40fa9e05454431649bb6aee1a48826b7,
         type: 3}

@@ -23,9 +23,12 @@ public class tiggerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Renderer render = GetComponent<Renderer>();
-        render.material = Triggered_Material;
-        spinspeed = spinspeed_nonZero;
+        if (other.CompareTag("Player"))
+        {
+            Renderer render = GetComponent<Renderer>();
+            render.material = Triggered_Material;
+            spinspeed = spinspeed_nonZero;
+        }
     }
 
     private void OnTriggerExit(Collider other)
