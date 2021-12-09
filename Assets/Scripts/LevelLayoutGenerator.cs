@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Jobs;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public class LevelLayoutGenerator : MonoBehaviour
@@ -14,6 +17,7 @@ public class LevelLayoutGenerator : MonoBehaviour
 
     public GameObject[] obstacles;
     public int[] difficulty;
+    public int[] temp_list;
     public GameObject start_pad; //don't think we need this.
 
     public GameObject end_pad;
@@ -27,6 +31,7 @@ public class LevelLayoutGenerator : MonoBehaviour
     private Vector3 curly_end_pad_increment = new Vector3(140, 0, 0);
     private Vector3 joint1_increment = new Vector3(-175, 0, -499);
     public GameObject joint, joint1;
+    
 
     private Boolean isForward = true;
 
@@ -41,6 +46,11 @@ public class LevelLayoutGenerator : MonoBehaviour
     
     void Start()
     {
+        temp_list=new int[obstacles.Length];
+        for (int counter = 0; counter < obstacles.Length;counter++)
+        {
+            temp_list[counter] = counter;
+        }
         if (playerSetupObject == null)
         {
             Debug.LogError("no player setup");
@@ -158,28 +168,55 @@ public class LevelLayoutGenerator : MonoBehaviour
         }
     }
 
-    private int GetObstacleIndex(int i=0)
+    private int GetObstacleIndex(int i = 0)
     {
         int obstacleIndex;
+        int indexindex;
         if (forceObsticle >= 0)
         {
             return forceObsticle;
         }
-        else if (StaticClass.levelsCompleted == 2 && i==numberOfPrefabs()-1)
+        if (StaticClass.levelsCompleted == 2 && i == numberOfPrefabs() - 1)
         {
             return 1;
         }
-        else
-        {
-            do
+        do
             {
-                obstacleIndex = Random.Range(0, obstacles.Length);
+                indexindex = Random.Range(0, temp_list.Length);
+                obstacleIndex = temp_list[indexindex];
             } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
-        }
 
-        return obstacleIndex;
+            if (temp_list.Length == 1)
+            {
+                for (int counter = 0; counter < obstacles.Length; counter++)
+                {
+                    temp_list[counter] = counter;
+                }
+            }
+            else
+            {
+                int[] temp_temp_list = new int[temp_list.Length - 1];
+                int c1 = 0;
+                int c2 = 0;
+                while (c1 < temp_list.Length && c2 < temp_list.Length - 1)
+                {
+                    if (c1 != indexindex)
+                    {
+                        temp_temp_list[c2] = temp_list[c1];
+                        c1 += 1;
+                        c2 += 1;
+                    }
+                    else
+                    {
+                        c1 += 1;
+                    }
+                }
+                
+                temp_list = temp_temp_list;
+            }
+
+            return obstacleIndex;
     }
-
     /*
      void Start1()
     {
