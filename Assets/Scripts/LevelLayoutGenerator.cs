@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 
 public class LevelLayoutGenerator : MonoBehaviour
 {
+    public int forceObsticle = -1;
     public int delta = 2; // level+delta= # of obstacles
 
     public Transform playerSetupObject;
@@ -67,12 +68,17 @@ public class LevelLayoutGenerator : MonoBehaviour
         {
             if (i == 0)
             {
-                do
+                if (forceObsticle >= 0)
+                    obstacleIndex = forceObsticle;
+                else
                 {
-                    obstacleIndex = Random.Range(0, obstacles.Length);
-                //} while (obstacleIndex != 11);
-                } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);
-
+                    do
+                    {
+                        obstacleIndex = Random.Range(0, obstacles.Length);
+                        //} while (obstacleIndex != 11);
+                    } while (difficulty[obstacleIndex] > StaticClass.levelsCompleted);    
+                }
+                
                 temp_obstacle = obstacles[obstacleIndex];
                 clone = Instantiate(temp_obstacle, latest_forward + start_pad_increment-new Vector3(0,height_delta*counter_descent,0), Quaternion.identity,
                     level_geometry.transform);
